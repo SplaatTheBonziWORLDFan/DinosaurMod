@@ -659,6 +659,16 @@ const menuItems = [
         featured: true
     },
     {
+        name: 'Site Runtime',
+        extensionId: 'https://gabsthecuriouskid.github.io/FirstExtension/webextension.js',
+        tags: ['dinosaurmod'],
+        iconURL: defaultExtensionIcon,
+        description: 'A Combined version of 2 Extensions: Packager Applications & AdaBrowser',
+        featured: true,
+        extDeveloper: 'MrIncredibleMaker',
+        internetConnectionRequired: true
+    },
+    {
         name: 'Search Params',
         extensionId: 'https://extensions.turbowarp.org/ZXMushroom63/searchApi.js',
         tags: ['turbowarp'],
@@ -737,17 +747,6 @@ const menuItems = [
         tags: ['penguinmod'],
         description: 'Compress and decompress text using lz-string.',
         extDeveloper: 'TheShovel',
-        featured: true
-    },
-    {
-        name: 'Packager Applications',
-        extensionId: 'jgPackagerApplications',
-        iconURL: jgPackagerApplicationsExtensionIcon,
-        insetIconURL: jgPackagerApplicationsInsetExtensionIcon,
-        twDeveloper: 'CubesterYT',
-        customInsetColor: '#66B8FF',
-        tags: ['penguinmod', 'packager'],
-        description: 'In development. Do extra things in packaged applications that you can\'t do in the website!',
         featured: true
     },
     {
