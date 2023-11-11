@@ -1502,6 +1502,28 @@ const myBlocks = function () {
     `;
 };
 
+const menusCategory = function () {
+    return `
+    <category name="Menus" id="menusCategory" colour="#FFFFFF" secondaryColour="#000000">
+        <block type="motion_goto_menu"/>
+        <block type="motion_pointtowards_menu"/>
+        
+        <block type="looks_costume"/>
+        <block type="looks_backdrops"/>
+        
+        <block type="sound_sounds_menu"/>
+        
+        <block type="event_touchingobjectmenu"/>
+        
+        <block type="control_create_clone_of_menu"/>
+        
+        <block type="sensing_touchingobjectmenu"/>
+        <block type="sensing_keyoptions"/>
+        ${categorySeparator}
+    </category>
+    `;
+};
+
 const liveTests = function () {
     return `
     <category name="Live Tests" id="liveTests" colour="#FF0000" secondaryColour="#FF0000">
@@ -1578,6 +1600,7 @@ const makeToolboxXML = function (isInitialSetup, isStage = true, targetId, categ
     const controlXML = moveCategory('control') || control(isInitialSetup, isStage, targetId);
     const sensingXML = moveCategory('sensing') || sensing(isInitialSetup, isStage, targetId);
     const operatorsXML = moveCategory('operators') || operators(isInitialSetup, isStage, targetId);
+    const menusXML = moveCategory('menus') || menusCategory(isInitialSetup, isStage, targetId);
     const variablesXML = moveCategory('data') || variables(isInitialSetup, isStage, targetId);
     const myBlocksXML = moveCategory('procedures') || myBlocks(isInitialSetup, isStage, targetId);
     const liveTestsXML = moveCategory('liveTests') || liveTests(isLiveTest);
@@ -1591,6 +1614,7 @@ const makeToolboxXML = function (isInitialSetup, isStage = true, targetId, categ
         controlXML, gap,
         sensingXML, gap,
         operatorsXML, gap,
+        menusXML, gap,
         variablesXML, gap,
         myBlocksXML, gap,
         isLiveTest ? [liveTestsXML, gap] : ''

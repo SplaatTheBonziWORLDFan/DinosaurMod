@@ -68,7 +68,8 @@ const Credits = () => (
                 you have made many people be able to make whatever they can imagine.
             </p>
             <p>
-                check out <a href="https://dino-mod.github.io">dinomod</a> , i never knew dinomod existed
+                check out <a href="https://dino-mod.github.io">Dino-mod</a> 
+                i never knew dinomod existed.
             </p>
             <a href="https://scratch.mit.edu/donate">
                 Donate to support Scratch.
