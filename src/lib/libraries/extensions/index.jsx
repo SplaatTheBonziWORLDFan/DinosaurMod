@@ -1231,6 +1231,16 @@ const menuItems = [
         helpLink: 'https://scratch.mit.edu/vernier'
     },
     {
+        name: 'TurboBuilder',
+        href: 'https://turbobuilder-steel.vercel.app',
+        extensionId: 'special_turboBuilder',
+        iconURL: 'https://studio.penguinmod.com/static/assets/93db39f338237e6a51790829ba22a879.png',
+        description: 'hehe, early release, don\'t tell the developers tho. Create your own amazing extensions using a scratch-based UI!',
+        credits: 'Started by JeremyGamer13, continued by jwklong',
+        featured: true,
+        disabled: false
+    },
+    {
         // not really an extension, but it's easiest to present it as one
         name: (
             <FormattedMessage
