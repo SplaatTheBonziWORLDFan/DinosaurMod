@@ -666,7 +666,8 @@ const menuItems = [
         description: 'A Combined version of 2 Extensions: Packager Applications & AdaBrowser',
         featured: true,
         extDeveloper: 'MrIncredibleMaker',
-        internetConnectionRequired: true
+        internetConnectionRequired: true,
+        disabled: true
     },
     {
         name: 'Search Params',
