@@ -1504,7 +1504,7 @@ const myBlocks = function () {
 
 const menusCategory = function () {
     return `
-    <category name="Menus" id="menusCategory" colour="#FFFFFF" secondaryColour="#000000">
+    <category name="Menus" id="menusCategory" colour="#C6D226" secondaryColour="#A2AB1F">
         <block type="motion_goto_menu"/>
         <block type="motion_pointtowards_menu"/>
         
