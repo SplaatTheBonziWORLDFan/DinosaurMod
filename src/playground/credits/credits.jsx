@@ -67,6 +67,9 @@ const Credits = () => (
                 Thank you to everyone who worked on Scratch, TurboWarp & Penguinmod,
                 you have made many people be able to make whatever they can imagine.
             </p>
+            <p>
+                check out <a href="https://dino-mod.github.io">dinomod</a> , i never knew dinomod existed
+            </p>
             <a href="https://scratch.mit.edu/donate">
                 Donate to support Scratch.
             </a>
