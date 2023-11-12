@@ -180,15 +180,40 @@ const CustomProcedures = props => (
                     <div className={styles.optionTitle}>
                         <FormattedMessage
                             defaultMessage="Add an input"
-                            description="Label for button to add a number/text input"
+                            description="Label for button to add a text input"
                             id="gui.customProcedures.addAnInputNumberText"
                         />
                     </div>
                     <div className={styles.optionDescription}>
                         <FormattedMessage
-                            defaultMessage="number or text"
-                            description="Description of the number/text input type"
+                            defaultMessage="text"
+                            description="Description of the text input type"
                             id="gui.customProcedures.numberTextType"
+                        />
+                    </div>
+                </div>
+                <div
+                    className={styles.optionCard}
+                    role="button"
+                    tabIndex="0"
+                    onClick={props.onAddNumber}
+                >
+                    <img
+                        className={styles.optionIcon}
+                        src={textInputIcon}
+                    />
+                    <div className={styles.optionTitle}>
+                        <FormattedMessage
+                            defaultMessage="Add an input"
+                            description="Label for button to add a number input"
+                            id="gui.customProcedures.addAnInputNumber"
+                        />
+                    </div>
+                    <div className={styles.optionDescription}>
+                        <FormattedMessage
+                            defaultMessage="number"
+                            description="Description of the number/text input type"
+                            id="gui.customProcedures.numberType"
                         />
                     </div>
                 </div>
@@ -360,6 +385,7 @@ CustomProcedures.propTypes = {
     onAddBoolean: PropTypes.func.isRequired,
     onAddLabel: PropTypes.func.isRequired,
     onAddTextNumber: PropTypes.func.isRequired,
+    onAddNumber: PropTypes.func.isRequired,
     onCancel: PropTypes.func.isRequired,
     onOk: PropTypes.func.isRequired,
     onToggleWarp: PropTypes.func.isRequired,
