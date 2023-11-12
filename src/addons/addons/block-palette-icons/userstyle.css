@@ -44,7 +44,6 @@
 
 .scratchCategoryId-menusCategory .scratchCategoryItemBubble::after {
   background-image: url(icons/menusNew_icon.svg);
-  background-size: 5;
 }
 
 .scratchCategoryId-variables .scratchCategoryItemBubble::after {
