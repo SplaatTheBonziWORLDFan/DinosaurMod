@@ -42,8 +42,8 @@
   background-image: url(icons/operators_icon.svg);
 }
 
-.scratchCategoryId-operators .scratchCategoryItemBubble::after {
-  background-image: url(icons/menusCategory_icon.svg);
+.scratchCategoryId-menusCategory .scratchCategoryItemBubble::after {
+  background-image: url(icons/menusNew_icon.svg);
 }
 
 .scratchCategoryId-variables .scratchCategoryItemBubble::after {

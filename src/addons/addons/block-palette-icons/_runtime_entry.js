@@ -5,12 +5,13 @@ import _asset2 from "!url-loader!./icons/control_icon.svg";
 import _asset3 from "!url-loader!./icons/events_icon.svg";
 import _asset4 from "!url-loader!./icons/list_icon.svg";
 import _asset5 from "!url-loader!./icons/looks_icon.svg";
-import _asset6 from "!url-loader!./icons/motion_icon.svg";
-import _asset7 from "!url-loader!./icons/operators_icon.svg";
-import _asset8 from "!url-loader!./icons/sensing_icon.svg";
-import _asset9 from "!url-loader!./icons/sound_icon.svg";
-import _asset10 from "!url-loader!./icons/variables_icon.svg";
-import _asset11 from "!url-loader!./icons/menusCategory_icon.svg";
+import _asset6 from "!url-loader!./icons/menusNew_icon.svg";
+import _asset7 from "!url-loader!./icons/motion_icon.svg";
+import _asset8 from "!url-loader!./icons/operators_icon.svg";
+import _asset9 from "!url-loader!./icons/sensing_icon.svg";
+import _asset10 from "!url-loader!./icons/sound_icon.svg";
+import _asset11 from "!url-loader!./icons/variables_icon.svg";
+
 export const resources = {
   "userstyle.css": _css,
   "icons/block_icon.svg": _asset,
@@ -18,10 +19,10 @@ export const resources = {
   "icons/events_icon.svg": _asset3,
   "icons/list_icon.svg": _asset4,
   "icons/looks_icon.svg": _asset5,
-  "icons/motion_icon.svg": _asset6,
-  "icons/operators_icon.svg": _asset7,
-  "icons/sensing_icon.svg": _asset8,
-  "icons/sound_icon.svg": _asset9,
-  "icons/variables_icon.svg": _asset10,
-  "icons/menusCategory_icon.svg": _asset11,
+  "icons/menusNew_icon.svg": _asset6,
+  "icons/motion_icon.svg": _asset7,
+  "icons/operators_icon.svg": _asset8,
+  "icons/sensing_icon.svg": _asset9,
+  "icons/sound_icon.svg": _asset10,
+  "icons/variables_icon.svg": _asset11,
 };
