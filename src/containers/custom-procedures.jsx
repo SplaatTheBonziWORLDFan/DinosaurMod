@@ -270,6 +270,16 @@ class CustomProcedures extends React.Component {
     }
 }
 
+Blockly.ScratchBlocks.ProcedureUtils.addNumberExternal = function() {
+    Blockly.WidgetDiv.hide(true);
+    this.procCode_ = this.procCode_ + ' %n';
+    this.displayNames_.push('number');
+    this.argumentIds_.push(Blockly.utils.genUid());
+    this.argumentDefaults_.push('');
+    this.updateDisplay_();
+    this.focusLastEditor_();
+};
+
 CustomProcedures.propTypes = {
     isRtl: PropTypes.bool,
     mutator: PropTypes.instanceOf(Element),
