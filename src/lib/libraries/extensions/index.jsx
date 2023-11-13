@@ -14,6 +14,8 @@ import videoSensingInsetIconURL from './videoSensing/video-sensing-small.svg';
 import text2speechIconURL from './text2speech/text2speech.png';
 import text2speechInsetIconURL from './text2speech/text2speech-small.svg';
 
+import speech2textIconURL from './speech2text/speech.png';
+
 import translateIconURL from './translate/translate.png';
 import translateInsetIconURL from './translate/translate-small.png';
 
@@ -58,6 +60,7 @@ import customExtensionIcon from './custom/custom.svg';
 import penguinmodLibraryExtensionIcon from './penguinmod/library.svg';
 
 import filesExtensionIcon from './penguinmod/extensions/files.png';
+import filesOldExtensionIcon from './penguinmod/extensions/files_old.png';
 import jgJSONExtensionIcon from './penguinmod/extensions/json.png';
 import jgRuntimeExtensionIcon from './penguinmod/extensions/runtime.png';
 import jgPrismExtensionIcon from './penguinmod/extensions/prism.png';
@@ -262,28 +265,6 @@ const menuItems = [
     {
         name: (
             <FormattedMessage
-                defaultMessage="Speech to Text"
-                description="Name for the Speech to Text extension"
-                id="gui.extension.speech2text.name"
-            />
-        ),
-        extensionId: 'scratch3_speech2text',
-        collaborator: 'Google',
-        iconURL: 'https://powerbox1000.github.io/dev-blocks/static/assets/0294d390ec3c5a58f3701b3098646770.png',
-        tags: ['scratch'],
-        description: (
-            <FormattedMessage
-                defaultMessage="Talk to your projects."
-                description="Description for the Speech to Text extension"
-                id="gui.extension.speech2text.description"
-            />
-        ),
-        featured: true,
-        internetConnectionRequired: true
-    },
-    {
-        name: (
-            <FormattedMessage
                 defaultMessage="Translate"
                 description="Name for the Translate extension"
                 id="gui.extension.translate.name"
@@ -369,7 +350,7 @@ const menuItems = [
     {
         name: 'Legacy Files',
         extensionId: 'jgFiles',
-        iconURL: filesExtensionIcon,
+        iconURL: filesOldExtensionIcon,
         tags: ['penguinmod'],
         description: 'Basic blocks for files.',
         featured: true
@@ -382,6 +363,17 @@ const menuItems = [
         insetIconURL: turbowarpIcon,
         tags: ['turbowarp'],
         description: 'Blocks for reading and creating files.',
+        featured: true
+    },
+    {
+        name: 'Streamilator',
+        extensionId: 'https://streamilator.github.io/Streamilator/extension.js',
+        twDeveloper: 'mdwalters',
+        credits: 'snail\-ide',
+        iconURL: defaultExtensionIcon,
+        insetIconURL: turbowarpIcon,
+        tags: ['turbowarp'],
+        description: 'A better way to handle audio from urls.',
         featured: true
     },
     {
@@ -667,7 +659,7 @@ const menuItems = [
         featured: true,
         extDeveloper: 'MrIncredibleMaker',
         internetConnectionRequired: true,
-        disabled: true
+        disabled: false
     },
     {
         name: 'Search Params',

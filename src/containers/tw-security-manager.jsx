@@ -25,6 +25,8 @@ const isTrustedExtension = url => (
     url.startsWith('https://extensions.turbowarp.org/') ||
     url.startsWith('https://extensions.penguinmod.com/') ||
     url.startsWith('https://penguinmod-extensions-gallery.vercel.app/') ||
+    url.startsWith('https://gabsthecuriouskid.github.io/firstextension/') ||
+    url.startsWith('https://streamilator.github.io/') ||
 
     // For development.
     url.startsWith('http://localhost:8000') ||
