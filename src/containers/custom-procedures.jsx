@@ -39,7 +39,6 @@ class CustomProcedures extends React.Component {
             'handleAddLabel',
             'handleAddBoolean',
             'handleAddTextNumber',
-            'handleAddNumber',
             'handleToggleWarp',
             'handleToggleReturns',
             'handleCancel',
@@ -184,11 +183,6 @@ class CustomProcedures extends React.Component {
             this.mutationRoot.addStringNumberExternal();
         }
     }
-    handleAddNumber () {
-        if (this.mutationRoot) {
-            this.mutationRoot.addNumberExternal();
-        }
-    }
     handleToggleWarp () {
         if (this.mutationRoot) {
             const newWarp = !this.mutationRoot.getWarp();
@@ -254,7 +248,6 @@ class CustomProcedures extends React.Component {
                 onAddBoolean={this.handleAddBoolean}
                 onAddLabel={this.handleAddLabel}
                 onAddTextNumber={this.handleAddTextNumber}
-                onAddNumber={this.handleAddNumber}
                 onCancel={this.handleCancel}
                 onOk={this.handleOk}
                 onToggleWarp={this.handleToggleWarp}
@@ -269,16 +262,6 @@ class CustomProcedures extends React.Component {
         );
     }
 }
-
-Blockly.ScratchBlocks.ProcedureUtils.addNumberExternal = function() {
-    Blockly.WidgetDiv.hide(true);
-    this.procCode_ = this.procCode_ + ' %n';
-    this.displayNames_.push('number');
-    this.argumentIds_.push(Blockly.utils.genUid());
-    this.argumentDefaults_.push('');
-    this.updateDisplay_();
-    this.focusLastEditor_();
-};
 
 CustomProcedures.propTypes = {
     isRtl: PropTypes.bool,
