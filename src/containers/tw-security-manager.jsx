@@ -80,7 +80,13 @@ const isAlwaysTrustedForFetching = parsed => (
     parsed.origin === 'https://httpbin.org' ||
 
     // ScratchDB
-    parsed.origin === 'https://scratchdb.lefty.one'
+    parsed.origin === 'https://scratchdb.lefty.one' ||
+
+    // Youtube
+    parsed.origin === 'https://youtube.com' ||
+
+    // Beepbox
+    parsed.origin === 'https://beepbox.co'
 );
 
 /**
