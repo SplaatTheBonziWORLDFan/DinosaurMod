@@ -574,6 +574,7 @@ const menuItems = [
         tags: ['turbowarp'],
         iconURL: 'https://extensions.turbowarp.org/images/fetch.svg',
         insetIconURL: turbowarpIcon,
+        customInsetColor: '#ff4d4d',
         description: "Make requests to the broader internet.",
         featured: true,
     },
