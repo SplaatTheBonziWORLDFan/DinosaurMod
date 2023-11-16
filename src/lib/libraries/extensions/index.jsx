@@ -330,6 +330,7 @@ const menuItems = [
         iconURL: 'https://extensions.turbowarp.org/images/NOname-awa/graphics2d.svg',
         tags: ['turbowarp'],
         extDeveloper: 'NOname-awa',
+        customInsetColor: '#ff4d4d',
         featured: true
     },
     {
@@ -393,6 +394,7 @@ const menuItems = [
         insetIconURL: turbowarpIcon,
         description: "Get the definitions of words from the Longman Dictionary in your projects.",
         featured: true,
+        customInsetColor: '#ff4d4d',
         extDeveloper: 'veggiecan0419'
     },
     {
@@ -401,6 +403,7 @@ const menuItems = [
         iconURL: 'https://extensions.turbowarp.org/images/bitwise.svg',
         insetIconURL: turbowarpIcon,
         tags: ['turbowarp'],
+        customInsetColor: '#ff4d4d',
         description: 'Blocks that operate on the binary representation of numbers in computers.',
         extDeveloper: 'TrueFantom',
         featured: true
@@ -517,6 +520,7 @@ const menuItems = [
         insetIconURL: turbowarpIcon,
         tags: ['turbowarp'],
         description: 'Store data persistently. Like cookies, but better.',
+        customInsetColor: '#ff4d4d',
         featured: true
     },
     {
@@ -590,7 +594,7 @@ const menuItems = [
         iconURL: 'https://extensions.turbowarp.org/images/true-fantom/base.svg',
         insetIconURL: turbowarpIcon,
         description: "Convert numbers between bases.",
-        customInsetColor: '#E200CA',
+        customInsetColor: '#ff4d4d',
         featured: true,
         extDeveloper: 'TrueFantom'
     },
@@ -619,6 +623,7 @@ const menuItems = [
         tags: ['turbowarp'],
         iconURL: 'https://extensions.turbowarp.org/images/-SIPC-/time.svg',
         insetIconURL: turbowarpIcon,
+        customInsetColor: '#ff4d4d',
         description: "Blocks for interacting with unix timestamps and other date strings.",
         featured: true,
         extDeveloper: '-SIPC-'
@@ -637,6 +642,7 @@ const menuItems = [
         extensionId: 'https://extensions.turbowarp.org/Longboost/color_channels.js',
         iconURL: 'https://extensions.turbowarp.org/images/Longboost/color_channels.svg',
         insetIconURL: turbowarpIcon,
+        customInsetColor: '#ff4d4d',
         tags: ['turbowarp'],
         description: 'Only render or stamp certain RGB channels.',
         featured: true
@@ -669,6 +675,7 @@ const menuItems = [
         insetIconURL: turbowarpIcon,
         description: "Interact with URL search parameters: the part of the URL after a question mark.",
         featured: true,
+        customInsetColor: '#ff4d4d',
         extDeveloper: 'ZXMushroom63'
     },
     {
@@ -697,6 +704,7 @@ const menuItems = [
         iconURL: 'https://extensions.turbowarp.org/images/Lily/Cast.svg',
         insetIconURL: turbowarpIcon,
         tags: ['turbowarp'],
+        customInsetColor: '#ff4d4d',
         description: 'Convert values between types.',
         featured: true,
         extDeveloper: 'LilyMakesThings',
@@ -707,6 +715,7 @@ const menuItems = [
         extensionId: 'https://extensions.turbowarp.org/Lily/AllMenus.js',
         iconURL: 'https://extensions.turbowarp.org/images/Lily/AllMenus.svg',
         insetIconURL: turbowarpIcon,
+        customInsetColor: '#ff4d4d',
         tags: ['turbowarp'],
         description: 'Special category with all menus from every Scratch category including extensions, whenever you add one to the toolbox.',
         featured: true,
@@ -729,6 +738,8 @@ const menuItems = [
         extensionId: 'https://anonymous-cat1.github.io/WorkingTurboGPT/extension.js',
         iconURL: 'https://camo.githubusercontent.com/c317b9c3d7681a40fb286d644fa3fdb0b2dbc4434840b004e86b77d62b331bbe/68747470733a2f2f616e6f6e796d6f75732d636174312e6769746875622e696f2f576f726b696e67547572626f4750542f696d672f7468756d622e737667',
         tags: ['dinosaurmod'],
+        insetIconURL: turbowarpIcon,
+        customInsetColor: '#ff4d4d',
         description: 'BETA! this extension might break sometimes.',
         twDeveloper: 'Diseveled_cat',
         featured: true,
@@ -752,6 +763,7 @@ const menuItems = [
     },
     {
         name: 'Numerical Encoding',
+        customInsetColor: '#ff4d4d',
         extensionId: 'https://extensions.turbowarp.org/cs2627883/numericalencoding.js',
         iconURL: 'https://extensions.turbowarp.org/images/cs2627883/numericalencoding.svg',
         insetIconURL: turbowarpIcon,
