@@ -17,13 +17,6 @@ const manifest = {
   "settings": [
     {
       "dynamic": true,
-      "name": "Separate List Category",
-      "id": "separateListCategory",
-      "type": "boolean",
-      "default": true
-    },
-    {
-      "dynamic": true,
       "name": "Separate Sprite-only Variables",
       "id": "separateLocalVariables",
       "type": "boolean",
