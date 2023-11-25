@@ -42,7 +42,7 @@
   background-image: url(icons/operators_icon.svg);
 }
 
-.scratchCategoryId-menusCategory .scratchCategoryItemBubble::after {
+.scratchCategoryId-selectors .scratchCategoryItemBubble::after {
   background-image: url(icons/list_icon.svg);
 }
 
