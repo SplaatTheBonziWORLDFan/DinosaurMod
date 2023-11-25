@@ -1505,10 +1505,25 @@ const myBlocks = function () {
 const menusCategory = function () {
     return `
     <category name="Menus" id="menusCategory" colour="#C6D226" secondaryColour="#A2AB1F">
+
         <block type="motion_goto_menu"/>
         <block type="motion_pointtowards_menu"/>
+
         <block type="looks_costume"/>
         <block type="looks_backdrops"/>
+        <block type="looks_getinput_menu"/>
+
+        <block type="sound_sounds_menu"/>
+
+        <block type="event_touchingobjectmenu"/>
+        <block type="event_broadcast_menu"/>
+
+        <block type="control_run_as_sprite_menu"/>
+        <block type="control_create_clone_of_menu"/>
+
+        <block type="sensing_touchingobjectmenu"/>
+        <block type="sensing_keyoptions"/>
+        <block type="sensing_scrolldirections"/>
         ${categorySeparator}
     </category>
     `;

@@ -52,14 +52,6 @@
     cursor: pointer;
 }
 
-.dino-logo {
-    height:  1.6rem;
-    vertical-align: middle;
-}
-.dino-logo.clickable {
-    cursor: pointer;
-}
-
 .language-icon {
     height:  1.5rem;
     vertical-align: middle;
