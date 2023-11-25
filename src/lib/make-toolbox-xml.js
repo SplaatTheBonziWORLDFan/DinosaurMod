@@ -1505,22 +1505,16 @@ const myBlocks = function () {
 const menusCategory = function () {
     return `
     <category name="Menus" id="menusCategory" colour="#C6D226" secondaryColour="#A2AB1F">
-        <label text="Motion Menus"></label>
         <block type="motion_goto_menu"/>
         <block type="motion_pointtowards_menu"/>
-        <label text="Looks Menus"></label>
         <block type="looks_costume"/>
         <block type="looks_backdrops"/>
         <block type="looks_getinput_menu"/>
-        <label text="Sound Menus"></label>
         <block type="sound_sounds_menu"/>
-        <label text="Events Menus"></label>
         <block type="event_touchingobjectmenu"/>
         <block type="event_broadcast_menu"/>
-        <label text="Control Menus"></label>
         <block type="control_run_as_sprite_menu"/>
         <block type="control_create_clone_of_menu"/>
-        <label text="Sensing"></label>
         <block type="sensing_touchingobjectmenu"/>
         <block type="sensing_keyoptions"/>
         <block type="sensing_scrolldirections"/>
