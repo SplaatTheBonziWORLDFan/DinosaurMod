@@ -1620,7 +1620,7 @@ const makeToolboxXML = function (isInitialSetup, isStage = true, targetId, categ
     const sensingXML = moveCategory('sensing') || sensing(isInitialSetup, isStage, targetId);
     const operatorsXML = moveCategory('operators') || operators(isInitialSetup, isStage, targetId);
     const menusXML = moveCategory('selectors') || selectors(isInitialSetup, isStage, targetId);
-    const variablesXML = moveCategory('variables') || variables(isInitialSetup, isStage, targetId);
+    const variablesXML = moveCategory('data') || variables(isInitialSetup, isStage, targetId);
     const listsXML = moveCategory('lists') || lists(isInitialSetup, isStage, targetId);
     const myBlocksXML = moveCategory('procedures') || myBlocks(isInitialSetup, isStage, targetId);
     const liveTestsXML = moveCategory('liveTests') || liveTests(isLiveTest);

@@ -886,7 +886,6 @@ class MenuBar extends React.Component {
                             />)
                             : (null)}
                     </div>
-                    
                     <div className={styles.menuBarItem}>
                         <a
                             className={styles.feedbackLink}
