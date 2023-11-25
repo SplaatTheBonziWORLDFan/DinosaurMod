@@ -1575,16 +1575,6 @@
         "rate": 22050
     },
     {
-        "name": "CRYSTALS",
-        "tags": [
-            "music"
-        ],
-        "assetId": "35f407bbf69246d41de6829adfce59b2",
-        "dataFormat": "adpcm",
-        "md5ext": "35f407bbf69246d41de6829adfce59b2.wav",
-        "rate": 44100
-    },
-    {
         "name": "Curiously Sneaky",
         "tags": [
             "music",
