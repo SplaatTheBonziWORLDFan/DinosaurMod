@@ -886,7 +886,7 @@ class MenuBar extends React.Component {
                             />)
                             : (null)}
                     </div>
-                    {/*
+                    
                     <div className={styles.menuBarItem}>
                         <a
                             className={styles.feedbackLink}
@@ -903,7 +903,6 @@ class MenuBar extends React.Component {
                             </Button>
                         </a>
                     </div>
-                    */}
                 </div>
 
                 <div className={styles.accountInfoGroup}>
