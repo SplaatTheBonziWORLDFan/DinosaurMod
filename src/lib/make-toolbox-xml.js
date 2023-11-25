@@ -252,8 +252,8 @@ const xmlEscape = function (unsafe) {
 };
 
 const looks = function (isInitialSetup, isStage, targetId, costumeName, backdropName) {
-    const hello = translate('LOOKS_HELLO', 'Hello!');
-    const hmm = translate('LOOKS_HMM', 'Hmm...');
+    const hello = translate('LOOKS_HELLO', 'Hello, World!');
+    const hmm = translate('LOOKS_HMM', 'Hmmm..');
     return `
     <category name="%{BKY_CATEGORY_LOOKS}" id="looks" colour="#9966FF" secondaryColour="#774DCB">
         ${isStage ? '' : `
