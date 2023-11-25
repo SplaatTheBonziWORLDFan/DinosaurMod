@@ -1502,15 +1502,6 @@ const myBlocks = function () {
     `;
 };
 
-const menusCategory = function () {
-    return `
-    <category name="Menus" id="menusCategory" colour="#C6D226" secondaryColour="#A2AB1F">
-
-        ${categorySeparator}
-    </category>
-    `;
-};
-
 const liveTests = function () {
     return `
     <category name="Live Tests" id="liveTests" colour="#FF0000" secondaryColour="#FF0000">
@@ -1587,7 +1578,6 @@ const makeToolboxXML = function (isInitialSetup, isStage = true, targetId, categ
     const controlXML = moveCategory('control') || control(isInitialSetup, isStage, targetId);
     const sensingXML = moveCategory('sensing') || sensing(isInitialSetup, isStage, targetId);
     const operatorsXML = moveCategory('operators') || operators(isInitialSetup, isStage, targetId);
-    const menusXML = moveCategory('menus') || menusCategory(isInitialSetup, isStage, targetId);
     const variablesXML = moveCategory('data') || variables(isInitialSetup, isStage, targetId);
     const myBlocksXML = moveCategory('procedures') || myBlocks(isInitialSetup, isStage, targetId);
     const liveTestsXML = moveCategory('liveTests') || liveTests(isLiveTest);
@@ -1601,7 +1591,6 @@ const makeToolboxXML = function (isInitialSetup, isStage = true, targetId, categ
         controlXML, gap,
         sensingXML, gap,
         operatorsXML, gap,
-        menusXML, gap,
         variablesXML, gap,
         myBlocksXML, gap,
         isLiveTest ? [liveTestsXML, gap] : ''
