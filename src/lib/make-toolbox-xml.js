@@ -1509,7 +1509,6 @@ const menusCategory = function () {
         <block type="motion_pointtowards_menu"/>
         <block type="looks_costume"/>
         <block type="looks_backdrops"/>
-        <block type="looks_getinput_menu"/>
         <block type="sound_sounds_menu"/>
         <block type="event_touchingobjectmenu"/>
         <block type="event_broadcast_menu"/>
