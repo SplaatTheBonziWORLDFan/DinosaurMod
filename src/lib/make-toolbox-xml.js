@@ -1498,7 +1498,7 @@ const selectors = function () {
         <block type="control_run_as_sprite_menu"/>
         <block type="control_create_clone_of_menu"/>
     
-        <label text="Sensing"></label>
+        <label text="Sensing Menus"></label>
         <block type="sensing_touchingobjectmenu"/>
         <block type="sensing_keyoptions"/>
         <block type="sensing_scrolldirections"/>
@@ -1524,8 +1524,8 @@ const lists = function () {
     <category
         name="Lists"
         id="lists"
-        colour="#FF8C1A"
-        secondaryColour="#DB6E00"
+        colour="#FF661A"
+        secondaryColour="#FF5500"
         custom="LIST">
     </category>
     `;
