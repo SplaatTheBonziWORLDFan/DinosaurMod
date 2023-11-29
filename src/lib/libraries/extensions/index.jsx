@@ -738,10 +738,10 @@ const menuItems = [
         name: 'ChatGPT',
         extensionId: 'https://anonymous-cat1.github.io/WorkingTurboGPT/extension.js',
         iconURL: 'https://camo.githubusercontent.com/c317b9c3d7681a40fb286d644fa3fdb0b2dbc4434840b004e86b77d62b331bbe/68747470733a2f2f616e6f6e796d6f75732d636174312e6769746875622e696f2f576f726b696e67547572626f4750542f696d672f7468756d622e737667',
-        tags: ['dinosaurmod'],
+        tags: ['turbowarp'],
         insetIconURL: turbowarpIcon,
         customInsetColor: '#ff4d4d',
-        description: 'BETA! this extension might break sometimes.',
+        description: 'Use CHATGPT in your projects.',
         twDeveloper: 'Diseveled_cat',
         featured: true,
     },
@@ -1240,10 +1240,19 @@ const menuItems = [
         href: 'https://turbobuilder-steel.vercel.app',
         extensionId: 'special_turboBuilder',
         iconURL: 'https://studio.penguinmod.com/static/assets/93db39f338237e6a51790829ba22a879.png',
-        description: 'hehe, early release, don\'t tell the developers tho. Create your own amazing extensions using a scratch-based UI!',
+        description: 'Create your own amazing extensions using a scratch-based UI!',
         credits: 'Started by JeremyGamer13, continued by jwklong',
         featured: true,
         disabled: false
+    },
+    {
+        name: 'CreateExt',
+        href: 'https://ext-create.vercel.app/',
+        extensionId: 'special_ExtCreate',
+        iconURL: 'https://snail-ide.js.org/static/assets/2bcc1426567c2ca1179de43c02577d1a.svg',
+        description: 'Snail IDE version of TurboBuilder',
+        collaborator: 'Started by JeremyGamer13, continued by jwklong, modified by nmsderp',
+        featured: true
     },
     {
         // not really an extension, but it's easiest to present it as one
@@ -1311,26 +1320,6 @@ if (IsLocal || IsLiveTests) {
             featured: true
         },
         {
-            name: (
-                <FormattedMessage
-                    defaultMessage="OOP"
-                    description="Name of OOP extension"
-                    id="jwStructs.jwStructsExtension.name"
-                />
-            ),
-            extensionId: 'jwStructs',
-            tags: ['penguinmod'],
-            iconURL: jwStructsExtensionIcon,
-            description: (
-                <FormattedMessage
-                    defaultMessage="OOP blocks. OOp is a programming paradigm that uses objects and their interactions to design applications and computer programs."
-                    description="Description of OOP extension"
-                    id="jwStructs.jwStructsExtension.description"
-                />
-            ),
-            featured: true
-        },
-        {
             name: 'PenguinMod Permissions',
             extensionId: 'JgPermissionBlocks',
             iconURL: jgPermissionExtensionIcon,
@@ -1344,16 +1333,6 @@ if (IsLocal || IsLiveTests) {
             iconURL: defaultExtensionIcon,
             tags: ['penguinmod'],
             description: 'Test extension to see if things are possible.\nDO NOT USE THIS IN PRODUCTION as blocks are subject to change and may corrupt your projects.',
-            featured: true
-        },
-        {
-            name: '3D',
-            extensionId: 'jg3d',
-            iconURL: jg3dExtensionIcon,
-            tags: ['penguinmod'],
-            customInsetColor: '#B200FF',
-            insetIconURL: jg3dInsetExtensionIcon,
-            description: 'Use the magic of 3D to spice up your project.',
             featured: true
         },
         {
@@ -1411,14 +1390,6 @@ if (IsLocal || IsLiveTests) {
             customInsetColor: '#66B8FF',
             tags: ['penguinmod', 'packager'],
             description: 'In development. Do extra things in packaged applications that you can\'t do in the website!',
-            featured: true
-        },
-        {
-            name: 'the doo doo extension',
-            extensionId: 'jgDooDoo',
-            iconURL: defaultExtensionIcon,
-            tags: ['penguinmod'],
-            description: 'dr bob eae',
             featured: true
         },
         {
