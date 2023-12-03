@@ -62,7 +62,7 @@ class FeaturedProjects extends React.Component {
                         >
                             <div className={styles.openerContent}>
                                 <FormattedMessage
-                                    defaultMessage="Click to view uploaded projects."
+                                    defaultMessage="Click to view uploaded projects from Penguinmod."
                                     description="Text to view featured projects"
                                     id="tw.viewFeaturedProjects"
                                 />
