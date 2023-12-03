@@ -12,7 +12,7 @@ const PROJECT_BASE = 'https://studio.penguinmod.com/\#';
 
 const messages = defineMessages({
     tooltip: {
-        defaultMessage: 'this doesn\'t work yet.',
+        defaultMessage: 'Copy and Paste a Penguinmod Project Link Here',
         description: 'Project ID input tooltip',
         id: 'tw.input.tooltip'
     }
