@@ -1312,6 +1312,14 @@ if (IsLocal || IsLiveTests) {
             featured: true
         },
         {
+            name: 'GitHub API',
+            extensionId: 'https://gabsthecuriouskid.github.io/FirstExtension/wip-github-api.js',
+            iconURL: defaultExtensionIcon,
+            tags: ['dinosaurmod'],
+            description: 'In development. Fetch IDs, Description, etc. from Organizations and Repositories',
+            featured: true
+        },
+        {
             name: 'Debugging',
             extensionId: 'jgDebugging',
             iconURL: defaultExtensionIcon,

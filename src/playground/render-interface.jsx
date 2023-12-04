@@ -271,10 +271,14 @@ class Interface extends React.Component {
                             <div className={styles.section}>
                                 <ProjectInput />
                             </div>
+                            <div className={styles.remixWarningBox}>
+                                    <p>Do not put in a unapproved or non-existent project id otherwise loading projects will no longer work</p>
+                            </div>
                             {/* project not approved message */}
                             {(!extraProjectInfo.accepted) && (
                                 <div className={styles.remixWarningBox}>
-                                    <p>This project is not approved. Be careful when running this project.</p>
+                                    <p>This project is not approved or doesn't exist.</p>
+                                    <p>Please refresh and go here <a href='https://dinosaurmod.github.io'>DinosaurMod</a></p>
                                 </div>
                             )}
                             {/* remix info */}
