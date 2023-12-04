@@ -264,6 +264,18 @@ class LibraryItemComponent extends React.PureComponent {
                                             </div>
                                         </div>
                                     ) : null}
+                                    {this.props.inspiredExt ? (
+                                        <div>
+                                            <div>
+                                                Inspired by
+                                            </div>
+                                            <div
+                                                className={styles.featuredExtensionMetadataDetail}
+                                            >
+                                                {this.props.inspiredExt}
+                                            </div>
+                                        </div>
+                                    ) : null}
                                     {this.props.extDeveloper ? (
                                         <div>
                                             <div>

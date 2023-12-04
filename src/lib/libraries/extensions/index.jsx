@@ -1010,6 +1010,15 @@ const menuItems = [
         featured: true
     },
     {
+        name: 'DinosaurMod Blocks',
+        extensionId: 'https://gabsthecuriouskid.github.io/FirstExtension/dinosaurmodextras.js',
+        iconURL: defaultExtensionIcon,
+        tags: ['dinosaurmod'],
+        inspiredExt: 'TurboWarp Blocks Extension',
+        description: 'Extra Blocks',
+        featured: true
+    },
+    {
         name: (
             <FormattedMessage
                 defaultMessage="PenguinMod Extra Extensions"
