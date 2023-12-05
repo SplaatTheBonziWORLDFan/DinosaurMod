@@ -288,18 +288,6 @@ class LibraryItemComponent extends React.PureComponent {
                                             </div>
                                         </div>
                                     ) : null}
-                                    {this.props.eventSubmittor ? (
-                                        <div>
-                                            <div>
-                                                Event Submission by
-                                            </div>
-                                            <div
-                                                className={styles.featuredExtensionMetadataDetail}
-                                            >
-                                                {this.props.eventSubmittor}
-                                            </div>
-                                        </div>
-                                    ) : null}
                                     {this.props.credits ? (
                                         <div>
                                             <div>
