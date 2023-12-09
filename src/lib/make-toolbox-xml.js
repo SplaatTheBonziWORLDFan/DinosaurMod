@@ -231,6 +231,7 @@ const motion = function (isInitialSetup, isStage, targetId) {
         ${blockSeparator}
         <block type="motion_move_sprite_to_scene_side"/>
         ${blockSeparator}
+        <label text="Motion Variables"></label>
         <block id="${targetId}_xposition" type="motion_xposition"/>
         <block id="${targetId}_yposition" type="motion_yposition"/>
         <block id="${targetId}_direction" type="motion_direction"/>`}
@@ -257,6 +258,7 @@ const looks = function (isInitialSetup, isStage, targetId, costumeName, backdrop
     return `
     <category name="%{BKY_CATEGORY_LOOKS}" id="looks" colour="#9966FF" secondaryColour="#774DCB">
         ${isStage ? '' : `
+        <label text="Speech"></label>
         <block type="looks_sayforsecs">
             <value name="MESSAGE">
                 <shadow type="text">
@@ -328,6 +330,7 @@ const looks = function (isInitialSetup, isStage, targetId, costumeName, backdrop
         ${blockSeparator}
         `}
         ${isStage ? `
+        <label text="Backdrops"></label>
             <block type="looks_switchbackdropto">
                 <value name="BACKDROP">
                     <shadow type="looks_backdrops">
@@ -362,6 +365,7 @@ const looks = function (isInitialSetup, isStage, targetId, costumeName, backdrop
                 </value>
             </block>
         ` : `
+            <label text="Costumes\/Backdrops"></label>
             <block id="${targetId}_switchcostumeto" type="looks_switchcostumeto">
                 <value name="COSTUME">
                     <shadow type="looks_costume">
@@ -435,6 +439,7 @@ const looks = function (isInitialSetup, isStage, targetId, costumeName, backdrop
             <block type="looks_stretchGetY"></block>
         `}
         ${blockSeparator}
+        <label text="Effects"></label>
         <block type="looks_changeeffectby">
             <value name="CHANGE">
                 <shadow type="math_number">
@@ -449,8 +454,14 @@ const looks = function (isInitialSetup, isStage, targetId, costumeName, backdrop
                 </shadow>
             </value>
         </block>
+        <block type="looks_setTintColor">
+            <value name="color">
+                <shadow type="colour_picker"></shadow>
+            </value>
+        </block>
         <block type="looks_cleargraphiceffects"/>
         <block type="looks_getEffectValue"/>
+        <block type="looks_tintColor"/>
         ${blockSeparator}
         ${isStage ? '' : `
             <block type="looks_show"/>
