@@ -409,6 +409,29 @@ const menuItems = [
         featured: true
     },
     {
+        name: 'Blockly',
+        extensionId: 'blockly2math',
+        credits: 'Google',
+        description: 'test',
+        iconURL: defaultExtensionIcon,
+        featured: true
+    },
+    {
+        name: 'Profanity API',
+        extensionId: 'profanityAPI',
+        description: 'test',
+        iconURL: defaultExtensionIcon,
+        featured: true
+    },
+    {
+        name: 'CoreEx',
+        extensionId: 'coreExample',
+        credits: 'Google',
+        description: 'test',
+        iconURL: defaultExtensionIcon,
+        featured: true
+    },
+    {
         name: 'Pen+',
         extensionId: 'https://extensions.penguinmod.com/extensions/ObviousAlexC/PenPlus.js',
         tags: ['categoryexpansion'],
@@ -418,7 +441,7 @@ const menuItems = [
         extDeveloper: 'pinksheep2917'
     },
     {
-        name: 'Extended Sound',
+        name: 'Sound System',
         extensionId: 'jgExtendedAudio',
         iconURL: jgExtendedAudioExtensionIcon,
         tags: ['penguinmod', 'categoryexpansion'],
