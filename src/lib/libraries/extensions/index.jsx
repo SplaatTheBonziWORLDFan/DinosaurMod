@@ -263,14 +263,6 @@ const menuItems = [
         internetConnectionRequired: true
     },
     {
-        name: "Speech To Text",
-        description: "test",
-        featured: true,
-        tags: ['scratch'],
-        extensionId: '../extensions/scratch3_text2speech',
-        iconURL: speech2textIconURL
-    },
-    {
         name: (
             <FormattedMessage
                 defaultMessage="Translate"
