@@ -409,25 +409,24 @@ const menuItems = [
         featured: true
     },
     {
-        name: 'Blockly',
+        name: 'Blockly Math',
         extensionId: 'blockly2math',
         credits: 'Google',
-        description: 'test',
+        description: 'use math. that\'s it.',
         iconURL: defaultExtensionIcon,
         featured: true
     },
     {
         name: 'Profanity API',
         extensionId: 'profanityAPI',
-        description: 'test',
+        description: 'it doesn\'t censor all swear words yet.',
         iconURL: defaultExtensionIcon,
         featured: true
     },
     {
-        name: 'CoreEx',
-        extensionId: 'coreExample',
-        credits: 'Google',
-        description: 'test',
+        name: 'Christmas',
+        extensionId: 'jgChristmas',
+        description: 'use christmas particles',
         iconURL: defaultExtensionIcon,
         featured: true
     },
