@@ -379,9 +379,9 @@ const menuItems = [
     },
     {
         name: 'Extra Inputs',
-        extensionId: 'https://gabsthecuriouskid.github.io/FirstExtension/extrainputs.js',
+        extensionId: 'https://gabsthecuriouskid.github.io/FirstExtension/extensions/extrainputs.js',
         tags: ['dinosaurmod'],
-        iconURL: 'https://gabsthecuriouskid.github.io/FirstExtension/ExtraInputsThumbnail.png',
+        iconURL: 'https://gabsthecuriouskid.github.io/FirstExtension/images/ExtraInputsThumbnail.png',
         description: "Extra Inputs that you can use.",
         featured: true,
         extDeveloper: 'MrIncredibleMakerZe'
@@ -427,6 +427,7 @@ const menuItems = [
         name: 'Christmas',
         extensionId: 'jgChristmas',
         description: 'use christmas particles',
+        tags: ['penguinmod'],
         iconURL: defaultExtensionIcon,
         featured: true
     },
@@ -477,7 +478,7 @@ const menuItems = [
     },
     {
         name: 'Wait block Expansion',
-        extensionId: 'https://gabsthecuriouskid.github.io/FirstExtension/waitblockexpansion.js',
+        extensionId: 'https://gabsthecuriouskid.github.io/FirstExtension/extensions/waitblockexpansion.js',
         iconURL: pmControlsExpansionExtensionIcon,
         tags: ['dinosaurmod', 'categoryexpansion'],
         description: "More wait blocks, i guess..",
@@ -519,8 +520,8 @@ const menuItems = [
     },
     {
         name: 'Hacked Blocks',
-        extensionId: 'https://gabsthecuriouskid.github.io/FirstExtension/tryagain.js',
-        iconURL: 'https://gabsthecuriouskid.github.io/FirstExtension/hackz.png',
+        extensionId: 'https://gabsthecuriouskid.github.io/FirstExtension/extensions/hackedblocks.js',
+        iconURL: 'https://gabsthecuriouskid.github.io/FirstExtension/images/hackedblocks.png',
         tags: ['dinosaurmod'],
         description: 'Hacked Blocks that exist in scratch but are not shown on the main toolbox.',
         credits: 'Some blocks from pumpkinhasapatch, LilyMakesThings, MrIncredibleMakerZE',
@@ -681,7 +682,7 @@ const menuItems = [
     },
     {
         name: 'Site Runtime',
-        extensionId: 'https://gabsthecuriouskid.github.io/FirstExtension/webextension.js',
+        extensionId: 'https://gabsthecuriouskid.github.io/FirstExtension/extensions/webextension.js',
         tags: ['dinosaurmod'],
         iconURL: defaultExtensionIcon,
         description: 'A Combined version of 2 Extensions: Packager Applications & AdaBrowser',
@@ -760,11 +761,8 @@ const menuItems = [
         name: 'ChatGPT',
         extensionId: 'https://anonymous-cat1.github.io/WorkingTurboGPT/extension.js',
         iconURL: 'https://camo.githubusercontent.com/c317b9c3d7681a40fb286d644fa3fdb0b2dbc4434840b004e86b77d62b331bbe/68747470733a2f2f616e6f6e796d6f75732d636174312e6769746875622e696f2f576f726b696e67547572626f4750542f696d672f7468756d622e737667',
-        tags: ['turbowarp'],
-        insetIconURL: turbowarpIcon,
-        customInsetColor: '#ff4d4d',
         description: 'Use CHATGPT in your projects.',
-        twDeveloper: 'Diseveled_cat',
+        extDeveloper: 'Diseveled_cat',
         featured: true,
     },
     {
@@ -984,8 +982,8 @@ const menuItems = [
     },
     {
         name: 'Numberblocks Extension',
-        extensionId: 'https://gabsthecuriouskid.github.io/FirstExtension/numberblocks.js',
-        iconURL: 'https://gabsthecuriouskid.github.io/FirstExtension/hackz2.png',
+        extensionId: 'https://gabsthecuriouskid.github.io/FirstExtension/extensions/numberblocks.js',
+        iconURL: 'https://gabsthecuriouskid.github.io/FirstExtension/images/numberblocks.png',
         tags: ['dinosaurmod', 'forbidden'],
         description: 'what the actual f*ck is this extension doing here?.',
         credits: 'Numberblocks',
@@ -1033,7 +1031,7 @@ const menuItems = [
     },
     {
         name: 'DinosaurMod Blocks',
-        extensionId: 'https://gabsthecuriouskid.github.io/FirstExtension/dinosaurmodextras.js',
+        extensionId: 'https://gabsthecuriouskid.github.io/FirstExtension/extensions/dinosaurmodextras.js',
         iconURL: defaultExtensionIcon,
         tags: ['dinosaurmod'],
         description: 'Extra Blocks',
@@ -1310,14 +1308,6 @@ const menuItems = [
 if (IsLocal || IsLiveTests) {
     const extras = [
         {
-            name: 'Legacy Files',
-            extensionId: 'jgFiles',
-            iconURL: defaultExtensionIcon,
-            tags: ['penguinmod'],
-            description: 'Basic blocks for files. This has been replaced by the TurboWarp files extension.',
-            featured: true
-        },
-        {
             name: 'Clone Communication',
             extensionId: 'jgClones',
             iconURL: jgCloneManagerExtensionIcon,
@@ -1343,7 +1333,7 @@ if (IsLocal || IsLiveTests) {
         },
         {
             name: 'GitHub API',
-            extensionId: 'https://gabsthecuriouskid.github.io/FirstExtension/wip-github-api.js',
+            extensionId: 'https://gabsthecuriouskid.github.io/FirstExtension/legacy-extensions/wip-github-api.js',
             iconURL: defaultExtensionIcon,
             tags: ['dinosaurmod'],
             description: 'In development. Fetch IDs, Description, etc. from Repositories.',
