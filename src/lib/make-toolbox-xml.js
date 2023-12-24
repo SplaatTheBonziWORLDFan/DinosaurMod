@@ -728,6 +728,7 @@ const control = function (isInitialSetup, isStage) {
                 </shadow>
             </value>
         </block>
+        <block type="control_exitLoop"/>
         <block id="forever" type="control_forever"/>
         ${blockSeparator}
         <block type="control_switch"/>

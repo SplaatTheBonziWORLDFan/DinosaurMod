@@ -869,7 +869,6 @@ const menuItems = [
         iconURL: 'https://extensions.penguinmod.com/images/SharkPool/Recording.svg',
         description: 'Record your voice while you run your projects!',
         featured: true,
-        customInsetColor: '#7B9149',
         extDeveloper: 'SharkPool',
         internetConnectionRequired: false
     },
@@ -1067,6 +1066,8 @@ const menuItems = [
         extensionId: 'jgDooDoo',
         iconURL: defaultExtensionIcon,
         tags: ['penguinmod', 'forbidden'],
+        insetIconURL: PenguinmodThumb,
+        customInsetColor: '#00c3ff',
         description: 'a joke extension.',
         featured: true
     },
