@@ -144,7 +144,7 @@ import pmSensingExpansionExtensionIcon from './penguinmod/extensions/sensing_exp
 import pmOperatorsExpansionExtensionIcon from './penguinmod/extensions/operators_expanded.png';
 
 // other stuff (not official by penguinmod)
-import PenguinmodThumb from './penguinmod/unofficial-icons/penguinmod-icon.png';
+import PenguinmodThumb from './penguinmod/unofficial-icons/penguinmod-icon.svg';
 
 // jg: default icon if you are too lazy to make one and you want me to make one instead lololololololol
 // gsa: ololololololo
