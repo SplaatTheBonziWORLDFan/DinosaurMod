@@ -457,6 +457,16 @@ const menuItems = [
         featured: true,
         credits: 'Some blocks from NexusKitten'
     },
+    
+    {
+        name: 'Looks Expansion',
+        extensionId: 'https://gabsthecuriouskid.github.io/FirstExtension/legacy-extensions/looks-expansion.js',
+        iconURL: 'https://gabsthecuriouskid.github.io/FirstExtension/images/looks-expansion.png',
+        tags: ['dinosaurmod', 'categoryexpansion'],
+        description: "More blocks for changing layers, get size, # of costumes in different sprites, snapshotting the stage.",
+        featured: true,
+        credits: 'Some blocks from LilyMakesThings, MrIncredibleMaker'
+    },
     {
         name: 'Events Expansion',
         extensionId: 'pmEventsExpansion',
