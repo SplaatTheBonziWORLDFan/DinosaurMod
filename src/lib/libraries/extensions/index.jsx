@@ -491,6 +491,7 @@ const menuItems = [
         extensionId: 'pmControlsExpansion',
         iconURL: pmControlsExpansionExtensionIcon,
         tags: ['penguinmod', 'categoryexpansion'],
+        insetIconURL: PenguinmodThumb,
         description: "More control blocks for animations, complex systems or cleaner one-time use blocks.",
         featured: true,
         // uncomment when thread block is added
@@ -1042,6 +1043,7 @@ const menuItems = [
         name: 'Scratch Authentication',
         extensionId: 'jgScratchAuthenticate',
         iconURL: jgScratchAuthExtensionIcon,
+        insetIconURL: PenguinmodThumb,
         tags: ['penguinmod'],
         description: "Get a user's scratch name to prove they are a real scratch user.",
         featured: true
