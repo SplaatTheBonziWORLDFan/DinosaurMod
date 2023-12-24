@@ -549,6 +549,8 @@ const menuItems = [
         name: 'JSON',
         extensionId: 'jgJSON',
         iconURL: jgJSONExtensionIcon,
+        insetIconURL: PenguinmodThumb,
+        customInsetColor: '#00c3ff',
         tags: ['penguinmod'],
         description: 'Blocks for handling JSON objects and Arrays.',
         featured: true
@@ -588,6 +590,7 @@ const menuItems = [
         extensionId: 'https://extensions.turbowarp.org/clipboard.js',
         tags: ['turbowarp'],
         insetIconURL: turbowarpIcon,
+        customInsetColor: '#ff4d4d',
         iconURL: 'https://extensions.turbowarp.org/images/clipboard.svg',
         description: "Read and write from the system clipboard.",
         featured: true,
