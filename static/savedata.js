@@ -152,7 +152,7 @@
         }
     });
     Extension.prototype[`see`] = (args, util) => {
-        return localStorage.getItem("SNAIL-IDE-SAVE-EXT-" + args["seeid"])
+        return localStorage.getItem("DINO-SAVE-EXT-" + args["seeid"])
     };
 
     blocks.push({
@@ -171,7 +171,7 @@
         }
     });
     Extension.prototype[`colorsave`] = (args, util) => {
-        localStorage.setItem("SNAIL-IDE-SAVE-EXT-" + args["colorid"], args["color"])
+        localStorage.setItem("DINO-SAVE-EXT-" + args["colorid"], args["color"])
     };
 
     blocks.push({
@@ -190,7 +190,7 @@
         }
     });
     Extension.prototype[`savedata`] = (args, util) => {
-        localStorage.setItem("SNAIL-IDE-SAVE-EXT-" + args["id"], args["data"])
+        localStorage.setItem("DINO-SAVE-EXT-" + args["id"], args["data"])
     };
 
     '#b48abc';
