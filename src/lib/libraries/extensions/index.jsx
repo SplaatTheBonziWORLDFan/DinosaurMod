@@ -1091,6 +1091,17 @@ const menuItems = [
         featured: true
     },
     {
+        name: 'Save Data',
+        extensionId: 'https://dinosaurmod.github.io/savedata.js',
+        iconURL: 'https://snail-ide.js.org/static/assets/14ea6745b6f8a3c8e3cb4d3392f04573.svg',
+        insetIconURL: PenguinmodThumb,
+        collaborator: 'Snail IDE (Slighty modified from their extension)',
+        customInsetColor: '#00c3ff',
+        tags: ['penguinmod','turbowarp'],
+        description: "Extremely easy way to save data.",
+        featured: true
+    },
+    {
         name: 'JavaScript',
         extensionId: 'jgJavascript',
         iconURL: jgJavascriptExtensionIcon,
