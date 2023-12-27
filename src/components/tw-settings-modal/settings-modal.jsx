@@ -351,13 +351,6 @@ const CustomStageSize = ({
                     >
                         16:9
                     </button>
-                    <button
-                        className={styles.customStageSizeButton}
-                        data-selected={stageWidth === 360 && stageHeight === 360}
-                        onClick={() => onStagePresetUsed(false)}
-                    >
-                        1:1
-                    </button>
                 </div>
                 <div className={styles.customStageSizeContainer}>
                     <FormattedMessage
