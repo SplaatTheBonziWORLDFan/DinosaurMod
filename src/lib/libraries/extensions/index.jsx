@@ -483,13 +483,12 @@ const menuItems = [
     },
     {
         name: 'Sound Expansion',
-        extensionId: 'jgExtendedAudio',
+        extensionId: 'https://gabsthecuriouskid.github.io/FirstExtension/legacy-extensions/sound-expansion.js',
         iconURL: 'https://gabsthecuriouskid.github.io/FirstExtension/images/sound-expansion.png',
         tags: ['dinosaurmod', 'categoryexpansion'],
-        description: "No description yet.",
+        description: "Play sounds from other URLs, change project volume, get effect values from other sprites and more!",
         featured: true,
-        disabled: true,
-        credits: '(WORK IN PROGRESS) MrIncredibleMaker'
+        credits: 'Some blocks from LilyMakesThings, MrIncredibleMaker'
     },
     {
         name: 'Events Expansion',

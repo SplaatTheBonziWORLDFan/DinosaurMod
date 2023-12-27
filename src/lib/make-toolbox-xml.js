@@ -338,13 +338,6 @@ const looks = function (isInitialSetup, isStage, targetId, costumeName, backdrop
                     </shadow>
                 </value>
             </block>
-            <block type="looks_switchbackdropto">
-                <value name="BACKDROP">
-                    <shadow type="text">
-                        <field name="TEXT">backdrop1</field>
-                    </shadow>
-                </value>
-            </block>
             <block type="looks_switchbackdroptoandwait">
                 <value name="BACKDROP">
                     <shadow type="looks_backdrops">
@@ -373,13 +366,6 @@ const looks = function (isInitialSetup, isStage, targetId, costumeName, backdrop
                     </shadow>
                 </value>
             </block>
-            <block id="${targetId}_switchcostumeto" type="looks_switchcostumeto">
-                <value name="COSTUME">
-                    <shadow type="text">
-                        <field name="TEXT">costume1</field>
-                    </shadow>
-                </value>
-            </block>
             <block type="looks_nextcostume"/>
             <block type="looks_previouscostume"/>
             <block type="looks_switchbackdropto">
@@ -389,10 +375,10 @@ const looks = function (isInitialSetup, isStage, targetId, costumeName, backdrop
                     </shadow>
                 </value>
             </block>
-            <block type="looks_switchbackdropto">
+            <block type="looks_switchbackdroptoandwait">
                 <value name="BACKDROP">
-                    <shadow type="text">
-                        <field name="TEXT">backdrop1</field>
+                    <shadow type="looks_backdrops">
+                        <field name="BACKDROP">${backdropName}</field>
                     </shadow>
                 </value>
             </block>
@@ -524,13 +510,6 @@ const sound = function (isInitialSetup, isStage, targetId, soundName) {
                 </shadow>
             </value>
         </block>
-        <block id="${targetId}_sound_playuntildone" type="sound_playuntildone">
-            <value name="SOUND_MENU">
-                <shadow type="text">
-                    <field name="TEXT">Pop</field>
-                </shadow>
-            </value>
-        </block>
         <block id="${targetId}_sound_play_at_seconds_until_done" type="sound_play_at_seconds_until_done">
             <value name="VALUE">
                 <shadow type="math_number">
@@ -548,13 +527,6 @@ const sound = function (isInitialSetup, isStage, targetId, soundName) {
             <value name="SOUND_MENU">
                 <shadow type="sound_sounds_menu">
                     <field name="SOUND_MENU">${soundName}</field>
-                </shadow>
-            </value>
-        </block>
-        <block id="${targetId}_sound_play" type="sound_play">
-            <value name="SOUND_MENU">
-                <shadow type="text">
-                    <field name="TEXT">Pop</field>
                 </shadow>
             </value>
         </block>

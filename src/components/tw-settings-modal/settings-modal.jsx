@@ -121,8 +121,7 @@ BooleanSetting.propTypes = {
     label: PropTypes.node.isRequired
 };
 
-/*
-dd back: nohqpen
+
 const HighQualityPen = props => (
     <BooleanSetting
         {...props}
@@ -144,7 +143,6 @@ const HighQualityPen = props => (
         slug="high-quality-pen"
     />
 );
-*/
 
 const CustomFPS = props => (
     <BooleanSetting
@@ -274,6 +272,27 @@ const RemoveMiscLimits = props => (
     />
 );
 
+const EnableDangerousOptimizations = props => (
+    <BooleanSetting
+        {...props}
+        label={
+            <FormattedMessage
+                defaultMessage="Enable Dangerous Optimizations"
+                description="Enable Dangerous Optimizations setting"
+                id="pm.settingsModal.dangerousOptimizations"
+            />
+        }
+        help={
+            <FormattedMessage
+                defaultMessage="Precomputes certain numbers & uses faster methods for certain operations, at the cost of losing tiny features like typing special text in certain number inputs. Not all projects will be compatible with this setting."
+                description="Dangerous Optimizations setting help"
+                id="pm.settingsModal.dangerousOptimizationsHelp"
+            />
+        }
+        // slug="enable-dangerous-optimizations"
+    />
+);
+
 const WarpTimer = props => (
     <BooleanSetting
         {...props}
@@ -301,36 +320,69 @@ const CustomStageSize = ({
     stageWidth,
     onStageWidthChange,
     stageHeight,
-    onStageHeightChange
+    onStageHeightChange,
+    onStagePresetUsed
 }) => (
     <Setting
         active={customStageSizeEnabled}
+        unsetHeight={true}
         primary={(
             <div className={classNames(styles.label, styles.customStageSize)}>
                 <FormattedMessage
-                    defaultMessage="Custom Stage Size:"
-                    description="Custom Stage Size option"
-                    id="tw.settingsModal.customStageSize"
+                    defaultMessage="Stage Size:"
+                    description="Stage Size option"
+                    id="pm.settingsModal.stageSize"
                 />
-                <BufferedInput
-                    value={stageWidth}
-                    onSubmit={onStageWidthChange}
-                    className={styles.customStageSizeInput}
-                    type="number"
-                    min="0"
-                    max="1024"
-                    step="1"
-                />
-                <span>{'×'}</span>
-                <BufferedInput
-                    value={stageHeight}
-                    onSubmit={onStageHeightChange}
-                    className={styles.customStageSizeInput}
-                    type="number"
-                    min="0"
-                    max="1024"
-                    step="1"
-                />
+                <div>
+                    <button
+                        className={styles.customStageSizeButton}
+                        data-selected={stageWidth === 480 && stageHeight === 360}
+                        onClick={() => onStagePresetUsed(false)}
+                    >
+                        4:3
+                    </button>
+                    <button
+                        className={styles.customStageSizeButton}
+                        data-selected={stageWidth === 640 && stageHeight === 360}
+                        data-widescreen={true}
+                        onClick={() => onStagePresetUsed(true)}
+                    >
+                        16:9
+                    </button>
+                    <button
+                        className={styles.customStageSizeButton}
+                        data-selected={stageWidth === 360 && stageHeight === 360}
+                        onClick={() => onStagePresetUsed(false)}
+                    >
+                        1:1
+                    </button>
+                </div>
+                <div className={styles.customStageSizeContainer}>
+                    <FormattedMessage
+                        defaultMessage="Custom Stage Size:"
+                        description="Custom Stage Size option"
+                        id="tw.settingsModal.customStageSize"
+                    />
+                    <BufferedInput
+                        value={stageWidth}
+                        onSubmit={onStageWidthChange}
+                        className={styles.customStageSizeInput}
+                        type="number"
+                        min="0"
+                        max="1024"
+                        step="1"
+                    />
+                    <span>{'×'}</span>
+                    <BufferedInput
+                        value={stageHeight}
+                        onSubmit={onStageHeightChange}
+                        className={styles.customStageSizeInput}
+                        type="number"
+                        min="0"
+                        max="1024"
+                        step="1"
+                    />
+                </div>
             </div>
         )}
         secondary={
@@ -362,7 +414,8 @@ CustomStageSize.propTypes = {
     stageWidth: PropTypes.number,
     onStageWidthChange: PropTypes.func,
     stageHeight: PropTypes.number,
-    onStageHeightChange: PropTypes.func
+    onStageHeightChange: PropTypes.func,
+    onStagePresetUsed: PropTypes.func
 };
 
 const StoreProjectOptions = ({ onStoreProjectOptions }) => (
@@ -427,13 +480,10 @@ const SettingsModalComponent = props => (
                 value={props.interpolation}
                 onChange={props.onInterpolationChange}
             />
-            {/*
-            add back: nohqpen
             <HighQualityPen
                 value={props.highQualityPen}
                 onChange={props.onHighQualityPenChange}
             />
-            */}
             <WarpTimer
                 value={props.warpTimer}
                 onChange={props.onWarpTimerChange}
@@ -459,9 +509,20 @@ const SettingsModalComponent = props => (
             />
             <Header>
                 <FormattedMessage
-                    defaultMessage="Danger Zone"
+                    defaultMessage="Optimizations"
                     description="Settings modal section"
-                    id="tw.settingsModal.dangerZone"
+                    id="pm.settingsModal.optimizations"
+                />
+            </Header>
+            <EnableDangerousOptimizations
+                value={props.dangerousOptimizations}
+                onChange={props.onEnableDangerousOptimizationsChange}
+            />
+            <Header>
+                <FormattedMessage
+                    defaultMessage="Screen Resolution"
+                    description="Settings modal section"
+                    id="pm.settingsModal.screenResolution"
                 />
             </Header>
             {!props.isEmbedded && (
@@ -498,7 +559,9 @@ SettingsModalComponent.propTypes = {
     warpTimer: PropTypes.bool,
     onWarpTimerChange: PropTypes.func,
     disableCompiler: PropTypes.bool,
-    onDisableCompilerChange: PropTypes.func
+    dangerousOptimizations: PropTypes.bool,
+    onDisableCompilerChange: PropTypes.func,
+    onEnableDangerousOptimizationsChange: PropTypes.func
 };
 
 export default injectIntl(SettingsModalComponent);
