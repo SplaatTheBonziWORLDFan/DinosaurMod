@@ -70,7 +70,9 @@ class UnwrappedSetting extends React.Component {
                     [styles.active]: this.props.active
                 })}
             >
-                <div className={styles.label}>
+                <div className={classNames(styles.label, {
+                    [styles.labelUnsetHeight]: this.props.unsetHeight === true
+                })}>
                     {this.props.primary}
                     <button
                         className={styles.helpIcon}
@@ -459,7 +461,12 @@ Header.propTypes = {
 const SettingsModalComponent = props => (
     <Modal
         className={styles.modalContent}
-        onRequestClose={props.onClose}
+        onRequestClose={(...args) => {
+            if (!props.isEmbedded) {
+                props.onStoreProjectOptions();
+            }
+            props.onClose(...args)
+        }}
         contentLabel={props.intl.formatMessage(messages.title)}
         id="settingsModal"
     >
