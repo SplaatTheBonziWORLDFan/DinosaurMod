@@ -394,6 +394,12 @@ const TWStateManager = function (WrappedComponent) {
                 });
             }
 
+            if (urlParams.has('optimize')) {
+                this.props.vm.setRuntimeOptions({
+                    dangerousOptimizations: true
+                });
+            }
+
             for (const extension of urlParams.getAll('extension')) {
                 this.props.vm.extensionManager.loadExtensionURL(extension);
             }
