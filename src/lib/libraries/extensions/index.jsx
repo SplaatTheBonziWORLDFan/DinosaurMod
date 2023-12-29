@@ -811,19 +811,19 @@ const menuItems = [
     },
     {
         name: 'CloudLink',
-        extensionId: 'https://extensions.turbowarp.org/cloudlink.js',
-        tags: ['turbowarp'],
+        extensionId: 'https://extensions.penguinmod.com/extensions/MikeDev101/cloudlink.js',
+        tags: ['turbowarp', 'penguinmod'],
         insetIconURL: cloudlinkIcon,
-        iconURL: 'https://extensions.turbowarp.org/images/cloudlink.svg',
-        description: 'A cool extension to interact with webservers',
+        iconURL: 'https://extensions.penguinmod.com/images/MikeDev101/cloudlink.svg',
+        description: 'A powerful WebSocket extension for Scratch.',
         featured: true,
-        extDeveloper: 'MikeDev',
-        internetConnectionRequired: false
+        extDeveloper: 'MikeDev101',
+        internetConnectionRequired: true
     },
     {
         name: 'ChatGPT',
         extensionId: 'https://anonymous-cat1.github.io/WorkingTurboGPT/extension.js',
-        iconURL: 'https://camo.githubusercontent.com/c317b9c3d7681a40fb286d644fa3fdb0b2dbc4434840b004e86b77d62b331bbe/68747470733a2f2f616e6f6e796d6f75732d636174312e6769746875622e696f2f576f726b696e67547572626f4750542f696d672f7468756d622e737667',
+        iconURL: 'https://anonymous-cat1.github.io/WorkingTurboGPT/img/thumb.svg',
         description: 'Use ChatGPT in your projects.',
         extDeveloper: 'Diseveled_cat',
         featured: true,
