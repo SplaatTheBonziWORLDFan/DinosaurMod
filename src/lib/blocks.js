@@ -115,8 +115,12 @@ export default function (vm) {
     };
 
     const costumesMenu = function () {
+        const next = ScratchBlocks.ScratchMsgs.translate('LOOKS_NEXTCOSTUME', 'next costume');
+        const previous = ScratchBlocks.ScratchMsgs.translate('LOOKS_PREVIOUSCOSTUME', 'previous costume');
         if (vm.editingTarget && vm.editingTarget.getCostumes().length > 0) {
-            return vm.editingTarget.getCostumes().map(costume => [costume.name, costume.name]);
+            return vm.editingTarget.getCostumes().map(costume => [costume.name, costume.name])
+                .concat([[next,'next costume'],
+                    [previous, 'previoua costume']]);
         }
         return [['', '']];
     };
