@@ -745,7 +745,7 @@ const menuItems = [
         name: 'Site Runtime',
         extensionId: 'https://gabsthecuriouskid.github.io/FirstExtension/extensions/webextension.js',
         tags: ['dinosaurmod'],
-        iconURL: defaultExtensionIcon,
+        iconURL: 'https://gabsthecuriouskid.github.io/FirstExtension/images/site-runtime.png',
         description: 'A Combined version of 2 Extensions: Packager Applications & AdaBrowser',
         featured: true,
         extDeveloper: 'MrIncredibleMaker',
@@ -1129,7 +1129,7 @@ const menuItems = [
     {
         name: 'DinosaurMod Blocks',
         extensionId: 'https://gabsthecuriouskid.github.io/FirstExtension/extensions/dinosaurmodextras.js',
-        iconURL: defaultExtensionIcon,
+        iconURL: 'https://gabsthecuriouskid.github.io/FirstExtension/images/dinosaurmodextras.png',
         tags: ['dinosaurmod'],
         description: 'Extra Blocks',
         featured: true
