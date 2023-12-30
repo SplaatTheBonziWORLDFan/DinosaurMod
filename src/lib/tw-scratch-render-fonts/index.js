@@ -37,7 +37,7 @@ const fontSource = {
     'Arcade': Arcade,
     'Archivo': Archivo,
     'Archivo Black': ArchivoBlack,
-    'Fredoka': Fredoka,
+    'Fredoka One': Fredoka
 };
 
 const fontData = {};
