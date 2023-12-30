@@ -771,14 +771,6 @@ const control = function (isInitialSetup, isStage) {
             </value>
         </block>
         ${blockSeparator}
-        <block type="control_javascript_command">
-            <value name="JS">
-                <shadow type="text">
-                    <field name="TEXT">alert('hello!')</field>
-                </shadow>
-            </value>
-        </block>
-        ${blockSeparator}
         ${isStage ? `
             <block type="control_create_clone_of">
                 <value name="CLONE_OPTION">
@@ -1457,21 +1449,6 @@ const operators = function (isInitialSetup) {
             <value name="ONE">
                 <shadow type="text">
                     <field name="TEXT">true</field>
-                </shadow>
-            </value>
-        </block>
-        ${blockSeparator}
-        <block type="operator_javascript_output">
-            <value name="JS">
-                <shadow type="text">
-                    <field name="TEXT">Math.random()</field>
-                </shadow>
-            </value>
-        </block>
-        <block type="operator_javascript_boolean">
-            <value name="JS">
-                <shadow type="text">
-                    <field name="TEXT">Math.round(Math.random()) === 1</field>
                 </shadow>
             </value>
         </block>

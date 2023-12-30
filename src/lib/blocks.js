@@ -120,7 +120,7 @@ export default function (vm) {
         if (vm.editingTarget && vm.editingTarget.getCostumes().length > 0) {
             return vm.editingTarget.getCostumes().map(costume => [costume.name, costume.name])
                 .concat([[next,'next costume'],
-                    [previous, 'previoua costume']]);
+                    [previous, 'previous costume']]);
         }
         return [['', '']];
     };
