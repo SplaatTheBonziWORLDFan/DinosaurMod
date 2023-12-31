@@ -2,7 +2,10 @@ import projectData from './project-data';
 
 /* eslint-disable import/no-unresolved */
 import backdrop from '!raw-loader!./cd21514d0531fdffb22204e0ec5ed84a.svg';
-import costume1 from '!raw-loader!./penguin.svg';
+import costume1 from '!raw-loader!./HAPPYNEWYEAR.svg';
+import costume2 from '!raw-loader!./dino2.svg';
+import costume3 from '!raw-loader!./dino3.svg';
+import costume4 from '!raw-loader!./dino4.svg';
 /* eslint-enable import/no-unresolved */
 import { TextEncoder } from '../tw-text-encoder';
 
