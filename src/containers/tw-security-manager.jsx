@@ -28,6 +28,7 @@ const isTrustedExtension = url => (
     url.startsWith('https://gabsthecuriouskid.github.io/FirstExtension/') ||
     url.startsWith('https://streamilator.github.io/') ||
     url.startsWith('https://dinosaurmod.github.io/') ||
+    url.startsWith('https://mikedev101.github.io/') ||
 
     // For development.
     url.startsWith('http://localhost:8000') ||

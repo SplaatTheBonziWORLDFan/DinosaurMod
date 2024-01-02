@@ -823,7 +823,7 @@ const menuItems = [
     },
     {
         name: 'CloudLink',
-        extensionId: 'https://extensions.penguinmod.com/extensions/MikeDev101/cloudlink.js',
+        extensionId: 'https://mikedev101.github.io/cloudlink/scratch/cloudlink_penguinmod.js',
         tags: ['turbowarp', 'penguinmod'],
         insetIconURL: cloudlinkIcon,
         iconURL: 'https://extensions.penguinmod.com/images/MikeDev101/cloudlink.svg',
