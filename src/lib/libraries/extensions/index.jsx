@@ -1358,7 +1358,7 @@ const menuItems = [
             />
         ),
         tags: ['collections'],
-        credits: 'Listed in the site.',
+        credits: 'Listed in the site',
         featured: true
     },
     {
