@@ -1339,24 +1339,11 @@ const menuItems = [
         featured: true
     },
     {
-        name: (
-            <FormattedMessage
-                defaultMessage="Sharkpool's Extension Gallery"
-                description="extension library for Turbowarp made by Sharkpool"
-                id="sp.extensionGallery.name"
-            />
-        ),
+        name: 'SharkPool\'s Extension Collection',
         href: 'https://sharkpools-extensions.vercel.app/?originPM=true',
-        extensionId: 'special_SharkpoolExtensionLibrary',
+        extensionId: 'special_sharkpoolExtensionLibrary',
         iconURL: 'https://studio.penguinmod.com/static/assets/93259f95026260bc06f83d29d3b89115.svg',
-        description: (
-            <FormattedMessage
-                // eslint-disable-next-line max-len
-                defaultMessage="Tons of extensions created by SharkPool.\n\nClick on an extension while this menu is open to add it to your project."
-                description="Description of https://sharkpools-extensions.vercel.app/?originPM=true in extension library"
-                id="sp.extensionGallery.description"
-            />
-        ),
+        description: 'Tons of extensions created by SharkPool.\n\nClick on an extension while this menu is open to add it to your project.',
         tags: ['collections'],
         credits: 'Listed in the site',
         featured: true
