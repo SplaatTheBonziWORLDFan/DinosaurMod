@@ -1135,71 +1135,6 @@ const menuItems = [
         featured: true
     },
     {
-        name: (
-            <FormattedMessage
-                defaultMessage="PenguinMod Extra Extensions"
-                description="Name of library item to open the Extra Extensions gallery"
-                id="pm.extraLibraryExtensions.name"
-            />
-        ),
-        href: 'https://extensions.penguinmod.com/',
-        extensionId: 'special_penguinmodExtensionLibrary',
-        iconURL: penguinmodLibraryExtensionIcon,
-        description: (
-            <FormattedMessage
-                defaultMessage="See some user-submitted extensions. Opens in a new tab."
-                description="Description of library item to open the Extra Extensions gallery"
-                id="pm.extraLibraryExtensions.description"
-            />
-        ),
-        tags: ['penguinmod', 'collections'],
-        featured: true
-    },
-    {
-        name: (
-            <FormattedMessage
-                defaultMessage="TurboWarp Extension Gallery"
-                description="Name of extensions.turbowarp.org in extension library"
-                id="tw.extensionGallery.name"
-            />
-        ),
-        href: 'https://extensions.turbowarp.org/',
-        extensionId: 'special_turbowarpExtensionLibrary',
-        iconURL: galleryIcon,
-        description: (
-            <FormattedMessage
-                // eslint-disable-next-line max-len
-                defaultMessage="We list many TurboWarp extensions here for convenience, but you can find even more on extensions.turbowarp.org."
-                description="Description of extensions.turbowarp.org in extension library"
-                id="tw.extensionGallery.description"
-            />
-        ),
-        tags: ['tw', 'collections'],
-        featured: true
-    },
-    {
-        name: (
-            <FormattedMessage
-                defaultMessage="Sharkpool Extension Gallery"
-                description="extension library for Turbowarp made by Sharkpool"
-                id="sp.extensionGallery.name"
-            />
-        ),
-        href: 'https://sharkpools-extensions.vercel.app/?originPM=true',
-        extensionId: 'special_SharkpoolExtensionLibrary',
-        iconURL: 'https://studio.penguinmod.com/static/assets/93259f95026260bc06f83d29d3b89115.svg',
-        description: (
-            <FormattedMessage
-                // eslint-disable-next-line max-len
-                defaultMessage="more extensions, im too lazy to copy the original description."
-                description="Description of https://sharkpools-extensions.vercel.app/?originPM=true in extension library"
-                id="sp.extensionGallery.description"
-            />
-        ),
-        tags: ['collections'],
-        featured: true
-    },
-    {
         name: 'micro:bit',
         extensionId: 'microbit',
         collaborator: 'micro:bit',
@@ -1359,6 +1294,72 @@ const menuItems = [
             />
         ),
         helpLink: 'https://scratch.mit.edu/vernier'
+    },
+    {
+        name: (
+            <FormattedMessage
+                defaultMessage="PenguinMod Extra Extensions"
+                description="Name of library item to open the Extra Extensions gallery"
+                id="pm.extraLibraryExtensions.name"
+            />
+        ),
+        href: 'https://extensions.penguinmod.com/',
+        extensionId: 'special_penguinmodExtensionLibrary',
+        iconURL: 'https://studio.penguinmod.com/static/assets/7a4510ab192e5a0bd0b1186db1396bce.svg',
+        description: (
+            <FormattedMessage
+                defaultMessage="See some user-submitted extensions. Opens in a new tab."
+                description="Description of library item to open the Extra Extensions gallery"
+                id="pm.extraLibraryExtensions.description"
+            />
+        ),
+        tags: ['penguinmod', 'collections'],
+        featured: true
+    },
+    {
+        name: (
+            <FormattedMessage
+                defaultMessage="TurboWarp Extension Gallery"
+                description="Name of extensions.turbowarp.org in extension library"
+                id="tw.extensionGallery.name"
+            />
+        ),
+        href: 'https://extensions.turbowarp.org/',
+        extensionId: 'special_turbowarpExtensionLibrary',
+        iconURL: galleryIcon,
+        description: (
+            <FormattedMessage
+                // eslint-disable-next-line max-len
+                defaultMessage="We list many TurboWarp extensions here for convenience, but you can find even more on extensions.turbowarp.org."
+                description="Description of extensions.turbowarp.org in extension library"
+                id="tw.extensionGallery.description"
+            />
+        ),
+        tags: ['tw', 'collections'],
+        featured: true
+    },
+    {
+        name: (
+            <FormattedMessage
+                defaultMessage="Sharkpool's Extension Gallery"
+                description="extension library for Turbowarp made by Sharkpool"
+                id="sp.extensionGallery.name"
+            />
+        ),
+        href: 'https://sharkpools-extensions.vercel.app/?originPM=true',
+        extensionId: 'special_SharkpoolExtensionLibrary',
+        iconURL: 'https://studio.penguinmod.com/static/assets/93259f95026260bc06f83d29d3b89115.svg',
+        description: (
+            <FormattedMessage
+                // eslint-disable-next-line max-len
+                defaultMessage="Tons of extensions created by SharkPool.\n\nClick on an extension while this menu is open to add it to your project."
+                description="Description of https://sharkpools-extensions.vercel.app/?originPM=true in extension library"
+                id="sp.extensionGallery.description"
+            />
+        ),
+        tags: ['collections'],
+        credits: 'Listed in the site.',
+        featured: true
     },
     {
         name: 'TurboBuilder',
