@@ -333,6 +333,7 @@ const menuItems = [
         extensionId: 'https://extensions.turbowarp.org/NOname-awa/graphics2d.js',
         description: 'Blocks to compute lengths, angles, and areas in two dimensions.',
         iconURL: 'https://extensions.turbowarp.org/images/NOname-awa/graphics2d.svg',
+        insetIconURL: turbowarpIcon,
         tags: ['turbowarp'],
         extDeveloper: 'NOname-awa',
         customInsetColor: '#ff4d4d',
@@ -416,6 +417,17 @@ const menuItems = [
         description: 'Blocks that operate on the binary representation of numbers in computers.',
         extDeveloper: 'TrueFantom',
         featured: true
+    },
+    {
+        name: 'Control Controls',
+        extensionId: 'https://extensions.turbowarp.org/NexusKitten/controlcontrols.js',
+        tags: ['turbowarp'],
+        iconURL: 'https://extensions.turbowarp.org/images/NexusKitten/controlcontrols.svg',
+        insetIconURL: turbowarpIcon,
+        customInsetColor: '#ff4d4d',
+        description: "Show and hide the project's controls.",
+        featured: true,
+        extDeveloper: 'NexusKitten/NamelessCat'
     },
     {
         name: 'Blockly Math',
