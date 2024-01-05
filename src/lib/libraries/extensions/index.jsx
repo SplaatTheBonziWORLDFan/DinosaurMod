@@ -66,6 +66,7 @@ import jgRuntimeExtensionIcon from './penguinmod/extensions/runtime.png';
 import jgPrismExtensionIcon from './penguinmod/extensions/prism.png';
 
 import jwProtoExtensionIcon from './penguinmod/extensions/proto.png';
+import jwUniteExtensionIcon from './penguinmod/extensions/Unite.png';
 
 import jwStructsExtensionIcon from './penguinmod/extensions/ooplogo.png';
 
@@ -350,7 +351,7 @@ const menuItems = [
         name: 'Legacy Files',
         extensionId: 'jgFiles',
         iconURL: filesOldExtensionIcon,
-        tags: ['penguinmod'],
+        tags: ['penguinmod', 'datamgmt'],
         insetIconURL: PenguinmodThumb,
         customInsetColor: '#00c3ff',
         description: 'Basic blocks for files.',
@@ -362,7 +363,7 @@ const menuItems = [
         twDeveloper: 'GarboMuffin',
         iconURL: filesExtensionIcon,
         insetIconURL: turbowarpIcon,
-        tags: ['turbowarp'],
+        tags: ['turbowarp', 'datamgmt'],
         description: 'Blocks for reading and creating files.',
         featured: true
     },
@@ -532,8 +533,7 @@ const menuItems = [
         customInsetColor: '#00c3ff',
         description: "More control blocks for animations, complex systems or cleaner one-time use blocks.",
         featured: true,
-        // uncomment when thread block is added
-        // credits: 'CST1229'
+        credits: 'CST1229'
     },
     {
         name: 'Wait block Expansion',
@@ -581,7 +581,7 @@ const menuItems = [
         iconURL: jgJSONExtensionIcon,
         insetIconURL: PenguinmodThumb,
         customInsetColor: '#00c3ff',
-        tags: ['penguinmod'],
+        tags: ['penguinmod', 'datamgmt'],
         description: 'Blocks for handling JSON objects and Arrays.',
         featured: true
     },
@@ -1433,9 +1433,18 @@ if (IsLocal || IsLiveTests) {
         {
             name: 'Unite',
             extensionId: 'jwUnite',
-            iconURL: defaultExtensionIcon,
+            iconURL: jwUniteExtensionIcon,
             tags: ['penguinmod'],
             description: 'Legacy extension that was eventually merged into the default toolbox.',
+            featured: true
+        },
+        {
+            name: 'XML',
+            extensionId: 'jwXml',
+            iconURL: 'https://studio.penguinmod.com/static/assets/73077ae1577fa8af2e8544e19e447491.png',
+            tags: ['penguinmod', 'datamgmt'],
+            description: 'Enables the creation and getting of XML data. Not yet able to modify data.',
+            extDeveloper: 'jwklong',
             featured: true
         },
         {

@@ -206,4 +206,9 @@ export default defineMessages({
         description: 'Tag for filtering a library by collections.',
         id: 'gui.libraryTags.collections'
     },
+    datamgmt: {
+        defaultMessage: 'Data Management',
+        description: 'Tag for filtering a library by data management',
+        id: 'gui.libraryTags.datamgmt'
+    },
 });

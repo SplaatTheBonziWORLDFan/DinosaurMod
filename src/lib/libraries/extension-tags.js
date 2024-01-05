@@ -8,6 +8,7 @@ export default [
     { tag: 'categoryexpansion', intlLabel: messages.categoryexpansion },
     { tag: 'programminglanguage', intlLabel: messages.programminglanguage },
     { tag: 'hardware', intlLabel: messages.hardware },
+    { tag: 'datamgmt', intlLabel: messages.datamgmt },
     { tag: 'forbidden', intlLabel: messages.forbidden },
     { tag: 'divider2', intlLabel: messages.scratch, type: 'divider' },
     { tag: 'collections', intlLabel: messages.collections },
