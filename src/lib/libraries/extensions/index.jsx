@@ -491,7 +491,7 @@ const menuItems = [
         tags: ['dinosaurmod', 'categoryexpansion'],
         description: "More motion-related blocks.",
         featured: true,
-        credits: 'Some blocks from NexusKitten'
+        extDeveloper: 'Some blocks from NexusKitten'
     },
     {
         name: 'Looks Expansion',
@@ -1429,7 +1429,7 @@ if (IsLocal || IsLiveTests) {
             featured: true
         },
         {
-            name: 'Motion Expansion',
+            name: '(OLD) Motion Expansion',
             extensionId: 'pmMotionExpansion',
             iconURL: pmMotionExpansionExtensionIcon,
             tags: ['penguinmod', 'categoryexpansion'],
@@ -1469,6 +1469,7 @@ if (IsLocal || IsLiveTests) {
             extensionId: 'https://gabsthecuriouskid.github.io/FirstExtension/legacy-extensions/turbobuilder.js',
             iconURL: 'https://studio.penguinmod.com/static/assets/93db39f338237e6a51790829ba22a879.png',
             description: 'Not alot of options yet. Create your own amazing extensions!',
+            tags: ['dinosaurmod'],
             credits: 'MrIncredibleMaker',
             featured: true,
         },
