@@ -486,12 +486,10 @@ const menuItems = [
     },
     {
         name: 'Motion Expansion',
-        extensionId: 'pmMotionExpansion',
+        extensionId: 'https://gabsthecuriouskid.github.io/FirstExtension/legacy-extensions/motion-expansion.js',
         iconURL: pmMotionExpansionExtensionIcon,
-        tags: ['penguinmod', 'categoryexpansion'],
-        insetIconURL: PenguinmodThumb,
-        customInsetColor: '#00c3ff',
-        description: "More small motion blocks for movement or collision.",
+        tags: ['dinosaurmod', 'categoryexpansion'],
+        description: "More motion-related blocks.",
         featured: true,
         credits: 'Some blocks from NexusKitten'
     },
@@ -1431,6 +1429,17 @@ if (IsLocal || IsLiveTests) {
             featured: true
         },
         {
+            name: 'Motion Expansion',
+            extensionId: 'pmMotionExpansion',
+            iconURL: pmMotionExpansionExtensionIcon,
+            tags: ['penguinmod', 'categoryexpansion'],
+            insetIconURL: PenguinmodThumb,
+            customInsetColor: '#00c3ff',
+            description: "Replaced by the dinosaurmod version. More small motion blocks for movement or collision.",
+            featured: true,
+            credits: 'Some blocks from NexusKitten'
+        },
+        {
             name: 'Unite',
             extensionId: 'jwUnite',
             iconURL: jwUniteExtensionIcon,
@@ -1454,6 +1463,14 @@ if (IsLocal || IsLiveTests) {
             tags: ['dinosaurmod'],
             description: 'In development. Fetch IDs, Description, etc. from Repositories.',
             featured: true
+        },
+        {
+            name: 'TurboBuilder Extension',
+            extensionId: 'https://gabsthecuriouskid.github.io/FirstExtension/legacy-extensions/turbobuilder.js',
+            iconURL: 'https://studio.penguinmod.com/static/assets/93db39f338237e6a51790829ba22a879.png',
+            description: 'Not alot of options yet. Create your own amazing extensions!',
+            credits: 'MrIncredibleMaker',
+            featured: true,
         },
         {
             name: 'Debugging',
