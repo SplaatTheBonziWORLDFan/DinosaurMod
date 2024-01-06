@@ -354,6 +354,18 @@ export default async function ({ addon, console, msg }) {
     }
 
     if (addon.settings.get("event")) {
+      blockSwitches["event_whenflagclicked"] = [
+        {
+          opcode: "event_whenstopclicked",
+        },
+        noopSwitch,
+      ];
+      blockSwitches["event_whenstopclicked"] = [
+        noopSwitch,
+        {
+          opcode: "event_whenflagclicked",
+        },
+      ];
       blockSwitches["event_whentouchingobject"] = [
         {
           opcode: "sensing_touchingobject",
@@ -375,6 +387,19 @@ export default async function ({ addon, console, msg }) {
     }
 
     if (addon.settings.get("control")) {
+      blockSwitches["control_switch"] = [
+        noopSwitch,
+        {
+          opcode: "control_switch_default",
+        },
+      ];
+      blockSwitches["control_switch_default"] = [
+        {
+          opcode: "control_switch",
+          splitInputs: ["SUBSTACK2"],
+        },
+        noopSwitch,
+      ];
       blockSwitches["control_if"] = [
         noopSwitch,
         {
