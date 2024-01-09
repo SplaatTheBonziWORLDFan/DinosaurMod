@@ -390,6 +390,28 @@ const manifest = {
         "input-color": "#202020",
         "text": "colorOnBlack"
       }
+    },
+    {
+      "name": "Pitch Black",
+      "id": "pureblack",
+      "description": "Makes block backgrounds pitch black",
+      "values": {
+        "motion-color": "#000000",
+        "looks-color": "#000000",
+        "sounds-color": "#000000",
+        "events-color": "#000000",
+        "control-color": "#000000",
+        "sensing-color": "#000000",
+        "operators-color": "#000000",
+        "data-color": "#000000",
+        "data-lists-color": "#000000",
+        "custom-color": "#000000",
+        "Pen-color": "#000000",
+        "sa-color": "#000000",
+        "comment-color": "#2b2b2b",
+        "input-color": "#000000",
+        "text": "colorOnBlack"
+      }
     }
   ]
 };
