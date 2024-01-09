@@ -1,4 +1,5 @@
 export default async function ({ addon, msg, console }) {
+    // msg("RENAME_BROADCAST_MODAL_TITLE"), msg("RENAME_BROADCAST_TITLE", { name: oldName })
     const vm = addon.tab.traps.vm;
     const Blockly = await addon.tab.traps.getBlockly();
 
@@ -143,10 +144,10 @@ export default async function ({ addon, msg, console }) {
     };
 
     const promptRenameBroadcast = (workspace, variable) => {
-      const modalTitle = msg("RENAME_BROADCAST_MODAL_TITLE");
+      const modalTitle = "RENAME_BROADCAST_MODAL_TITLE";
       const oldName = variable.name;
       const id = variable.getId();
-      const promptText = msg("RENAME_BROADCAST_TITLE", { name: oldName });
+      const promptText = "RENAME_BROADCAST_TITLE", { name: oldName };
       const promptDefaultText = oldName;
 
       Blockly.prompt(
