@@ -155,6 +155,7 @@ const urlParams = new URLSearchParams(location.search);
 
 const IsLocal = String(window.location.href).startsWith(`http://localhost:`);
 const IsLiveTests = urlParams.has('livetests');
+const IsSecret = urlParams.has('verysecretplsnolook');
 
 const menuItems = [
     {
@@ -491,7 +492,8 @@ const menuItems = [
         tags: ['dinosaurmod', 'categoryexpansion'],
         description: "More motion-related blocks.",
         featured: true,
-        extDeveloper: 'Some blocks from NexusKitten'
+        credits: 'Some blocks from NexusKitten',
+        extDeveloper: 'MrIncredibleMaker'
     },
     {
         name: 'Looks Expansion',
@@ -1591,6 +1593,30 @@ if (IsLocal || IsLiveTests) {
         },
     ];
     extras.forEach(ext => {
+        menuItems.push(ext);
+    });
+};
+
+if (IsSecret) {
+    const secret = [
+        {
+            name: 'MR BEAST UTILTITIES',
+            extensionId: 'https://turbololder.vercel.app/extensions/mrbeastutil.js',
+            iconURL: 'https://turbololder.vercel.app/images/Mr_Beast_Utilitities.svg',
+            description: 'the best blockes ever',
+            extDeveloper: 'JeremyGamer13',
+            featured: true
+        },
+        {
+            name: 'Jungle Inferno',
+            extensionId: 'https://turbololder.vercel.app/extensions/jungleinferno.js',
+            iconURL: 'https://turbololder.vercel.app/images/none.png',
+            description: 'a good',
+            extDeveloper: 'LilyMakesThings',
+            featured: true
+        },
+    ];
+    secret.forEach(ext => {
         menuItems.push(ext);
     });
 }

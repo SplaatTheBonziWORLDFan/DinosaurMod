@@ -408,8 +408,8 @@ const manifest = {
         "custom-color": "#000000",
         "Pen-color": "#000000",
         "sa-color": "#000000",
-        "comment-color": "#2b2b2b",
-        "input-color": "#000000",
+        "comment-color": "#000000",
+        "input-color": "#2b2b2b",
         "text": "colorOnBlack"
       }
     }
