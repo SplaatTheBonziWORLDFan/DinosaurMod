@@ -336,12 +336,9 @@ const TWStateManager = function (WrappedComponent) {
                 }
             }
 
-            /*
-            add back: nohqpen
             if (urlParams.has('nohqpen')) {
                 this.props.vm.renderer.setUseHighQualityRender(false);
             }
-            */
 
             if (urlParams.has('turbo')) {
                 this.props.vm.setTurboMode(true);
@@ -353,13 +350,11 @@ const TWStateManager = function (WrappedComponent) {
                 });
             }
 
-            /*
             if (urlParams.has('nocompile')) {
                 this.props.vm.setCompilerOptions({
                     enabled: false
                 });
             }
-            */
 
             if (urlParams.has('livetests') || String(window.location.href).startsWith(`http://localhost:`)) {
                 // massive mega brained hack bc i cant figure out how to make a state
@@ -478,20 +473,15 @@ const TWStateManager = function (WrappedComponent) {
                     searchParams.delete('turbo');
                 }
 
-                /*
-                add back: nohqpen
                 if (!this.props.highQualityPen) {
                     searchParams.set('nohqpen', '');
                 } else {
                     searchParams.delete('nohqpen');
                 }
-                */
-
-                /*
+                
                 if (compilerOptions.enabled) {
                     searchParams.delete('nocompile');
                 }
-                */
 
                 if (this.props.isPlayerOnly) {
                     if (compilerOptions.warpTimer) {
