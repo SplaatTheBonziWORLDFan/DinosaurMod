@@ -1,12 +1,12 @@
 export default async function ({ addon, msg, console }) {
     const vm = addon.tab.traps.vm;
     const Blockly = await addon.tab.traps.getBlockly();
-  
+
     // editor-searchable-dropdowns relies on this value
     const RENAME_BROADCAST_MESSAGE_ID = "RENAME_BROADCAST_MESSAGE_ID";
-  
+
     const BROADCAST_MESSAGE_TYPE = Blockly.BROADCAST_MESSAGE_VARIABLE_TYPE;
-  
+
     const _dropdownCreate = Blockly.FieldVariable.dropdownCreate;
     Blockly.FieldVariable.dropdownCreate = function () {
       const options = _dropdownCreate.call(this);
@@ -20,7 +20,7 @@ export default async function ({ addon, msg, console }) {
       }
       return options;
     };
-  
+
     const _onItemSelected = Blockly.FieldVariable.prototype.onItemSelected;
     Blockly.FieldVariable.prototype.onItemSelected = function (menu, menuItem) {
       const workspace = this.sourceBlock_.workspace;
@@ -32,14 +32,14 @@ export default async function ({ addon, msg, console }) {
       }
       return _onItemSelected.call(this, menu, menuItem);
     };
-  
+
     const resetVMCaches = () => {
       const blockContainers = new Set(vm.runtime.targets.map((i) => i.blocks));
       for (const blocks of blockContainers) {
         blocks.resetCache();
       }
     };
-  
+
     const addUndoRedoHook = (callback) => {
       const eventQueue = Blockly.Events.FIRE_QUEUE_;
       // After a rename is emitted, some unrelated garbage events also get emitted
@@ -51,13 +51,13 @@ export default async function ({ addon, msg, console }) {
         callback(isRedo);
       };
     };
-  
+
     const renameBroadcastInVM = (id, newName) => {
       // Editor's rename won't completely rename the variable.
       const vmVariable = vm.runtime.getTargetForStage().variables[id];
       vmVariable.name = newName;
       vmVariable.value = newName;
-  
+
       // Update all references to the broadcast. Broadcasts won't work if these
       // don't match.
       const blockContainers = new Set(vm.runtime.targets.map((i) => i.blocks));
@@ -69,17 +69,17 @@ export default async function ({ addon, msg, console }) {
           }
         }
       }
-  
+
       resetVMCaches();
     };
-  
+
     const renameBroadcast = (workspace, id, oldName, newName) => {
       // Rename in editor. Undo/redo will work automatically.
       workspace.renameVariableById(id, newName);
-  
+
       // Rename in VM. Need to manually implement undo/redo.
       renameBroadcastInVM(id, newName);
-  
+
       addUndoRedoHook((isRedo) => {
         if (isRedo) {
           renameBroadcastInVM(id, newName);
@@ -88,11 +88,11 @@ export default async function ({ addon, msg, console }) {
         }
       });
     };
-  
+
     const mergeBroadcast = (workspace, oldId, oldName, newName) => {
       const newVmVariable = vm.runtime.getTargetForStage().lookupBroadcastByInputValue(newName);
       const newId = newVmVariable.id;
-  
+
       // Merge in editor. Undo/redo will work automatically for this.
       // Use group so that everything here is undone/redone at the same time.
       Blockly.Events.setGroup(true);
@@ -109,7 +109,7 @@ export default async function ({ addon, msg, console }) {
       // Undo/redo will work automatically for this.
       workspace.deleteVariableById(oldId);
       Blockly.Events.setGroup(false);
-  
+
       // Merge in VM to update sprites that aren't open. Need to manually implement undo/redo.
       // To figure out how to undo this operation, we first figure out which blocks we're
       // going to touch and keep hold of that list.
@@ -134,21 +134,21 @@ export default async function ({ addon, msg, console }) {
         resetVMCaches();
       };
       applyVmEdits(true);
-  
+
       // Earlier editor updates are guaranteed to generate at least 1 event that we can hook as the
       // broadcast block must exist in the editor for the user to rename it.
       addUndoRedoHook((isRedo) => {
         applyVmEdits(isRedo);
       });
     };
+
     const promptRenameBroadcast = (workspace, variable) => {
-      // to do: fix the rename broadcast modal title and regular title to translate into other languages and not breaking somehow.
       const modalTitle = msg("RENAME_BROADCAST_MODAL_TITLE");
       const oldName = variable.name;
       const id = variable.getId();
       const promptText = msg("RENAME_BROADCAST_TITLE", { name: oldName });
       const promptDefaultText = oldName;
-  
+
       Blockly.prompt(
         promptText,
         promptDefaultText,
@@ -158,7 +158,7 @@ export default async function ({ addon, msg, console }) {
           if (nameIsEmpty) {
             return;
           }
-  
+
           const variableAlreadyExists = !!workspace.getVariable(newName, BROADCAST_MESSAGE_TYPE);
           if (variableAlreadyExists) {
             mergeBroadcast(workspace, id, oldName, newName);
@@ -170,7 +170,7 @@ export default async function ({ addon, msg, console }) {
         BROADCAST_MESSAGE_TYPE
       );
     };
-  
+
     const updateExistingMenuGenerators = () => {
       const workspace = Blockly.getMainWorkspace();
       const flyout = workspace && workspace.getFlyout();
@@ -187,6 +187,6 @@ export default async function ({ addon, msg, console }) {
         }
       }
     };
-  
+
     updateExistingMenuGenerators();
   }
