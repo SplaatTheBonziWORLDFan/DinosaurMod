@@ -350,11 +350,13 @@ const TWStateManager = function (WrappedComponent) {
                 });
             }
 
+            /*
             if (urlParams.has('nocompile')) {
                 this.props.vm.setCompilerOptions({
                     enabled: false
                 });
             }
+            */
 
             if (urlParams.has('livetests') || String(window.location.href).startsWith(`http://localhost:`)) {
                 // massive mega brained hack bc i cant figure out how to make a state
@@ -478,11 +480,13 @@ const TWStateManager = function (WrappedComponent) {
                 } else {
                     searchParams.delete('nohqpen');
                 }
-                
+
+                /*
                 if (compilerOptions.enabled) {
                     searchParams.delete('nocompile');
                 }
-
+                */
+               
                 if (this.props.isPlayerOnly) {
                     if (compilerOptions.warpTimer) {
                         searchParams.set('stuck', '');
