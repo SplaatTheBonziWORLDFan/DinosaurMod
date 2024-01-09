@@ -142,12 +142,11 @@ export default async function ({ addon, msg, console }) {
       });
     };
     const promptRenameBroadcast = (workspace, variable) => {
-      /*msg("RENAME_BROADCAST_MODAL_TITLE")*/ /*msg("RENAME_BROADCAST_TITLE", { name: oldName })*/
       // to do: fix the rename broadcast modal title and regular title to translate into other languages and not breaking somehow.
-      const modalTitle = "Rename Broadcast";
+      const modalTitle = msg("RENAME_BROADCAST_MODAL_TITLE");
       const oldName = variable.name;
       const id = variable.getId();
-      const promptText = ("rename broadcast", { name: oldName });
+      const promptText = msg("RENAME_BROADCAST_TITLE", { name: oldName });
       const promptDefaultText = oldName;
   
       Blockly.prompt(
