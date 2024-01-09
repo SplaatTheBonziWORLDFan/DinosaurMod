@@ -1597,7 +1597,7 @@ if (IsLocal || IsLiveTests) {
     });
 };
 
-if (IsSecret) {
+if (IsSecret && IsLiveTests) {
     const secret = [
         {
             name: 'MR BEAST UTILTITIES',
@@ -1613,6 +1613,14 @@ if (IsSecret) {
             iconURL: 'https://turbololder.vercel.app/images/none.png',
             description: 'a good',
             extDeveloper: 'LilyMakesThings',
+            featured: true
+        },
+        {
+            name: 'Fleef',
+            extensionId: 'https://gabsthecuriouskid.github.io/FirstExtension/legacy-extensions/fleef.js',
+            iconURL: defaultExtensionIcon,
+            description: 'this extension refuses to be committed.',
+            extDeveloper: 'MrIncredibleMaker',
             featured: true
         },
     ];
