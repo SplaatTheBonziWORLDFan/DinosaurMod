@@ -136,13 +136,6 @@ const Footer = () => (
                             id="tw.footer.donate"
                         />
                     </a>
-                    <a href="https://penguinmod.com/donate">
-                        <FormattedMessage
-                            defaultMessage="Donate to Penguinmod"
-                            description="Donation link in footer"
-                            id="tw.footer.donate"
-                        />
-                    </a>
                 </div>
                 <div className={styles.footerSection}>
                     <a href="https://studio.penguinmod.com/PenguinMod-Packager">
@@ -176,14 +169,14 @@ const Footer = () => (
                     </a>
                 </div>
                 <div className={styles.footerSection}>
-                    <a href="https://github.com/Dinosaurmod/dinosaurmod.github.io/issues">
+                    <a href="https://discord.gg/NZ9MBMYTZh">
                         <FormattedMessage
                             defaultMessage="Feedback & Bugs"
                             description="Link to feedback/bugs page"
                             id="tw.feedback"
                         />
                     </a>
-                    <a href="https://github.com/DinosaurMod">
+                    <a href="https://github.com/PenguinMod">
                         <FormattedMessage
                             defaultMessage="Source Code"
                             description="Link to source code"
@@ -278,16 +271,14 @@ class Interface extends React.Component {
                             <div className={styles.section}>
                                 <ProjectInput />
                             </div>
-                            
                             <div className={styles.remixWarningBox}>
-                                <p>Do not put in a unapproved or non-existent project id otherwise loading projects will no longer work</p>
+                                    <p>Do not put in a unapproved or non-existent project id otherwise loading projects will no longer work</p>
                             </div>
-                            
                             {/* project not approved message */}
                             {(!extraProjectInfo.accepted) && (
                                 <div className={styles.remixWarningBox}>
                                     <p>This project is not approved or doesn't exist.</p>
-                                    <p>Please go back <a href='https://dinosaurmod.github.io'>DinosaurMod</a></p>
+                                    <p>Please refresh and go here <a href='https://dinosaurmod.github.io'>DinosaurMod</a></p>
                                 </div>
                             )}
                             {/* remix info */}
