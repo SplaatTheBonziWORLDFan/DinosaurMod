@@ -278,11 +278,11 @@ class Interface extends React.Component {
                             <div className={styles.section}>
                                 <ProjectInput />
                             </div>
-                            {(extraProjectInfo.accepted) && (
-                                <div className={styles.remixWarningBox}>
-                                    <p>Do not put in a unapproved or non-existent project id otherwise loading projects will no longer work</p>
-                                </div>
-                            )}
+                            
+                            <div className={styles.remixWarningBox}>
+                                <p>Do not put in a unapproved or non-existent project id otherwise loading projects will no longer work</p>
+                            </div>
+                            
                             {/* project not approved message */}
                             {(!extraProjectInfo.accepted) && (
                                 <div className={styles.remixWarningBox}>
