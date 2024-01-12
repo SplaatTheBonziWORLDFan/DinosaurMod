@@ -136,6 +136,13 @@ const Footer = () => (
                             id="tw.footer.donate"
                         />
                     </a>
+                    <a href="https://penguinmod.com/donate">
+                        <FormattedMessage
+                            defaultMessage="Donate to Penguinmod"
+                            description="Donation link to penguinmod in footer"
+                            id="tw.footer.donatePenguinmod"
+                        />
+                    </a>
                 </div>
                 <div className={styles.footerSection}>
                     <a href="https://studio.penguinmod.com/PenguinMod-Packager">
@@ -169,14 +176,14 @@ const Footer = () => (
                     </a>
                 </div>
                 <div className={styles.footerSection}>
-                    <a href="https://discord.gg/NZ9MBMYTZh">
+                    <a href="https://github.com/Dinosaurmod/dinosaurmod.github.io">
                         <FormattedMessage
                             defaultMessage="Feedback & Bugs"
                             description="Link to feedback/bugs page"
                             id="tw.feedback"
                         />
                     </a>
-                    <a href="https://github.com/PenguinMod">
+                    <a href="https://github.com/Dinosaurmod">
                         <FormattedMessage
                             defaultMessage="Source Code"
                             description="Link to source code"
