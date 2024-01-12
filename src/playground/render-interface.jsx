@@ -176,7 +176,7 @@ const Footer = () => (
                     </a>
                 </div>
                 <div className={styles.footerSection}>
-                    <a href="https://github.com/Dinosaurmod/dinosaurmod.github.io">
+                    <a href="https://github.com/Dinosaurmod/dinosaurmod.github.io/issues">
                         <FormattedMessage
                             defaultMessage="Feedback & Bugs"
                             description="Link to feedback/bugs page"
@@ -278,9 +278,11 @@ class Interface extends React.Component {
                             <div className={styles.section}>
                                 <ProjectInput />
                             </div>
+                            {(extraProjectInfo.accepted) && (
                             <div className={styles.remixWarningBox}>
                                     <p>Do not put in a unapproved or non-existent project id otherwise loading projects will no longer work</p>
                             </div>
+                            )}
                             {/* project not approved message */}
                             {(!extraProjectInfo.accepted) && (
                                 <div className={styles.remixWarningBox}>
