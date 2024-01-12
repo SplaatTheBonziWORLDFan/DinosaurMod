@@ -280,7 +280,7 @@ class Interface extends React.Component {
                             </div>
                             {(extraProjectInfo.accepted) && (
                             <div className={styles.remixWarningBox}>
-                                    <p>Do not put in a unapproved or non-existent project id otherwise loading projects will no longer work</p>
+                                    <p>Do not put in an unapproved or non-existent project id or expect project loading to break.</p>
                             </div>
                             )}
                             {/* project not approved message */}
@@ -355,8 +355,8 @@ class Interface extends React.Component {
                                 <p>
                                     <FormattedMessage
                                         // eslint-disable-next-line max-len
-                                        defaultMessage="Dinosaurmod is a mod of Penguinmod that has added new blocks and features in extensions or in Dinosaurmod's main toolbox. Penguinmod is a cool mod of turbowarp where you can share your projects. TurboWarp is a Scratch mod that compiles projects to JavaScript to make them run really fast. Try it out by choosing an uploaded project below or making your own in the editor."
-                                        description="Description of PenguinMod and TurboWarp"
+                                        defaultMessage="Dinosaurmod is a mod of Penguinmod that adds new blocks and features in extensions or the main toolbox. Penguinmod is a cool mod of turbowarp to share projects with other people. TurboWarp is a Scratch mod that compiles projects to JavaScript to make them run really fast. Try it out by choosing an uploaded project below or making your own in the editor."
+                                        description="Description of Dinosaurmod, PenguinMod and TurboWarp"
                                         id="tw.home.description"
                                     />
                                 </p>
