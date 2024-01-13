@@ -184,6 +184,7 @@ class LibraryItem extends React.PureComponent {
                 twDeveloper={this.props.twDeveloper}
                 credits={this.props.credits}
                 extDeveloper={this.props.extDeveloper}
+                inspiredExt={this.props.inspiredExt}
                 eventSubmittor={this.props.eventSubmittor}
                 description={this.props.description}
                 disabled={this.props.disabled}
@@ -230,6 +231,7 @@ LibraryItem.propTypes = {
     twDeveloper: PropTypes.string,
     extDeveloper: PropTypes.string,
     credits: PropTypes.string,
+    inspiredExt: PropTypes.string,
     eventSubmittor: PropTypes.string,
     description: PropTypes.oneOfType([
         PropTypes.string,
