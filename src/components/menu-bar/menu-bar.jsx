@@ -827,8 +827,8 @@ class MenuBar extends React.Component {
                         >
                             <div>
                                 <FormattedMessage
-                                    defaultMessage="Advanced"
-                                    description="Text for advanced settings menu item"
+                                    defaultMessage="Settings"
+                                    description="Text for gameplay settings menu item"
                                     id="tw.menuBar.advanced"
                                 />
                             </div>
