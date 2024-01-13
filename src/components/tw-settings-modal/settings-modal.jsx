@@ -17,7 +17,7 @@ const BufferedInput = BufferedInputHOC(Input);
 
 const messages = defineMessages({
     title: {
-        defaultMessage: 'Advanced Settings',
+        defaultMessage: 'Settings',
         description: 'Title of settings modal',
         id: 'tw.settingsModal.title'
     },
@@ -466,7 +466,7 @@ const SettingsModalComponent = props => (
         <Box className={styles.body}>
             <Header>
                 <FormattedMessage
-                    defaultMessage="Featured"
+                    defaultMessage="Gameplay"
                     description="Settings modal section"
                     id="tw.settingsModal.featured"
                 />

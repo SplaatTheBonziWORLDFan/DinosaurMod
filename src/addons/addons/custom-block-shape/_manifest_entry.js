@@ -104,7 +104,17 @@ const manifest = {
         "cornerSize": 0,
         "notchSize": 0
       }
-    }
+    },
+    {
+      "name": "Adacraft Shape",
+      "id": "adacraft",
+      "description": "Adacraft version of Scratch 3.0 blocks",
+      "values": {
+        "paddingSize": 100,
+        "cornerSize": 100,
+        "notchSize": 0
+      }
+    },
   ]
 };
 export default manifest;
