@@ -265,8 +265,9 @@ const menuItems = [
                 id="gui.extension.speech2text.name"
             />
         ),
-        extensionId: 'https://khanning.github.iot/scratch-extensions/speech_to_text_extension.js',
-        credits: 'Unknown',
+        extensionId: 'https://khanning.github.io/scratch-extensions/speech_to_text_extension.js',
+        credits: 'Snail-IDE',
+        extDeveloper: 'Unknown',
         iconURL: speech2textIconURL,
         description: (
             <FormattedMessage
