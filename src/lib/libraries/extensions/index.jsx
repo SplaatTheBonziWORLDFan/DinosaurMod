@@ -260,6 +260,27 @@ const menuItems = [
     {
         name: (
             <FormattedMessage
+                defaultMessage="Speech to Text"
+                description="Name for the Text to Speech extension"
+                id="gui.extension.speech2text.name"
+            />
+        ),
+        extensionId: 'https://khanning.github.iot/scratch-extensions/speech_to_text_extension.js',
+        credits: 'Unknown',
+        iconURL: speech2textIconURL,
+        description: (
+            <FormattedMessage
+                defaultMessage="Talk to your projects."
+                description="Description for the Speech to text extension"
+                id="gui.extension.speech2text.description"
+            />
+        ),
+        featured: true,
+        internetConnectionRequired: true
+    },
+    {
+        name: (
+            <FormattedMessage
                 defaultMessage="Translate"
                 description="Name for the Translate extension"
                 id="gui.extension.translate.name"
