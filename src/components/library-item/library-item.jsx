@@ -208,6 +208,7 @@ class LibraryItemComponent extends React.PureComponent {
                         this.props.collaborator ||
                         this.props.extDeveloper ||
                         this.props.twDeveloper ||
+                        this.props.inspiredExt ||
                         this.props.eventSubmittor ||
                         this.props.credits
                         ? (
@@ -288,6 +289,18 @@ class LibraryItemComponent extends React.PureComponent {
                                             </div>
                                         </div>
                                     ) : null}
+                                    {this.props.eventSubmittor ? (
+                                        <div className={styles.smallBottomMargin}>
+                                            <div>
+                                                Event Submission by
+                                            </div>
+                                            <div
+                                                className={styles.featuredExtensionMetadataDetail}
+                                            >
+                                                {this.props.eventSubmittor}
+                                            </div>
+                                        </div>
+                                    ) : null}
                                     {this.props.credits ? (
                                         <div>
                                             <div>
@@ -356,6 +369,7 @@ LibraryItemComponent.propTypes = {
     collaborator: PropTypes.string,
     credits: PropTypes.string,
     twDeveloper: PropTypes.string,
+    inspiredExt: PropTypes.string,
     extDeveloper: PropTypes.string,
     eventSubmittor: PropTypes.string,
     description: PropTypes.oneOfType([

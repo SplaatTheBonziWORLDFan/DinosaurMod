@@ -265,9 +265,9 @@ const menuItems = [
                 id="gui.extension.speech2text.name"
             />
         ),
-        extensionId: 'https://khanning.github.io/scratch-extensions/speech_to_text_extension.js',
-        credits: 'Snail-IDE',
-        extDeveloper: 'Unknown',
+        extensionId: 'https://sayamindu.github.io/scratch-extensions/speech_to_text_extension.js',
+        inspiredExt: 'Snail-IDE',
+        extDeveloper: 'sayamindu',
         iconURL: speech2textIconURL,
         description: (
             <FormattedMessage
@@ -1176,6 +1176,7 @@ const menuItems = [
         iconURL: 'https://gabsthecuriouskid.github.io/FirstExtension/images/dinosaurmodextras.png',
         tags: ['dinosaurmod'],
         description: 'Extra Blocks',
+        inspiredExt: 'TurboWarp Blocks',
         featured: true
     },
     {
