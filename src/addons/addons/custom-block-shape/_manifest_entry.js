@@ -21,7 +21,7 @@ const manifest = {
       "link": "https://scratch.mit.edu/users/GarboMuffin/"
     }
   ],
-  "enabledByDefault": false,
+  "enabledByDefault": true,
   "dynamicDisable": true,
   "userscripts": [
     {
@@ -42,7 +42,7 @@ const manifest = {
       "id": "paddingSize",
       "type": "integer",
       "min": 50,
-      "default": 100,
+      "default": 90, // 100
       "max": 200
     },
     {
@@ -51,7 +51,7 @@ const manifest = {
       "id": "cornerSize",
       "type": "integer",
       "min": 0,
-      "default": 100,
+      "default": 200, // 100
       "max": 300
     },
     {
@@ -60,7 +60,7 @@ const manifest = {
       "id": "notchSize",
       "type": "integer",
       "min": 0,
-      "default": 100,
+      "default": 0, // 100
       "max": 150
     }
   ],
@@ -106,12 +106,22 @@ const manifest = {
       }
     },
     {
-      "name": "Adacraft Shape",
+      "name": "Adacraft",
       "id": "adacraft",
       "description": "Adacraft version of Scratch 3.0 blocks",
       "values": {
         "paddingSize": 100,
         "cornerSize": 100,
+        "notchSize": 0
+      }
+    },
+    {
+      "name": "DinosaurMod",
+      "id": "dinosaurmod",
+      "description": "DinosaurMod version of Scratch 3.0 blocks",
+      "values": {
+        "paddingSize": 90,
+        "cornerSize": 200,
         "notchSize": 0
       }
     },
