@@ -9596,8 +9596,8 @@
     "minilog" "^3.0.1"
     "startaudiocontext" "1.2.1"
 
-"scratch-blocks@github:PenguinMod/PenguinMod-Blocks#develop-builds":
-  "resolved" "git+ssh://git@github.com/PenguinMod/PenguinMod-Blocks.git#8545692944c669902d6ea7221740e54548699ebc"
+"scratch-blocks@github:Dinosaurmod/Dinosaurmod-Blocks#develop":
+  "resolved" "git+ssh://git@github.com/Dinosaurmod/Dinosaurmod-Blocks.git#8545692944c669902d6ea7221740e54548699ebc"
   "version" "0.1.0"
 
 "scratch-paint@file:../scratch-paint":
