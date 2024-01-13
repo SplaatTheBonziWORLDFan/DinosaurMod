@@ -366,6 +366,18 @@ export default async function ({ addon, console, msg }) {
           opcode: "event_whenflagclicked",
         },
       ];
+      blockSwitches["event_whenkeypressed"] = [
+        {
+          opcode: "event_whenkeyhit",
+        },
+        noopSwitch,
+      ];
+      blockSwitches["event_whenkeyhit"] = [
+        noopSwitch,
+        {
+          opcode: "event_whenkeypressed",
+        },
+      ];
       blockSwitches["event_whentouchingobject"] = [
         {
           opcode: "sensing_touchingobject",

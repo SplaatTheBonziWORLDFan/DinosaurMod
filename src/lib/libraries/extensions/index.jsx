@@ -628,6 +628,16 @@ const menuItems = [
         featured: true
     },
     {
+        name: 'TurboWeather',
+        extensionId: 'https://extensions.penguinmod.com/extensions/RubyDevs/turboweather.js',
+        iconURL: 'https://extensions.penguinmod.com/images/RubyDevs/turboweather.webp',
+        insetIconURL: PenguinmodThumb,
+        customInsetColor: '#00c3ff',
+        tags: ['penguinmod'],
+        description: "Show weather and location data for any place in our world. Data that could be used for doxxing is deleted from results.",
+        featured: true,
+    },
+    {
         name: 'Local Storage',
         extensionId: 'https://extensions.turbowarp.org/local-storage.js',
         iconURL: 'https://extensions.turbowarp.org/images/local-storage.svg',
