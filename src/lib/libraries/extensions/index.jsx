@@ -15,6 +15,7 @@ import text2speechIconURL from './text2speech/text2speech.png';
 import text2speechInsetIconURL from './text2speech/text2speech-small.svg';
 
 import speech2textIconURL from './speech2text/speech.png';
+import speech2textInsetIconURL from './speech2text/speech-small.svg'
 
 import translateIconURL from './translate/translate.png';
 import translateInsetIconURL from './translate/translate-small.png';
@@ -269,9 +270,11 @@ const menuItems = [
         inspiredExt: 'Snail-IDE',
         extDeveloper: 'sayamindu',
         iconURL: speech2textIconURL,
+        insetIconURL: speech2textInsetIconURL,
+        customInsetColor: '#CF63CF',
         description: (
             <FormattedMessage
-                defaultMessage="Talk to your projects."
+                defaultMessage="Talk to your projects. Not exactly the same as the Scratch one."
                 description="Description for the Speech to text extension"
                 id="gui.extension.speech2text.description"
             />
