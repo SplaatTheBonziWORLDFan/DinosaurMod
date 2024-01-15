@@ -935,6 +935,14 @@ const menuItems = [
         internetConnectionRequired: false
     },
     {
+        name: 'GitHub API',
+        extensionId: 'https://gabsthecuriouskid.github.io/FirstExtension/legacy-extensions/wip-github-api.js',
+        iconURL: 'https://gabsthecuriouskid.github.io/FirstExtension/images/githubapi.png',
+        tags: ['dinosaurmod'],
+        description: 'Fetch IDs, Description, etc. from Repositories, Users and Organizations.',
+        featured: true
+    },
+    {
         name: 'HTML iframe Elements',
         extensionId: 'jgIframe',
         iconURL: jgIframeExtensionIcon,
@@ -1489,14 +1497,6 @@ if (IsLocal || IsLiveTests) {
             tags: ['penguinmod', 'datamgmt'],
             description: 'Enables the creation and getting of XML data. Not yet able to modify data.',
             extDeveloper: 'jwklong',
-            featured: true
-        },
-        {
-            name: 'GitHub API',
-            extensionId: 'https://gabsthecuriouskid.github.io/FirstExtension/legacy-extensions/wip-github-api.js',
-            iconURL: defaultExtensionIcon,
-            tags: ['dinosaurmod'],
-            description: 'In development. Fetch IDs, Description, etc. from Repositories.',
             featured: true
         },
         {
