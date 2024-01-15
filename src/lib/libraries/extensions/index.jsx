@@ -1467,6 +1467,14 @@ if (IsLocal || IsLiveTests) {
             featured: true
         },
         {
+            name: 'Fetch+',
+            extensionId: 'https://gabsthecuriouskid.github.io/FirstExtension/extensions/fetchplus.js',
+            tags: ['dinosaurmod'],
+            iconURL: 'https://extensions.turbowarp.org/images/fetch.svg',
+            description: "get and post stuff, i guess.",
+            featured: true,
+        },
+        {
             name: 'Easy Save',
             extensionId: 'jgEasySave',
             iconURL: defaultExtensionIcon,
