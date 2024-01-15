@@ -609,10 +609,10 @@ const menuItems = [
     },
     {
         name: 'Hacked Blocks',
-        extensionId: 'https://gabsthecuriouskid.github.io/FirstExtension/extensions/hackedblocks.js',
+        extensionId: 'https://gabsthecuriouskid.github.io/FirstExtension/penguinmod-version/hackedblocks.js',
         iconURL: 'https://gabsthecuriouskid.github.io/FirstExtension/images/hackedblocks.png',
         tags: ['dinosaurmod'],
-        description: 'Hacked Blocks that exist in scratch but are not shown on the main toolbox.',
+        description: 'Hacked Blocks that exist in Penguinmod but are not shown on the main toolbox.',
         credits: 'Some blocks from pumpkinhasapatch, LilyMakesThings, MrIncredibleMakerZE',
         featured: true
     },
@@ -936,7 +936,7 @@ const menuItems = [
     },
     {
         name: 'GitHub API',
-        extensionId: 'https://gabsthecuriouskid.github.io/FirstExtension/legacy-extensions/wip-github-api.js',
+        extensionId: 'https://gabsthecuriouskid.github.io/FirstExtension/extensions/github-api.js',
         iconURL: 'https://gabsthecuriouskid.github.io/FirstExtension/images/githubapi.png',
         tags: ['dinosaurmod'],
         description: 'Fetch IDs, Description, etc. from Repositories, Users and Organizations.',
