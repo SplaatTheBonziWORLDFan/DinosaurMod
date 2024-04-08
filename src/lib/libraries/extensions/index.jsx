@@ -313,7 +313,7 @@ const menuItems = [
         iconURL: makeymakeyIconURL,
         insetIconURL: makeymakeyInsetIconURL,
         customInsetColor: '#E64D00',
-        tags: ['scratch'],
+        tags: ['scratch', 'hardware'],
         description: (
             <FormattedMessage
                 defaultMessage="Make anything into a key."
@@ -669,6 +669,15 @@ const menuItems = [
         insetIconURL: griffpatchPhysicsIcon,
         description: 'Box2D Physics extension created by Griffpatch.',
         customInsetColor: '#D9F0FF',
+        featured: true
+    },
+    {
+        name: 'More Keys Event',
+        extensionId: 'https://ldsjvg.webwave.dev/lib/ldsjvg/more-keys-ltair3aw.js',
+        iconURL: 'https://ldsjvg.webwave.dev/files/dynamicContent/sites/ldsjvg/images/pl/webpage_20/lu4jj2ug/element_333/rwdMode_1/424x145/block_2032024-19_33_30.webp',
+        tags: ['categoryexpansion'],
+        description: 'This extension adds a hat block with support for f1, f2, f3... keys and alt key.',
+        extDeveloper: 'Jul mik',
         featured: true
     },
     {

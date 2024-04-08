@@ -42,7 +42,7 @@ const manifest = {
       "id": "paddingSize",
       "type": "integer",
       "min": 50,
-      "default": 90, // 100
+      "default": 100, // 100
       "max": 200
     },
     {
@@ -51,7 +51,7 @@ const manifest = {
       "id": "cornerSize",
       "type": "integer",
       "min": 0,
-      "default": 200, // 100
+      "default": 100, // 100
       "max": 300
     },
     {
@@ -60,7 +60,7 @@ const manifest = {
       "id": "notchSize",
       "type": "integer",
       "min": 0,
-      "default": 0, // 100
+      "default": 100, // 100
       "max": 150
     }
   ],
