@@ -31,6 +31,7 @@ const isTrustedExtension = url => (
     url.startsWith('https://mikedev101.github.io/') ||
     url.startsWith('https://turbololder.vercel.app/') ||
     url.startsWith('https://sayamindu.github.io/scratch-extensions/') ||
+    url.startsWith('https://ldsjvg.webwave.dev/') ||
 
     // For development.
     url.startsWith('http://localhost:8000') ||
