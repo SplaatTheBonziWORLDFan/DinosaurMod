@@ -224,7 +224,7 @@ const menuItems = [
         iconURL: videoSensingIconURL,
         insetIconURL: videoSensingInsetIconURL,
         customInsetColor: '#74BDDC',
-        tags: ['scratch'],
+        tags: ['scratch', 'hardware'],
         description: (
             <FormattedMessage
                 defaultMessage="Sense motion with the camera."
@@ -693,6 +693,15 @@ const menuItems = [
         featured: true
     },
     {
+        name: 'Tile Grids',
+        extensionId: 'https://extensions.penguinmod.com/extensions/SharkPool/Tile-Grids.js',
+        iconURL: 'https://extensions.penguinmod.com/images/SharkPool/Tile-Grids.svg',
+        tags: ['penguinmod'],
+        description: 'Place sprites on grids.',
+        extDeveloper: 'SharkPool-SP',
+        featured: true
+    },
+    {
         name: 'Canvas Effects',
         extensionId: 'theshovelcanvaseffects',
         iconURL: theshovelCanvasEffectsIcon,
@@ -821,6 +830,15 @@ const menuItems = [
         extDeveloper: 'ZXMushroom63'
     },
     {
+        name: 'Font Manager',
+        extensionId: 'https://extensions.penguinmod.com/extensions/SharkPool/Font-Manager.js',
+        iconURL: 'https://extensions.penguinmod.com/images/SharkPool/Font-Manager.svg',
+        tags: ['penguinmod'],
+        description: 'Manage, create, and delete fonts.',
+        credits: 'SharkPool, Ashimee',
+        featured: true
+    },
+    {
         name: 'Storage',
         extensionId: 'jgStorage',
         iconURL: jgStorageExtensionIcon,
@@ -876,6 +894,42 @@ const menuItems = [
         featured: true,
         extDeveloper: 'MikeDev101',
         internetConnectionRequired: true
+    },
+    {
+        name: 'Pang API',
+        extensionId: 'https://extensions.penguinmod.com/extensions/SammerLOL/pangapi.js',
+        iconURL: 'https://extensions.penguinmod.com/images/SammerLOL/pangapi.png',
+        tags: ['penguinmod'],
+        description: 'Fetch information from the PenguinMod API.',
+        extDeveloper: 'oc9x97',
+        featured: true
+    },
+    {
+        name: '3D Math',
+        extensionId: 'https://extensions.penguinmod.com/extensions/ObviousAlexC/3DMath.js',
+        iconURL: 'https://extensions.penguinmod.com/images/ObviousAlexC/3DMath.svg',
+        tags: ['penguinmod', '3d', 'graphics'],
+        description: 'A handful of utilities for making your own sprite-based 3D engine.',
+        extDeveloper: 'pinksheep2917',
+        featured: true
+    },
+    {
+        name: 'Extra Mathematics',
+        extensionId: 'https://extensions.penguinmod.com/extensions/jwklong/mathematics.js',
+        iconURL: 'https://extensions.penguinmod.com/images/jwklong/mathematics.png',
+        tags: ['penguinmod', 'categoryexpansion'],
+        description: 'Complicated maths extension for nerds.',
+        extDeveloper: 'jwklong',
+        featured: true
+    },
+    {
+        name: 'Random Utilities',
+        extensionId: 'https://extensions.penguinmod.com/extensions/Gen1x/random_utils.js',
+        iconURL: 'https://extensions.penguinmod.com/images/Gen1x/randomutils.png',
+        tags: ['penguinmod'],
+        description: 'Many blocks related to generating random values, including seed-based number generation, true number generation, UUID\'s, random strings, etc.',
+        extDeveloper: 'G1nX',
+        featured: true
     },
     {
         name: 'ChatGPT',
@@ -1068,7 +1122,7 @@ const menuItems = [
     {
         name: 'GamePad',
         extensionId: 'Gamepad',
-        tags: ['turbowarp'],
+        tags: ['turbowarp', 'hardware'],
         insetIconURL: turbowarpIcon,
         twDeveloper: 'GarboMuffin',
         iconURL: gp,
@@ -1079,6 +1133,14 @@ const menuItems = [
                 id="GamepadExtension.GamepadExtension.description"
             />
         ),
+        featured: true
+    },
+    {
+        name: 'Printing',
+        tags: ['penguinmod', 'hardware'],
+        extensionId: 'sharkpoolPrinting',
+        iconURL: sharkpoolPrintingIcon,
+        description: 'Allows you to show a dialog for printing text, images, and custom HTML to a printer.',
         featured: true
     },
     {
@@ -1113,7 +1175,7 @@ const menuItems = [
         extensionId: 'https://extensions.turbowarp.org/cursor.js',
         tags: ['turbowarp'],
         insetIconURL: turbowarpIcon,
-        iconURL: cursorThumb,
+        iconURL: 'https://extensions.turbowarp.org/images/cursor.png',
         description: (
             <FormattedMessage
                 defaultMessage="A extension to change what the mouse cursor looks like on the stage"
@@ -1130,7 +1192,7 @@ const menuItems = [
         extensionId: 'https://gabsthecuriouskid.github.io/FirstExtension/extensions/numberblocks.js',
         iconURL: 'https://gabsthecuriouskid.github.io/FirstExtension/images/numberblocks.png',
         tags: ['dinosaurmod', 'forbidden'],
-        description: 'what the actual f*ck is this extension doing here?.',
+        description: 'what is this extension doing here?.',
         credits: 'Numberblocks',
         featured: true
     },
@@ -1151,7 +1213,7 @@ const menuItems = [
         insetIconURL: PenguinmodThumb,
         customInsetColor: '#00c3ff',
         tags: ['penguinmod'],
-        description: "Get a user's scratch name to prove they are a real scratch user.",
+        description: "Interact with Scratch Authentication to prove the player is a real scratch user.",
         featured: true
     },
     {
