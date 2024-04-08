@@ -1139,7 +1139,7 @@ const menuItems = [
         name: 'Printing',
         tags: ['penguinmod', 'hardware'],
         extensionId: 'sharkpoolPrinting',
-        iconURL: sharkpoolPrintingIcon,
+        iconURL: 'https://studio.penguinmod.com/static/assets/d52a9f0f59cd75bb37db958947ddd83e.png',
         description: 'Allows you to show a dialog for printing text, images, and custom HTML to a printer.',
         featured: true
     },
