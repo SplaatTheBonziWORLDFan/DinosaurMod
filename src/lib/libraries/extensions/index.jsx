@@ -672,6 +672,14 @@ const menuItems = [
         featured: true
     },
     {
+        name: 'Jul mik Blocks',
+        extensionId: 'https://gabsthecuriouskid.github.io/FirstExtension/legacy-extensions/Julmikblocks.js',
+        credits: 'Jul mik and TurboBuilder',
+        description: 'some turbobuilder blocks',
+        iconURL: defaultExtensionIcon,
+        featured: true
+    },
+    {
         name: 'More Keys Event',
         extensionId: 'https://ldsjvg.webwave.dev/lib/ldsjvg/more-keys-ltair3aw.js',
         iconURL: 'https://ldsjvg.webwave.dev/files/dynamicContent/sites/ldsjvg/images/pl/webpage_20/lu4jj2ug/element_333/rwdMode_1/424x145/block_2032024-19_33_30.webp',
@@ -851,7 +859,7 @@ const menuItems = [
         name: 'Storage',
         extensionId: 'jgStorage',
         iconURL: jgStorageExtensionIcon,
-        tags: ['penguinmod'],
+        tags: ['penguinmod', 'datamgmt'],
         description: 'Store data after PenguinMod has already been closed out. Basic Server Storage is also included.',
         eventSubmittor: 'Fir & silvxrcat',
         insetIconURL: PenguinmodThumb,
@@ -952,7 +960,7 @@ const menuItems = [
         name: 'LZ Compress',
         extensionId: 'shovellzcompresss',
         iconURL: theshovelLzCompressIcon,
-        tags: ['penguinmod'],
+        tags: ['penguinmod', 'datamgmt'],
         insetIconURL: PenguinmodThumb,
         customInsetColor: '#00c3ff',
         description: 'Compress and decompress text using lz-string.',
@@ -962,7 +970,7 @@ const menuItems = [
     {
         name: 'Prism',
         extensionId: 'jgPrism',
-        tags: ['penguinmod'],
+        tags: ['penguinmod', 'datamgmt'],
         iconURL: jgPrismExtensionIcon,
         insetIconURL: PenguinmodThumb,
         customInsetColor: '#00c3ff',

@@ -244,6 +244,7 @@ const vmListenerHOC = function (WrappedComponent) {
         shouldUpdateTargets: PropTypes.bool,
         shouldUpdateProjectChanged: PropTypes.bool,
         username: PropTypes.string,
+        usernameLoggedIn: PropTypes.bool,
         vm: PropTypes.instanceOf(VM).isRequired
     };
     VMListener.defaultProps = {
@@ -260,6 +261,7 @@ const vmListenerHOC = function (WrappedComponent) {
         // Do not update the projectChanged state in fullscreen or player only mode
         shouldUpdateProjectChanged: !state.scratchGui.mode.isFullScreen && !state.scratchGui.mode.isPlayerOnly,
         vm: state.scratchGui.vm,
+        usernameLoggedIn: state.scratchGui.tw.usernameLoggedIn,
         username: state.session && state.session.session && state.session.session.user ?
             state.session.session.user.username : state.scratchGui.tw ? state.scratchGui.tw.username : ''
     });

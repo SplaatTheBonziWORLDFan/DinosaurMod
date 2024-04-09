@@ -318,7 +318,7 @@ const TWStateManager = function (WrappedComponent) {
                 this.props.vm.setInterpolation(true);
             }
 
-            if (urlParams.has('username')) {
+            if (urlParams.has('username') && !this.props.usernameLoggedIn) {
                 const username = urlParams.get('username');
                 // Do not save username when loaded from URL
                 this.doNotPersistUsername = username;
@@ -610,9 +610,11 @@ const TWStateManager = function (WrappedComponent) {
         reduxProjectId: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
         routingStyle: PropTypes.oneOf(Object.keys(routers)),
         username: PropTypes.string,
+        usernameLoggedIn: PropTypes.bool,
         vm: PropTypes.instanceOf(VM)
     };
     StateManagerComponent.defaultProps = {
+        usernameLoggedIn: false,
         routingStyle: process.env.ROUTING_STYLE
     };
     const mapStateToProps = state => ({
@@ -623,6 +625,7 @@ const TWStateManager = function (WrappedComponent) {
         projectChanged: state.scratchGui.projectChanged,
         reduxProjectId: state.scratchGui.projectState.projectId,
         compilerOptions: state.scratchGui.tw.compilerOptions,
+        usernameLoggedIn: state.scratchGui.tw.usernameLoggedIn,
         runtimeOptions: state.scratchGui.tw.runtimeOptions,
         highQualityPen: state.scratchGui.tw.highQualityPen,
         framerate: state.scratchGui.tw.framerate,
