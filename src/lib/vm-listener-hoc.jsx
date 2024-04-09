@@ -79,11 +79,17 @@ const vmListenerHOC = function (WrappedComponent) {
                 document.addEventListener('keydown', this.handleKeyDown);
                 document.addEventListener('keyup', this.handleKeyUp);
             }
-            this.props.vm.postIOData('userData', {username: this.props.username});
+            this.props.vm.postIOData('userData', {
+                username: this.props.username,
+                loggedIn: this.props.usernameLoggedIn
+            });
         }
         componentDidUpdate (prevProps) {
-            if (prevProps.username !== this.props.username) {
-                this.props.vm.postIOData('userData', {username: this.props.username});
+            if (prevProps.username !== this.props.username || prevProps.usernameLoggedIn !== this.props.usernameLoggedIn) {
+                this.props.vm.postIOData('userData', {
+                    username: this.props.username,
+                    loggedIn: this.props.usernameLoggedIn
+                });
             }
 
             // Re-request a targets update when the shouldUpdateTargets state changes to true
