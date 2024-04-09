@@ -512,7 +512,7 @@ const menuItems = [
     },
     {
         name: 'Motion Expansion',
-        extensionId: 'https://gabsthecuriouskid.github.io/FirstExtension/legacy-extensions/motion-expansion.js',
+        extensionId: 'https://gabsthecuriouskid.github.io/FirstExtension/extensions/motion-expansion.js',
         iconURL: pmMotionExpansionExtensionIcon,
         tags: ['dinosaurmod', 'categoryexpansion'],
         description: "More motion-related blocks.",
@@ -531,7 +531,7 @@ const menuItems = [
     },
     {
         name: 'Sound Expansion',
-        extensionId: 'https://gabsthecuriouskid.github.io/FirstExtension/legacy-extensions/sound-expansion.js',
+        extensionId: 'https://gabsthecuriouskid.github.io/FirstExtension/extensions/sound-expansion.js',
         iconURL: 'https://gabsthecuriouskid.github.io/FirstExtension/images/sound-expansion.png',
         tags: ['dinosaurmod', 'categoryexpansion'],
         description: "Play sounds from other URLs, change project volume, get effect values from other sprites and more!",
