@@ -131,30 +131,17 @@ class ShareButton extends React.Component {
                 return;
             }
 
-            const isEdit = this.props.usernameLoggedIn
-                && this.props.extraProjectInfo?.author === this.props.username;
-
-            let editPiece = '';
             let remixPiece = '';
-            const id = location.hash.replace('#', '');
-            if (this.props.extraProjectInfo?.isRemix) {
+            if (location.hash.includes('#')) {
+                const id = location.hash.replace('#', '');
                 remixPiece = `&remix=${id}`;
             }
 
-            let targetPage = 'upload';
-            if (isEdit) {
-                targetPage = 'edit';
-                editPiece = `&id=${id}`;
-            }
-
             const url = location.origin;
-            window.open(`https://penguinmod.com/${targetPage}?name=${this.props.projectTitle}${editPiece}${remixPiece}&external=${url}`, '_blank');
+            window.open(`https://penguinmod.com/upload?name=${this.props.projectTitle}${remixPiece}&external=${url}`, '_blank');
         });
     }
     render() {
-        const isRemix = this.props.extraProjectInfo?.isRemix;
-        const isEdit = this.props.usernameLoggedIn
-            && this.props.extraProjectInfo?.author === this.props.username;
         return (
             <Button
                 className={classNames(
@@ -166,22 +153,17 @@ class ShareButton extends React.Component {
                 onClick={this.onUploadProject}
             >
                 <div className={classNames(styles.shareContent)}>
-                    {isEdit ? <FormattedMessage
-                            defaultMessage="Upload Edits"
-                            description="Text for uploading edits for projects on PenguinMod"
-                            id="gui.menuBar.pmedit"
+                    {window.location.hash.includes('#') ?
+                        <FormattedMessage
+                            defaultMessage="Remix"
+                            description="Menu bar item for remixing"
+                            id="gui.menuBar.remix"
                         /> :
-                        (isRemix ?
-                            <FormattedMessage
-                                defaultMessage="Remix to PM"
-                                description="Menu bar item for remixing"
-                                id="gui.menuBar.remix"
-                            /> :
-                            <FormattedMessage
-                                defaultMessage="Upload to PM"
-                                description="Label for project share button"
-                                id="gui.menuBar.pmshare"
-                        />)}
+                        <FormattedMessage
+                            defaultMessage="Upload to PM"
+                            description="Label for project share button"
+                            id="gui.menuBar.pmshare"
+                        />}
                     {this.state.loading ? (
                         <img
                             className={classNames(styles.icon)}
@@ -200,25 +182,11 @@ class ShareButton extends React.Component {
 ShareButton.propTypes = {
     className: PropTypes.string,
     isShared: PropTypes.bool,
-    projectTitle: PropTypes.string,
-    extraProjectInfo: PropTypes.shape({
-        accepted: PropTypes.bool,
-        isRemix: PropTypes.bool,
-        remixId: PropTypes.number,
-        tooLarge: PropTypes.bool,
-        author: PropTypes.string,
-        releaseDate: PropTypes.shape(Date),
-        isUpdated: PropTypes.bool
-    }),
-    username: PropTypes.string,
-    usernameLoggedIn: PropTypes.bool
+    projectTitle: PropTypes.string
 };
 
 const mapStateToProps = state => ({
-    projectTitle: state.scratchGui.projectTitle,
-    extraProjectInfo: state.scratchGui.tw.extraProjectInfo,
-    username: state.scratchGui.tw.username,
-    usernameLoggedIn: state.scratchGui.tw.usernameLoggedIn
+    projectTitle: state.scratchGui.projectTitle
 });
 
 // eslint-disable-next-line no-unused-vars
