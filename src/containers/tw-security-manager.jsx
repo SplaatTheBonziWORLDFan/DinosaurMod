@@ -32,6 +32,7 @@ const isTrustedExtension = url => (
     url.startsWith('https://turbololder.vercel.app/') ||
     url.startsWith('https://sayamindu.github.io/scratch-extensions/') ||
     url.startsWith('https://ldsjvg.webwave.dev/') ||
+    url.startsWith('https://electramod-extensions-gallery.vercel.app/') ||
 
     // For development.
     url.startsWith('http://localhost:8000') ||
