@@ -672,11 +672,11 @@ const menuItems = [
         featured: true
     },
     {
-        name: 'Jul mik Blocks',
-        extensionId: 'https://gabsthecuriouskid.github.io/FirstExtension/legacy-extensions/Julmikblocks.js',
-        credits: 'Jul mik and TurboBuilder',
-        description: 'some turbobuilder blocks',
-        iconURL: defaultExtensionIcon,
+        name: 'Jul Mik Utilities',
+        extensionId: 'https://electramod-extensions-gallery.vercel.app/extensions/julmik6478/julmik_utilities.js',
+        extDeveloper: 'julmik6478',
+        description: 'An Extension of Blocks Utilities by Jul Mik (V1 and V2 when named Jul Mik Blocks with Turbobuilder) and helped by Aness6040 (Actual v3)',
+        iconURL: 'https://electramod-extensions-gallery.vercel.app/images/julmik6478/julmik_utilities.svg',
         featured: true
     },
     {
@@ -685,7 +685,7 @@ const menuItems = [
         iconURL: 'https://ldsjvg.webwave.dev/files/dynamicContent/sites/ldsjvg/images/pl/webpage_20/lu4jj2ug/element_333/rwdMode_1/424x145/block_2032024-19_33_30.webp',
         tags: ['categoryexpansion'],
         description: 'This extension adds a hat block with support for f1, f2, f3... keys and alt key.',
-        extDeveloper: 'Jul mik',
+        extDeveloper: 'julmik6478',
         featured: true
     },
     {
