@@ -1,43 +1,282 @@
 <!DOCTYPE html>
-<html>
-    <head>
-        <title>Dinosaurmod is down.</title>
-        <meta charset="utf8">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <style>
-            body {
-                font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
-                margin: 0; padding: 0;
-            }
-            header {
-                background-color: rgb(166, 255, 0);
-                color: white;
-                text-align: center;
-                padding: 20px 0;
-            }
-            main {
-                max-width: 600px;
-                margin: auto;
-            }
-            @media (prefers-color-scheme: dark) {
-                body { background: #111; color: #eee; }
-                a { color: rgb(143, 255, 68); }
-            }
-        </style>
-    </head>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>DinosaurMod - Issue Page</title>
+    <script src="https://code.jquery.com/jquery-3.4.1.js"></script>
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+            text-decoration: none;
+            list-style: none;
+        }
 
-    <body>
-        <header>
-            <h1>DinosaurMod is currently down.</h1>
-        </header>
+        body {
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+            background-color: white;
+            color: #111111;
+        }
 
-        <main>
-            <!-- UPDATE THIS WHEN MAKING CONTENT CHANGES -->
-            <p><i>Updated 20th April 2024 (Central European Time)</i></p>
-            <p><i></i>Dinosaurmod</i></p>
+        nav {
+            height: 60px;
+            width: 100%;
+            background-color: #80F41A;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            position: fixed;
+            top: 0;
+            z-index: 1000;
+        }
 
-            <p>DinosaurMod is having a bit of a problem.</p>
-            <p>I'll see if i can fix the issue</p>
-        </main>
-    </body>
+        nav ul {
+            float: center;
+            margin-left: 50;
+        }
+
+        nav li {
+            display: inline-block;
+            margin: 0 8px;
+            line-height: 60px;
+        }
+
+        nav a {
+            color: white;
+            font-size: 18px;
+            text-transform: uppercase;
+            border: 1px solid transparent;
+            padding: 7px 10px;
+            border-radius: 3px;
+        }
+
+        nav input[type="text"] {
+            padding: 5px;
+            border: 1px solid #ccc;
+            border-radius: 3px;
+            margin-right: 10px;
+        }
+
+        #searchIcon {
+            font-size: 18px;
+            vertical-align: middle; /* Align the image vertically */
+            border: 1px solid rgb(63, 63, 63);
+            border-radius: 3px;
+            cursor: pointer;
+        }
+
+        a.active, a:hover, li #darkModeToggle.active {
+            border: 0px solid white;
+            background-color: rgba(0, 0, 0, 0.125);
+            /* transition: 0.5s; */
+        }
+
+        li #darkModeToggle img {
+            width: 30px;
+            height: 30px;
+            vertical-align: middle; /* Align the image vertically */
+            cursor: pointer;
+        }
+
+        li #IconImage img {
+            width: 40px;
+            height: 40px;
+            vertical-align: middle; /* Align the image vertically */
+            transition: transform 0.3s ease-in-out; /* Add a smooth transition effect */
+        }
+
+        #IconImage img:hover {
+            background-color: transparent;
+            transform: scale(1.1);
+        }
+
+        #IconImage img:not(:hover) {
+            background-color: transparent;
+            transform: scale(1); /* Return to regular size when not hovered */
+        }
+
+        footer {
+            background-color: #ccc;
+            color: black;
+            text-align: center;
+            padding: 20px;
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            flex-wrap: wrap;
+        }
+
+        footer.dark-mode {
+            background-color: #333333;
+            color: white;
+        }
+
+        .footer-row {
+            margin-bottom: 10px;
+            width: 100%; /* Each row takes the full width */
+            flex: 0 0 30%; /* Adjust the width of each footer-row */
+        }
+
+        .footer-row a {
+            color: #7DD100;
+            text-decoration: underline;
+            display: block;
+            margin-bottom: 5px;
+        }
+
+        .footer-row a.dark-mode {
+            color: #7DD100;
+            text-decoration: underline;
+            display: block;
+            margin-bottom: 5px;
+        }
+
+        section {
+            background: white;
+            color: #111111;
+            padding: 20px;
+            align-items: center;
+            text-align: center;
+            margin-top: 60px;
+        }
+
+        section.dark-mode {
+            background-color: #111111;
+            color: white;
+        }
+
+        body.dark-mode {
+            background-color: #111111;
+            color: white;
+        }
+        nav.dark-mode {
+            background-color: #7DD100;
+        }
+        nav.dark-mode input[type="text"] {
+            color: white; /* Darker color for dark mode */
+            background-color: #333333; /* Darker color for dark mode */
+        }
+        nav.dark-mode #searchIcon {
+            color: white; /* Darker color for dark mode */
+            background-color: #333333; /* Darker color for dark mode */
+            border: 1px solid rgb(0, 0, 0);
+            border-radius: 3px;
+        }
+
+    </style>
+    <script>
+        $(document).ready(function(){
+            $('#icon').click(function(){
+                $('nav ul').toggleClass('show');
+            });
+
+            const storedMode = localStorage.getItem('mode');
+            if (storedMode) {
+                // Apply the stored mode
+                applyMode(storedMode);
+            }
+
+            $('#darkModeToggle').click(function(){
+                // Toggle dark mode
+                const isDarkMode = $('body').hasClass('dark-mode');
+                const newMode = isDarkMode ? 'light-mode' : 'dark-mode';
+                
+                // Store the mode preference
+                localStorage.setItem('mode', newMode);
+
+                // Apply the new mode
+                applyMode(newMode);
+            });
+
+            function applyMode(mode) {
+                $('body').removeClass('dark-mode light-mode').addClass(mode);
+                $('nav').removeClass('dark-mode light-mode').addClass(mode);
+                $('section').removeClass('dark-mode light-mode').addClass(mode);
+                $('footer').removeClass('dark-mode light-mode').addClass(mode);
+                $('.footer-row a').removeClass('dark-mode light-mode').addClass(mode);
+            }
+
+            function performSearch() {
+                var searchQuery = $('#searchBar').val();
+                console.log('Search Query:', searchQuery);
+                window.open(`https://penguinmod.com/search?q=${searchQuery}`)
+            }
+
+            // Click event for search icon
+            $('#searchIcon').click(function(){
+                performSearch();
+            });
+
+            // Keypress event for Enter key in search bar
+            $('#searchBar').keypress(function(e){
+                if(e.which === 13){ // 13 corresponds to the Enter key
+                    performSearch();
+                }
+            });
+            /*
+            $.get("https://api.github.com/repos/Dinosaurmod/dinosaurmod.github.io/commits", function(data) {
+            // Display recent commits in a section
+            var commitsSection = $("#recentCommits");
+            var commitsList = $("<ul>");
+
+            data.forEach(function(commit) {
+                // Exclude commits made by "web-flow"
+                if (commit.author && commit.author.login.toLowerCase() !== "web-flow") {
+                    var commitItem = $("<li>");
+                    var commitInfo = commit.author ? commit.author.login : "Unknown";
+                    var commitTitle = commit.commit.message;
+
+                    commitItem.text(commitInfo + " - " + commitTitle);
+                    commitsList.append(commitItem);
+                }
+            });
+
+            commitsSection.append(commitsList);
+            
+          });
+          <div id="recentCommits">
+            <h2>Recent Commits</h2>
+            <ul></ul>
+          </div>
+          */
+        });
+    </script>
+</head>
+<body>
+    <nav>
+        <ul>
+            <li><a id="IconImage" href="https://dinosaurmod.github.io/Dino-Home"><img src="https://dinosaurmod.github.io/favicon.ico" alt="Icon"></a></li>
+            <li><a id="darkModeToggle"><img src="https://penguinmod.com/moon.svg" alt="Moon Icon"></a></li>
+            <li>
+                <button id="searchIcon">&#128269;</button>
+                <input type="text" id="searchBar" placeholder="Search for projects on PM...">
+            </li>
+        </ul>
+        <label id="icon">
+            <i class="fas fa-bars"></i>
+        </label>
+    </nav>
+    <section>
+        <h1>Dinosaurmod is having a issue</h1>
+        <p>I'll see if i can fix the problem</p>
+    </section>
+    <footer>
+        <h1>DinosaurMod is not affiliated with Scratch, TurboWarp, PenguinMod, the Scratch Team, or the Scratch Foundation.</h1>
+
+        <div class="footer-row">
+            <h3>Website</h3>
+            <a>The Editor is not available</a>
+            <a>Credits are not available</a>
+            <a href="https://github.com/Dinosaurmod">Source</a>
+        </div>
+        <div class="footer-row">
+            <h3>Donate</h3>
+            <a href="https://penguinmod.com/donate">PenguinMod</a>
+            <a href="https://github.com/sponsors/GarboMuffin">TurboWarp</a>
+            <a href="https://www.scratchfoundation.org/donate">Scratch</a>
+        </div>
+    </footer>
+</body>
 </html>
