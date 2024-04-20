@@ -674,7 +674,7 @@ const menuItems = [
     {
         name: 'Jul Mik Utilities',
         extensionId: 'https://electramod-extensions-gallery.vercel.app/extensions/julmik6478/julmik_utilities.js',
-        credits: 'V1 & V2 by julmik6478, V3 by Aness6040',
+        credits: 'V1 \& V2 by julmik6478, V3 by Aness6040',
         description: 'An Extension of Blocks Utilities by Jul Mik (V1 and V2 when named Jul Mik Blocks with Turbobuilder) and helped by Aness6040 (Actual v3)',
         iconURL: 'https://electramod-extensions-gallery.vercel.app/images/julmik6478/julmik_utilities.svg',
         featured: true

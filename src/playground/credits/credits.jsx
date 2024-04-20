@@ -80,7 +80,7 @@ const Credits = () => (
             </a>
             <h2>Contributors</h2>
             <p>
-                DinosaurMod is made by a small bunch of developers.
+                DinosaurMod is made by a single developer.
                 A list is below, but you can also check <a href="https://github.com/orgs/DinosaurMod/people">our GitHub</a> incase this one is out of date.
             </p>
             <UserList users={UserData.pmDevelopers} />
@@ -110,8 +110,8 @@ const Credits = () => (
         <section>
             <h2>Extensions</h2>
             <p><i>
-                If you are an extension developer who wants their extension removed from PenguinMod's extensions list,
-                contact us as soon as you can. We'll get it removed as soon as we are able to.
+                If you are an extension developer who wants their extension removed from DinosaurMod's extensions list,
+                let me know as soon as you can. I'll get it removed as soon as i'm able to.
             </i></p>
             <p>
                 We use some MIT licensed extensions from TurboWarp as they are really useful!
