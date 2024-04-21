@@ -956,6 +956,7 @@ const menuItems = [
         extDeveloper: 'G1nX',
         featured: true
     },
+    /*
     {
         name: 'ChatGPT',
         extensionId: 'https://anonymous-cat1.github.io/WorkingTurboGPT/extension.js',
@@ -964,6 +965,7 @@ const menuItems = [
         extDeveloper: 'Diseveled_cat',
         featured: true,
     },
+    */
     {
         name: 'LZ Compress',
         extensionId: 'shovellzcompresss',
@@ -1022,6 +1024,7 @@ const menuItems = [
         iconURL: 'https://gabsthecuriouskid.github.io/FirstExtension/images/githubapi.png',
         tags: ['dinosaurmod'],
         description: 'Fetch IDs, Description, etc. from Repositories, Users and Organizations.',
+        internetConnectionRequired: true,
         featured: true
     },
     {
