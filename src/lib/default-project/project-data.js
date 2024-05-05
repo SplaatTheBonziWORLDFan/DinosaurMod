@@ -26,12 +26,12 @@ const projectData = translateFunction => {
             {
                 isStage: true,
                 name: 'Stage',
-                variables: {
+                variables: {/*
                     '`jEk@4|i[#Fk?(8x)AV.-my variable': [
                         translator(messages.variable),
                         0
                     ]
-                },
+                */},
                 lists: {},
                 broadcasts: {},
                 blocks: {},
