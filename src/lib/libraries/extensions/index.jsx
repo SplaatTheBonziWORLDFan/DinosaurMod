@@ -501,13 +501,13 @@ const menuItems = [
         extDeveloper: 'pinksheep2917'
     },
     {
-        name: 'Sound System',
+        name: 'Sound Systems',
         extensionId: 'jgExtendedAudio',
         iconURL: jgExtendedAudioExtensionIcon,
         tags: ['penguinmod', 'categoryexpansion'],
         insetIconURL: PenguinmodThumb,
         customInsetColor: '#00c3ff',
-        description: 'Free speed and pitch control, starting sounds at certain positions, stopping sounds, etc.',
+        description: 'An audio grouping system for more intensive audio work.',
         featured: true
     },
     {
@@ -966,6 +966,16 @@ const menuItems = [
         featured: true,
     },
     */
+    {
+        name: 'PenguinGPT',
+        extensionId: 'https://extensions.penguinmod.com/extensions/MubiLop/penguingpt.js',
+        iconURL: 'https://extensions.penguinmod.com/images/MubiLop/penguingpt.png',
+        tags: ['penguinmod'],
+        description: 'Talk to ChatGPT! Use models like DALL-E 3, Midjourney, and GPT 4. Please read PenguinMod\'s Privacy Policy before use.',
+        extDeveloper: 'MubiLop',
+        internetConnectionRequired: true,
+        featured: true
+    },
     {
         name: 'LZ Compress',
         extensionId: 'shovellzcompresss',
@@ -1521,6 +1531,16 @@ const menuItems = [
         iconURL: 'https://snail-ide.js.org/static/assets/2bcc1426567c2ca1179de43c02577d1a.svg',
         description: 'Snail IDE version of TurboBuilder',
         collaborator: 'Started by JeremyGamer13, continued by jwklong, modified by nmsderp',
+        featured: true
+    },
+    {
+        name: 'TurboBuilder - Dev Branch',
+        href: 'https://dev-turbobuilder.vercel.app/',
+        extensionId: 'special_turboBuilderDev',
+        iconURL: 'https://studio.penguinmod.com/static/assets/4b6b60b27f82c5ad7b6565275594adb4.png',
+        description: 'Publicly available developer branch, with the latest features.',
+        credits: 'Started by JeremyGamer13, continued by jwklong',
+        tags: ['extcreate'],
         featured: true
     },
     {
