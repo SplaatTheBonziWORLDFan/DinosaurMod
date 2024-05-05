@@ -2,11 +2,11 @@ import { defineMessages } from 'react-intl';
 import sharedMessages from '../shared-messages';
 
 let messages = defineMessages({
-    variable: {
+    /*variable: {
         defaultMessage: 'my variable',
         description: 'Name for the default variable',
         id: 'gui.defaultProject.variable'
-    }
+    }*/
 });
 
 messages = { ...messages, ...sharedMessages };

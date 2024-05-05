@@ -1516,7 +1516,7 @@ const menuItems = [
     },
     {
         name: 'TurboBuilder',
-        href: 'https://turbobuilder-steel.vercel.app',
+        href: 'https://legacy-turbobuilder.vercel.app',
         extensionId: 'special_turboBuilder',
         iconURL: 'https://studio.penguinmod.com/static/assets/93db39f338237e6a51790829ba22a879.png',
         description: 'Create your own amazing extensions using a scratch-based UI!',
