@@ -280,8 +280,7 @@ class Interface extends React.Component {
                             </div>
                             {(extraProjectInfo.accepted) && (
                             <div className={styles.remixWarningBox}>
-                                    <p>Penguinmod is currently working on getting a new server, meaning that the project loader will temporarily not work.</p>
-                                    <p> </p>
+                                    <p>Penguinmod is currently working on getting a new server, meaning that you wont be temporarily able to see other projects.</p>
                                     <p>Do not put in unapproved or invalid project ids or expect project loading to break.</p>
                             </div>
                             )}
