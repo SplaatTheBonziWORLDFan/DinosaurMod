@@ -405,15 +405,6 @@ const menuItems = [
         featured: true
     },
     {
-        name: 'Extra Inputs',
-        extensionId: 'https://gabsthecuriouskid.github.io/FirstExtension/extensions/extrainputs.js',
-        tags: ['dinosaurmod'],
-        iconURL: 'https://gabsthecuriouskid.github.io/FirstExtension/images/ExtraInputsThumbnail.png',
-        description: "Extra Inputs that you can use.",
-        featured: true,
-        extDeveloper: 'MrIncredibleMakerZe'
-    },
-    {
         name: 'Longman Dictionary',
         extensionId: 'https://extensions.turbowarp.org/veggiecan/LongmanDictionary.js',
         tags: ['turbowarp'],
@@ -1266,16 +1257,6 @@ const menuItems = [
         featured: true
     },
     {
-        name: 'JavaScript',
-        extensionId: 'jgJavascript',
-        iconURL: jgJavascriptExtensionIcon,
-        insetIconURL: PenguinmodThumb,
-        customInsetColor: '#00c3ff',
-        tags: ['penguinmod', 'programminglanguage'],
-        description: 'Run your own custom code written in JavaScript!',
-        featured: true
-    },
-    {
         name: (
             <FormattedMessage
                 defaultMessage="TurboWarp Blocks"
@@ -1577,12 +1558,58 @@ if (IsLocal || IsLiveTests) {
             featured: true
         },
         {
+            name: 'an amazing extension',
+            extensionId: 'jgBestExtension',
+            iconURL: 'https://extensions.penguinmod.com/images/JeremyGamer13/epic.png',
+            internetConnectionRequired: true,
+            tags: ['penguinmod', 'joke'],
+            description: 'this is SUCH A GOOD EXTENSION USE IT NOW',
+            featured: true
+        },
+        {
+            name: 'Epic utilities',
+            extensionId: 'https://extensions.penguinmod.com/extensions/SharkPool/AprilFools.js',
+            iconURL: 'https://extensions.penguinmod.com/images/JeremyGamer13/epicutils.png',
+            tags: ['penguinmod', 'joke'],
+            description: 'the super good utilities brought to you by todays sponsor sharkpool (the epic utilities)',
+            featured: true
+        },
+        {
+            name: 'image blocks',
+            extensionId: 'https://extensions.penguinmod.com/extensions/Ashime/funneimageblocks.js',
+            iconURL: 'https://extensions.penguinmod.com/images/JeremyGamer13/screenshot1.png',
+            tags: ['penguinmod', 'joke'],
+            internetConnectionRequired: true,
+            description: 'who needs cat blocks when you have penguin block',
+            extDeveloper: 'Ashimee, 0znzw, CST1229',
+            featured: true
+        },
+        {
+            name: 'fire in the hole',
+            extensionId: 'https://extensions.penguinmod.com/extensions/JeremyGamer13/FireInTheHole.js',
+            iconURL: 'https://library.penguinmod.com/files/emojis/cluelesssmile.png',
+            tags: ['penguinmod', 'joke', 'forbidden'],
+            internetConnectionRequired: true,
+            description: 'this joke is not funny anymore',
+            featured: true
+        },
+        {
             name: 'Fetch+',
             extensionId: 'https://gabsthecuriouskid.github.io/FirstExtension/extensions/fetchplus.js',
             tags: ['dinosaurmod'],
             iconURL: 'https://extensions.turbowarp.org/images/fetch.svg',
             description: "get and post stuff, i guess.",
             featured: true,
+        },
+        {
+            name: 'JavaScript',
+            extensionId: 'jgJavascript',
+            iconURL: jgJavascriptExtensionIcon,
+            insetIconURL: PenguinmodThumb,
+            customInsetColor: '#00c3ff',
+            tags: ['penguinmod', 'programminglanguage'],
+            description: 'This Extension has been merged into the main toolbox. Run your own custom code written in JavaScript!',
+            featured: true
         },
         {
             name: 'Easy Save',
@@ -1602,6 +1629,15 @@ if (IsLocal || IsLiveTests) {
             description: "Replaced by the dinosaurmod version. More small motion blocks for movement or collision.",
             featured: true,
             credits: 'Some blocks from NexusKitten'
+        },
+        {
+            name: 'Extra Inputs',
+            extensionId: 'https://gabsthecuriouskid.github.io/FirstExtension/extensions/extrainputs.js',
+            tags: ['dinosaurmod'],
+            iconURL: 'https://gabsthecuriouskid.github.io/FirstExtension/images/ExtraInputsThumbnail.png',
+            description: "This Extension has been merged into the main toolbox. Extra Inputs that you can use.",
+            featured: true,
+            extDeveloper: 'MrIncredibleMakerZe'
         },
         {
             name: 'Unite',
