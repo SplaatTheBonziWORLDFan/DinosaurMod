@@ -145,6 +145,9 @@ import pmControlsExpansionExtensionIcon from './penguinmod/extensions/controls_e
 import pmSensingExpansionExtensionIcon from './penguinmod/extensions/sensing_expanded.png';
 import pmOperatorsExpansionExtensionIcon from './penguinmod/extensions/operators_expanded.png';
 
+// dinosaurmod icons
+import dmDinoBuilderIcon from './dinosaurmod/dinobuilder.png';
+
 // other stuff (not official by penguinmod)
 import PenguinmodThumb from './penguinmod/unofficial-icons/penguinmod-icon.svg';
 
@@ -1523,6 +1526,16 @@ const menuItems = [
         credits: 'Started by JeremyGamer13, continued by jwklong',
         tags: ['extcreate'],
         featured: true
+    },
+    {
+        name: 'DinoBuilder',
+        href: 'https://dinoobuilder.vercel.app',
+        extensionId: 'special_dinoBuilder',
+        iconURL: dmDinoBuilderIcon,
+        description: 'Create your own amazing extensions using a TurboBuilder Mod scratch-based UI!',
+        credits: 'MrIncredibleMakerZe',
+        featured: true,
+        disabled: false
     },
     {
         // not really an extension, but it's easiest to present it as one
