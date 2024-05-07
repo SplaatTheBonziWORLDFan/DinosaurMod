@@ -1529,7 +1529,7 @@ const menuItems = [
     },
     {
         name: 'DinoBuilder',
-        href: 'https://dinoobuilder.vercel.app',
+        href: 'https://dinobuilder.vercel.app',
         extensionId: 'special_dinoBuilder',
         iconURL: dmDinoBuilderIcon,
         description: 'Create your own amazing extensions using a TurboBuilder Mod scratch-based UI!',
