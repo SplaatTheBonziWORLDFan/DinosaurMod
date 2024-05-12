@@ -60,6 +60,8 @@ import turbowarpIcon from './penguinmod/extensions/turbowarp_icon.svg';
 import customExtensionIcon from './custom/custom.svg';
 import penguinmodLibraryExtensionIcon from './penguinmod/library.svg';
 
+import turboBuilderIcon from './penguinmod/turbobuilder.png';
+
 import filesExtensionIcon from './penguinmod/extensions/files.png';
 import filesOldExtensionIcon from './penguinmod/extensions/files_old.png';
 import jgJSONExtensionIcon from './penguinmod/extensions/json.png';
@@ -992,14 +994,14 @@ const menuItems = [
         featured: true
     },
     {
-        name: 'Numerical Encoding',
+        name: 'Numerical Encoding V2',
         customInsetColor: '#ff4d4d',
-        extensionId: 'https://extensions.turbowarp.org/cs2627883/numericalencoding.js',
-        iconURL: 'https://extensions.turbowarp.org/images/cs2627883/numericalencoding.svg',
+        extensionId: 'https://extensions.turbowarp.org/numerical-encoding-2.js',
+        iconURL: 'https://extensions.turbowarp.org/images/numerical-encoding-2.svg',
         insetIconURL: turbowarpIcon,
         tags: ['turbowarp'],
         description: 'Encode strings as numbers for cloud variables.',
-        credits: 'cs2627883',
+        // credits: 'cs2627883',
         featured: true
     },
     {
@@ -1502,7 +1504,7 @@ const menuItems = [
         name: 'TurboBuilder',
         href: 'https://legacy-turbobuilder.vercel.app',
         extensionId: 'special_turboBuilder',
-        iconURL: 'https://studio.penguinmod.com/static/assets/93db39f338237e6a51790829ba22a879.png',
+        iconURL: turboBuilderIcon,
         description: 'Create your own amazing extensions using a scratch-based UI!',
         credits: 'Started by JeremyGamer13, continued by jwklong',
         featured: true,
@@ -1521,7 +1523,7 @@ const menuItems = [
         name: 'TurboBuilder - Dev Branch',
         href: 'https://dev-turbobuilder.vercel.app/',
         extensionId: 'special_turboBuilderDev',
-        iconURL: 'https://studio.penguinmod.com/static/assets/4b6b60b27f82c5ad7b6565275594adb4.png',
+        iconURL: 'https://studio.penguinmod.com/static/assets/78d464ee4e15000ce44b841ff2f4c518.png',
         description: 'Publicly available developer branch, with the latest features.',
         credits: 'Started by JeremyGamer13, continued by jwklong',
         tags: ['extcreate'],
