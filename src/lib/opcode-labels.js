@@ -108,6 +108,11 @@ const messages = defineMessages({
         description: 'Label for the current second monitor when shown on the stage',
         id: 'gui.opcodeLabels.second'
     },
+    sensing_current_timestamp: {
+        defaultMessage: 'js timestamp',
+        description: 'Label for the current js timestamp monitor when shown on the stage',
+        id: 'gui.opcodeLabels.second'
+    },
     sensing_timer: {
         defaultMessage: 'timer',
         description: 'Label for the timer monitor when shown on the stage',
