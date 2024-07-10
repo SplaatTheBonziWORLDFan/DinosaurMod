@@ -413,7 +413,7 @@ const menuItems = [
         name: 'Longman Dictionary',
         extensionId: 'https://extensions.turbowarp.org/veggiecan/LongmanDictionary.js',
         tags: ['turbowarp'],
-        iconURL: 'https://extensions.turbowarp.org/images/veggiecan/LongmanDictionary.png',
+        iconURL: 'https://extensions.turbowarp.org/images/veggiecan/LongmanDictionary.svg',
         insetIconURL: turbowarpIcon,
         description: "Get the definitions of words from the Longman Dictionary in your projects.",
         featured: true,
@@ -678,7 +678,7 @@ const menuItems = [
     {
         name: 'More Keys Event',
         extensionId: 'https://ldsjvg.webwave.dev/lib/ldsjvg/more-keys-ltair3aw.js',
-        iconURL: 'https://ldsjvg.webwave.dev/files/dynamicContent/sites/ldsjvg/images/pl/webpage_20/lu4jj2ug/element_333/rwdMode_1/424x145/block_2032024-19_33_30.webp',
+        iconURL: defaultExtensionIcon,
         tags: ['categoryexpansion'],
         description: 'This extension adds a hat block with support for f1, f2, f3... keys and alt key.',
         extDeveloper: 'julmik6478',
@@ -1173,7 +1173,7 @@ const menuItems = [
         name: 'Printing',
         tags: ['penguinmod', 'hardware'],
         extensionId: 'sharkpoolPrinting',
-        iconURL: 'https://studio.penguinmod.com/static/assets/d52a9f0f59cd75bb37db958947ddd83e.png',
+        iconURL: 'https://studio.penguinmod.com/static/assets/1a086f192347214d507e8373d05481bd.svg',
         description: 'Allows you to show a dialog for printing text, images, and custom HTML to a printer.',
         featured: true
     },
