@@ -80,7 +80,7 @@ const getPenguinModSoundAsset = (soundObject, vm) => {
 
 const getDinosaurModSoundAsset = (soundObject, vm) => {
     return new Promise((resolve, reject) => {
-        fetch(`${DM_LIBRARY_API}files/${soundObject.libraryFilePage2}`, { mode: 'no-cors' })
+        fetch(`${DM_LIBRARY_API}files/${soundObject.libraryFilePage2}`)
             .then((r) => r.arrayBuffer())
             .then((arrayBuffer) => {
                 const storage = vm.runtime.storage;
