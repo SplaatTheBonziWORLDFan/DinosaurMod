@@ -44,7 +44,7 @@ const getSoundLibraryThumbnailData = (soundLibraryContent, isRtl) => soundLibrar
         rawURL: sound.fromPenguinModLibrary ?
             `${PM_LIBRARY_API}files/sound_previews/${sound.libraryFilePage.replace(/\//g, "_").replace(".mp3", ".png")}` :
             (sound.fromDinosaurmodLibrary ? `${DM_LIBRARY_API}files/sound_previews/${sound.libraryFilePage.replace(/\//g, "_").replace(".mp3", ".png")}` :
-             `${PM_LIBRARY_API}files/scratch_sound_previews/${assetId}.png`),
+             `${DM_LIBRARY_API}files/scratch_sound_previews/${assetId}.png`),
         soundLength: sound.fromPenguinModLibrary || sound.fromDinosaurModLibrary ?
             soundLengths.penguinmod[sound.libraryFilePage] :
             soundLengths.scratch[assetId],
@@ -227,8 +227,7 @@ class SoundLibrary extends React.PureComponent {
                     }
                 });
             return;
-        }
-        if (soundItem.fromDinosaurModLibrary === true) {
+        } else if (soundItem.fromDinosaurModLibrary === true) {
             this.playingSoundPromise = getDinosaurModSoundAsset(soundItem, vm)
                 .then(soundAsset => {
                     if (soundAsset) {
@@ -298,8 +297,7 @@ class SoundLibrary extends React.PureComponent {
         if (soundItem.fromPenguinModLibrary) {
             vmSound.fromPenguinModLibrary = true;
             vmSound.libraryId = soundItem.libraryFilePage;
-        };
-        if (soundItem.fromDinosaurModLibrary) {
+        } else if (soundItem.fromDinosaurModLibrary) {
             vmSound.fromDinosaurModLibrary = true;
             vmSound.libraryId = soundItem.libraryFilePage;
         };
