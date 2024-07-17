@@ -41,10 +41,9 @@ const getSoundLibraryThumbnailData = (soundLibraryContent, isRtl) => soundLibrar
     } = sound;
     return {
         _md5: md5ext,
-        rawURL: sound.fromPenguinModLibrary ?
-            `${PM_LIBRARY_API}files/sound_previews/${sound.libraryFilePage.replace(/\//g, "_").replace(".mp3", ".png")}` :
-            (sound.fromDinosaurmodLibrary ? `${DM_LIBRARY_API}files/sound_previews/${sound.libraryFilePage.replace(/\//g, "_").replace(".mp3", ".png")}` :
-             `${DM_LIBRARY_API}files/scratch_sound_previews/${assetId}.png`),
+        rawURL: sound.fromDinosaurmodLibrary ?
+            `${DM_LIBRARY_API}files/sound_previews/${sound.libraryFilePage.replace(/\//g, "_").replace(".mp3", ".png")}` :
+             `${DM_LIBRARY_API}files/scratch_sound_previews/${assetId}.png`,
         soundLength: sound.fromPenguinModLibrary || sound.fromDinosaurModLibrary ?
             soundLengths.penguinmod[sound.libraryFilePage] :
             soundLengths.scratch[assetId],
