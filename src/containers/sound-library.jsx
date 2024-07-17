@@ -77,6 +77,30 @@ const getPenguinModSoundAsset = (soundObject, vm) => {
     })
 }
 
+const getDinosaurModSoundAsset = (soundObject, vm) => {
+    return new Promise((resolve, reject) => {
+        fetch(`${DM_LIBRARY_API}files/${soundObject.libraryFilePage}`)
+            .then((r) => r.arrayBuffer())
+            .then((arrayBuffer) => {
+                const storage = vm.runtime.storage;
+                const asset = new storage.Asset(
+                    // asset type Sound cant be used since it defaults to wav files
+                    {
+                        contentType: 'audio/mpeg',
+                        name: 'Sound',
+                        runtimeFormat: storage.DataFormat.MP3,
+                        immutable: true
+                    },
+                    null,
+                    storage.DataFormat.MP3,
+                    new Uint8Array(arrayBuffer),
+                    true
+                );
+                resolve(asset);
+            }).catch(reject);
+    })
+}
+
 class SoundLibrary extends React.PureComponent {
     constructor (props) {
         super(props);
@@ -178,6 +202,34 @@ class SoundLibrary extends React.PureComponent {
         // pm: check if we are using the PM object library instead of the normal one
         if (soundItem.fromPenguinModLibrary === true) {
             this.playingSoundPromise = getPenguinModSoundAsset(soundItem, vm)
+                .then(soundAsset => {
+                    if (soundAsset) {
+                        const sound = {
+                            md5: md5ext,
+                            name: soundItem.name,
+                            format: "mpeg",
+                            data: soundAsset.data
+                        };
+                        return this.audioEngine.decodeSoundPlayer(sound)
+                            .then(soundPlayer => {
+                                soundPlayer.connect(this.audioEngine);
+                                // Play the sound. Playing the sound will always come before a
+                                // paired stop if the sound must stop early.
+                                soundPlayer.play();
+                                soundPlayer.addListener('stop', this.onStop);
+                                // Set that the sound is playing. This affects the type of stop
+                                // instruction given if the sound must stop early.
+                                if (this.playingSoundPromise !== null) {
+                                    this.playingSoundPromise.isPlaying = true;
+                                }
+                                return soundPlayer;
+                            });
+                    }
+                });
+            return;
+        }
+        if (soundItem.fromDinosaurModLibrary === true) {
+            this.playingSoundPromise = getDinosaurModSoundAsset(soundItem, vm)
                 .then(soundAsset => {
                     if (soundAsset) {
                         const sound = {

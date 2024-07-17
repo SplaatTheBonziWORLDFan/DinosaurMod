@@ -126,6 +126,10 @@ class SoundTab extends React.Component {
             vmSound.fromPenguinModLibrary = true;
             vmSound.libraryId = soundItem.libraryFilePage;
         }
+        if (soundItem.fromDinosaurModLibrary) {
+            vmSound.fromDinosaurModLibrary = true;
+            vmSound.libraryId = soundItem.libraryFilePage;
+        }
         this.props.vm.addSound(vmSound).then(() => {
             this.handleNewSound();
         });
