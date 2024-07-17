@@ -42,11 +42,13 @@ const getSoundLibraryThumbnailData = (soundLibraryContent, isRtl) => soundLibrar
     return {
         _md5: md5ext,
         rawURL: sound.fromDinosaurmodLibrary ?
-            `${DM_LIBRARY_API}files/sound_previews/${sound.libraryFilePage.replace(/\//g, "_").replace(".mp3", ".png")}` :
-             `${DM_LIBRARY_API}files/scratch_sound_previews/${assetId}.png`,
-        soundLength: sound.fromPenguinModLibrary || sound.fromDinosaurModLibrary ?
-            soundLengths.penguinmod[sound.libraryFilePage] :
-            soundLengths.scratch[assetId],
+            `${DM_LIBRARY_API}files/sound_previews/${sound.libraryFilePage2.replace(/\//g, "_").replace(".mp3", ".png")}` :
+             (sound.fromPenguinModLibrary ? `${PM_LIBRARY_API}files/sound_previews/${sound.libraryFilePage.replace(/\//g, "_").replace(".mp3", ".png")}` :
+              `${PM_LIBRARY_API}files/scratch_sound_previews/${assetId}.png`),
+        soundLength: sound.fromDinosaurModLibrary ?
+            soundLengths.dinosaurmod[sound.libraryFilePage2] :
+            (sound.fromPenguinModLibrary ? soundLengths.penguinmod[sound.libraryFilePage] :
+            soundLengths.scratch[assetId],)
         soundType: isTheme ? "Theme" : (isLoop ? "Loop" : "Sound"),
         ...otherData
     };
@@ -78,7 +80,7 @@ const getPenguinModSoundAsset = (soundObject, vm) => {
 
 const getDinosaurModSoundAsset = (soundObject, vm) => {
     return new Promise((resolve, reject) => {
-        fetch(`${DM_LIBRARY_API}files/${soundObject.libraryFilePage}`)
+        fetch(`${DM_LIBRARY_API}files/${soundObject.libraryFilePage2}`)
             .then((r) => r.arrayBuffer())
             .then((arrayBuffer) => {
                 const storage = vm.runtime.storage;
@@ -298,7 +300,7 @@ class SoundLibrary extends React.PureComponent {
             vmSound.libraryId = soundItem.libraryFilePage;
         } else if (soundItem.fromDinosaurModLibrary) {
             vmSound.fromDinosaurModLibrary = true;
-            vmSound.libraryId = soundItem.libraryFilePage;
+            vmSound.libraryId = soundItem.libraryFilePage2;
         };
         this.props.vm.addSound(vmSound).then(() => {
             this.props.onNewSound();

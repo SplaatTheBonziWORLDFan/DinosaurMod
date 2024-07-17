@@ -5421,7 +5421,7 @@
         "md5ext": "sound.mp3",
         "rate": 44100,
         "fromDinosaurModLibrary": true,
-        "libraryFilePage": "sounds/mibup15full.mp3"
+        "libraryFilePage2": "sounds/mibup15full.mp3"
     },
     {
         "name": "Muted Conga",

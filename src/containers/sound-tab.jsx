@@ -127,7 +127,7 @@ class SoundTab extends React.Component {
             vmSound.libraryId = soundItem.libraryFilePage;
         } else if (soundItem.fromDinosaurModLibrary) {
             vmSound.fromDinosaurModLibrary = true;
-            vmSound.libraryId = soundItem.libraryFilePage;
+            vmSound.libraryId = soundItem.libraryFilePage2;
         }
         this.props.vm.addSound(vmSound).then(() => {
             this.handleNewSound();
