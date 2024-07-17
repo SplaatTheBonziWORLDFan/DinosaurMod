@@ -9,6 +9,7 @@ export default [
     {type: 'divider'},
     {type: 'subtitle', intlLabel: "General"},
     {tag: 'animals', intlLabel: messages.animals},
+    {tag: 'monster', intlLabel: messages.monsters},
     {tag: 'notes', intlLabel: messages.notes},
     {tag: 'percussion', intlLabel: messages.percussion},
     {tag: 'voice', intlLabel: messages.voice},
@@ -21,4 +22,7 @@ export default [
     {tag: 'sports', intlLabel: messages.sports},
     {tag: 'swords', intlLabel: messages.swords},
     {tag: 'guns', intlLabel: messages.guns},
+    {type: 'divider'},
+    {type: 'subtitle', intlLabel: "Materials"},
+    {tag: 'metal', intlLabel: messages.metal},
 ];

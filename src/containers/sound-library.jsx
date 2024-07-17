@@ -7,10 +7,11 @@ import AudioEngine from 'scratch-audio';
 
 import LibraryComponent from '../components/library/library.jsx';
 
-import soundIcon from '../components/library-item/lib-icon--sound.svg';
-import soundIconRtl from '../components/library-item/lib-icon--sound-rtl.svg';
+// import soundIcon from '../components/library-item/lib-icon--sound.svg';
+// import soundIconRtl from '../components/library-item/lib-icon--sound-rtl.svg';
 
 import {getSoundLibrary} from '../lib/libraries/tw-async-libraries';
+import soundLengths from '../lib/libraries/sounds-lengths.json';
 import soundTags from '../lib/libraries/sound-tags';
 
 import {connect} from 'react-redux';
@@ -26,14 +27,26 @@ const messages = defineMessages({
 const PM_LIBRARY_API = "https://penguinmod-objectlibraries.vercel.app/";
 
 // @todo need to use this hack to avoid library using md5 for image
-const getSoundLibraryThumbnailData = (soundLibraryContent, isRtl) => soundLibraryContent.map(sound => {
+const getSoundLibraryThumbnailData = (soundLibraryContent, isRtl) => soundLibraryContent
+.sort((a, b) => a.name.localeCompare(b.name))
+.map(sound => {
+    const isLoop = sound.tags ? sound.tags.includes('loops') : false;
+    const isTheme = sound.tags ? sound.tags.includes('themes') : false;
+
     const {
         md5ext,
+        assetId,
         ...otherData
     } = sound;
     return {
         _md5: md5ext,
-        rawURL: isRtl ? soundIconRtl : soundIcon,
+        rawURL: sound.fromPenguinModLibrary ?
+            `${PM_LIBRARY_API}files/sound_previews/${sound.libraryFilePage.replace(/\//g, "_").replace(".mp3", ".png")}` :
+            `${PM_LIBRARY_API}files/scratch_sound_previews/${assetId}.png`,
+        soundLength: sound.fromPenguinModLibrary ?
+            soundLengths.penguinmod[sound.libraryFilePage] :
+            soundLengths.scratch[assetId],
+        soundType: isTheme ? "Theme" : (isLoop ? "Loop" : "Sound"),
         ...otherData
     };
 });
@@ -242,6 +255,7 @@ class SoundLibrary extends React.PureComponent {
                 showPlayButton
                 data={this.state.data}
                 id="soundLibrary"
+                actor="SoundLibrary"
                 header={"Sounds"}
                 setStopHandler={this.setStopHandler}
                 tags={soundTags}

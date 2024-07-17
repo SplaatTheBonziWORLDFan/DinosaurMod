@@ -25,6 +25,9 @@ const getURLOrigin = (url) => {
     }
     return urlObj.origin;
 };
+const getMSFormatted = (ms) => {
+    return (ms / 1000).toFixed(2);
+};
 
 /* eslint-disable react/prefer-stateless-function */
 class LibraryItemComponent extends React.PureComponent {
@@ -349,7 +352,7 @@ class LibraryItemComponent extends React.PureComponent {
                     >
                         <img
                             className={classNames(
-                                styles.libraryItemImage, styles.libraryItemImageOverlay, {
+                                styles.libraryItemImage, {
                                 [styles.libraryItemWaveform]: this.props.styleForSound
                             }
                             )}
@@ -357,6 +360,18 @@ class LibraryItemComponent extends React.PureComponent {
                             src={this.props.iconURL}
                             draggable={false}
                         />
+                        {this.props.overlayURL && (
+                            <img
+                                className={classNames(
+                                    styles.libraryItemImage, styles.libraryItemImageOverlay, {
+                                    [styles.libraryItemWaveform]: this.props.styleForSound
+                                }
+                                )}
+                                loading="lazy"
+                                src={this.props.overlayURL}
+                                draggable={false}
+                            />
+                        )}
                     </Box>
                 </Box>
                 {this.props.styleForSound ? (
