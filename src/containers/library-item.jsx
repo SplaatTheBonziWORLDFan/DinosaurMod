@@ -188,10 +188,15 @@ class LibraryItem extends React.PureComponent {
                 eventSubmittor={this.props.eventSubmittor}
                 description={this.props.description}
                 disabled={this.props.disabled}
+                isNew={this.props.isNew}
                 extensionId={this.props.extensionId}
                 featured={this.props.featured}
                 hidden={this.props.hidden}
                 iconURL={iconURL}
+                overlayURL={this.props.overlayURL}
+                styleForSound={this.props.styleForSound}
+                soundType={this.props.soundType}
+                soundLength={this.props.soundLength}
                 icons={this.props.icons}
                 id={this.props.id}
                 _id={this.props._id}
@@ -241,6 +246,7 @@ LibraryItem.propTypes = {
     extensionId: PropTypes.string,
     href: PropTypes.string,
     featured: PropTypes.bool,
+    isNew: PropTypes.bool,
     hidden: PropTypes.bool,
     iconMd5: PropTypes.string,
     iconRawURL: PropTypes.string,

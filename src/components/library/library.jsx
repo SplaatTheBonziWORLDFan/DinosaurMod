@@ -446,6 +446,7 @@ class LibraryComponent extends React.Component {
                                 disabled={dataItem.disabled}
                                 extensionId={dataItem.extensionId}
                                 featured={dataItem.featured}
+                                isNew={dataItem.tags && dataItem.tags.includes("new")}
                                 hidden={dataItem.hidden}
                                 href={dataItem.href}
                                 iconMd5={dataItem.costumes ? dataItem.costumes[0].md5ext : dataItem.md5ext}

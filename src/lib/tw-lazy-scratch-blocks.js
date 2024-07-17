@@ -48,6 +48,7 @@ const get2 = () => {
 
 const load = () => {
     if (_ScratchBlocks && (isNameUrMom() === wasNameYourmom())) {
+        window.ScratchBlocks = _ScratchBlocks;
         return Promise.resolve();
     }
     _ScratchBlocks = null;

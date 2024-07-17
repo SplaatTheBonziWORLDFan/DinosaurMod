@@ -39,10 +39,10 @@ class CustomExtensionModal extends React.Component {
         ]);
         this.state = {
             files: null,
-            type: 'url',
-            url: '',
+            type: this.props.swapId ? 'text' : 'url',
+            url: this.fetchSwapUrl(),
             file: null,
-            text: '',
+            text: this.fetchSwapText(),
             unsandboxed: false,
             addingToLibrary: false,
             libraryImageFile: null,
@@ -116,19 +116,50 @@ class CustomExtensionModal extends React.Component {
     }
     async handleLoadExtension () {
         let failed = false;
+        if (this.props.swapId) {
+            /* eslint-disable-next-line no-alert, max-len */
+            if (!confirm('Failure to swap extensions will cause the extension to be flatout removed, are you sure the inputed extension has matching id\'s and has no errors?')) {
+                return;
+            }
+        }
         this.handleClose();
         try {
             const url = await this.getExtensionURL();
             if (this.state.type !== 'url' && this.state.unsandboxed) {
                 manuallyTrustExtension(url);
             }
-            await this.props.vm.extensionManager.loadExtensionURL(url);
+            if (this.props.swapId) {
+                const runtime = this.props.vm.runtime;
+                this.props.vm.extensionManager.prepareSwap(this.props.swapId);
+                let extIdx = runtime._blockInfo.findIndex(ext => ext.id === this.props.swapId);
+                const loadedIds = await this.props.vm.extensionManager.loadExtensionURL(url);
+                if (!loadedIds.includes(this.props.swapId)) {
+                    for (const ext of loadedIds) this.props.vm.extensionManager.removeExtension(ext);
+                    // eslint-disable-next-line no-alert
+                    alert('The extension you used to for the edit had a different id to the one you where editing.');
+                }
+                this.props.vm.runtime._removeExtensionPrimitive(this.props.swapId);
+                loadedIds.forEach(extId => {
+                    const idx = runtime._blockInfo.findLastIndex(ext => ext.id === extId);
+                    const ext = runtime._blockInfo[idx];
+                    runtime._blockInfo.splice(idx, 1);
+                    runtime._blockInfo.splice(extIdx, 0, ext);
+                    extIdx++;
+                });
+            } else {
+                await this.props.vm.extensionManager.loadExtensionURL(url);
+            }
         } catch (err) {
             failed = true;
             log.error(err);
             // eslint-disable-next-line no-alert
             alert(err);
         } finally {
+            if (failed && this.props.swapId) {
+                // eslint-disable-next-line no-alert
+                alert('The extension you used to for the edit has failed to load.');
+                this.props.vm.runtime._removeExtensionPrimitive(this.props.swapId);
+            }
             if (failed) return;
             if (!this.state.addingToLibrary) return;
             // we are only adding to library if it succeeded to load
@@ -246,9 +277,17 @@ class CustomExtensionModal extends React.Component {
             }
         });
     }
+    fetchSwapUrl () {
+        return this.props.vm.extensionManager.extensionUrlFromId(this.props.swapId) ?? '';
+    }
+    fetchSwapText () {
+        return this.props.vm.extensionManager.extUrlCodes[this.fetchSwapUrl()] ?? '';
+    }
     render () {
         return (
             <CustomExtensionModalComponent
+                defaultUrl={this.fetchSwapUrl()}
+                defaultText={this.fetchSwapText()}
                 canLoadExtension={this.hasValidInput()}
                 type={this.state.type}
                 onSwitchToFile={this.handleSwitchToFile}
@@ -286,13 +325,24 @@ CustomExtensionModal.propTypes = {
     onClose: PropTypes.func,
     vm: PropTypes.shape({
         extensionManager: PropTypes.shape({
-            loadExtensionURL: PropTypes.func
+            loadExtensionURL: PropTypes.func,
+            getExtensionURLs: PropTypes.func,
+            extUrlCodes: PropTypes.object,
+            prepareSwap: PropTypes.func,
+            extensionUrlFromId: PropTypes.func,
+            removeExtension: PropTypes.func
+        }),
+        runtime: PropTypes.shape({
+            _removeExtensionPrimitive: PropTypes.func,
+            _blockInfo: PropTypes.array
         })
-    })
+    }),
+    swapId: PropTypes.string
 };
 
 const mapStateToProps = state => ({
-    vm: state.scratchGui.vm
+    vm: state.scratchGui.vm,
+    swapId: state.scratchGui.modals.extensionModalSwapId
 });
 
 const mapDispatchToProps = dispatch => ({
