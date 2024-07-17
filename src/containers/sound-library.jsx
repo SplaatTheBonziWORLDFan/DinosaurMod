@@ -48,7 +48,7 @@ const getSoundLibraryThumbnailData = (soundLibraryContent, isRtl) => soundLibrar
         soundLength: sound.fromDinosaurModLibrary ?
             soundLengths.dinosaurmod[sound.libraryFilePage2] :
             (sound.fromPenguinModLibrary ? soundLengths.penguinmod[sound.libraryFilePage] :
-            soundLengths.scratch[assetId],)
+            soundLengths.scratch[assetId]),
         soundType: isTheme ? "Theme" : (isLoop ? "Loop" : "Sound"),
         ...otherData
     };
