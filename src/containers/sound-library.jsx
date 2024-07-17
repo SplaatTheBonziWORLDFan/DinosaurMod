@@ -25,6 +25,7 @@ const messages = defineMessages({
 });
 
 const PM_LIBRARY_API = "https://penguinmod-objectlibraries.vercel.app/";
+const DM_LIBRARY_API = "https://dinosaurmod-object-libraries.vercel.app/";
 
 // @todo need to use this hack to avoid library using md5 for image
 const getSoundLibraryThumbnailData = (soundLibraryContent, isRtl) => soundLibraryContent
@@ -42,8 +43,9 @@ const getSoundLibraryThumbnailData = (soundLibraryContent, isRtl) => soundLibrar
         _md5: md5ext,
         rawURL: sound.fromPenguinModLibrary ?
             `${PM_LIBRARY_API}files/sound_previews/${sound.libraryFilePage.replace(/\//g, "_").replace(".mp3", ".png")}` :
-            `${PM_LIBRARY_API}files/scratch_sound_previews/${assetId}.png`,
-        soundLength: sound.fromPenguinModLibrary ?
+            (sound.fromDinosaurmodLibrary ? `${DM_LIBRARY_API}files/sound_previews/${sound.libraryFilePage.replace(/\//g, "_").replace(".mp3", ".png")}` :
+             `${PM_LIBRARY_API}files/scratch_sound_previews/${assetId}.png`),
+        soundLength: sound.fromPenguinModLibrary || sound.fromDinosaurModLibrary ?
             soundLengths.penguinmod[sound.libraryFilePage] :
             soundLengths.scratch[assetId],
         soundType: isTheme ? "Theme" : (isLoop ? "Loop" : "Sound"),
@@ -243,6 +245,10 @@ class SoundLibrary extends React.PureComponent {
         };
         if (soundItem.fromPenguinModLibrary) {
             vmSound.fromPenguinModLibrary = true;
+            vmSound.libraryId = soundItem.libraryFilePage;
+        };
+        if (soundItem.fromDinosaurModLibrary) {
+            vmSound.fromDinosaurModLibrary = true;
             vmSound.libraryId = soundItem.libraryFilePage;
         };
         this.props.vm.addSound(vmSound).then(() => {

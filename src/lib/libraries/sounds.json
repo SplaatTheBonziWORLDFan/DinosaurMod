@@ -5410,6 +5410,19 @@
         "rate": 22050
     },
     {
+        "name": "Mr Incredible Becoming Uncanny Phase 15 Full Music",
+        "tags": [
+            "monster",
+            "loops",
+            "new"
+        ],
+        "dataFormat": "mpeg",
+        "md5ext": "sound.mp3",
+        "rate": 44100,
+        "fromDinosaurModLibrary": true,
+        "libraryFilePage": "sounds/mibup15full.mp3"
+    },
+    {
         "name": "Muted Conga",
         "tags": [
             "drums",

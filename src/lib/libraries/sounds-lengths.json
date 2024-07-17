@@ -1,4 +1,7 @@
-{
+{   
+    "dinosaurmod": {
+        "sounds/mibup15full": 132480
+    },
     "penguinmod": {
         "sounds/woosh.mp3": 470,
         "sounds/win3.mp3": 3420,
