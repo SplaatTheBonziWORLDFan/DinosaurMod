@@ -19,6 +19,8 @@ import xIcon from './icon--x.svg';
 import yIcon from './icon--y.svg';
 import showIcon from './icon--show.svg';
 import hideIcon from './icon--hide.svg';
+import dragOnIcon from './icon--draggable-on.svg';
+import dragOffIcon from './icon--draggable-off.svg';
 
 const BufferedInput = BufferedInputHOC(Input);
 
@@ -38,6 +40,7 @@ class SpriteInfo extends React.Component {
             this.props.name !== nextProps.name ||
             this.props.stageSize !== nextProps.stageSize ||
             this.props.visible !== nextProps.visible ||
+            this.props.draggable !== nextProps.draggable ||
             // Only update these if rounded value has changed
             Math.round(this.props.direction) !== Math.round(nextProps.direction) ||
             Math.round(this.props.size) !== Math.round(nextProps.size) ||
@@ -224,6 +227,46 @@ class SpriteInfo extends React.Component {
                                     src={hideIcon}
                                 />
                             </div>
+                        </div>
+                    </div>
+                    <div className={styles.radioWrapper}>
+                        <div
+                            className={classNames(
+                                styles.radio,
+                                styles.radioFirst,
+                                styles.iconWrapper,
+                                {
+                                    [styles.isActive]: this.props.visible && !this.props.disabled,
+                                    [styles.isDisabled]: this.props.disabled
+                                }
+                            )}
+                            tabIndex="0"
+                            onClick={this.props.onClickVisible}
+                            onKeyPress={this.props.onPressVisible}
+                        >
+                            <img
+                                className={styles.icon}
+                                src={dragOnIcon}
+                            />
+                        </div>
+                        <div
+                            className={classNames(
+                                styles.radio,
+                                styles.radioLast,
+                                styles.iconWrapper,
+                                {
+                                    [styles.isActive]: !this.props.draggable && !this.props.disabled,
+                                    [styles.isDisabled]: this.props.disabled
+                                }
+                            )}
+                            tabIndex="0"
+                            onClick={this.props.onClickNotVisible}
+                            onKeyPress={this.props.onPressNotVisible}
+                        >
+                            <img
+                                className={styles.icon}
+                                src={dragOffIcon}
+                            />
                         </div>
                     </div>
                     <div className={classNames(styles.group, styles.largerInput)}>
