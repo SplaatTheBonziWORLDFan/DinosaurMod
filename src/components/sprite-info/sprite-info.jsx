@@ -74,6 +74,13 @@ class SpriteInfo extends React.Component {
                 id="gui.SpriteInfo.size"
             />
         );
+        const dragLabel = (
+            <FormattedMessage
+                defaultMessage="Drag"
+                description="Sprite info drag label"
+                id="gui.SpriteInfo.drag"
+            />
+        );
 
         const labelAbove = isWideLocale(this.props.intl.locale);
 
@@ -266,7 +273,7 @@ class SpriteInfo extends React.Component {
                             stageSize === STAGE_DISPLAY_SIZES.large ?
                                 <Label
                                     secondary
-                                    text={showLabel}
+                                    text={dragLabel}
                                 /> :
                                 null
                         }

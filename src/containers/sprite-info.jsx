@@ -11,7 +11,11 @@ class SpriteInfo extends React.Component {
             'handleClickVisible',
             'handleClickNotVisible',
             'handlePressVisible',
-            'handlePressNotVisible'
+            'handlePressNotVisible',
+            'handleClickDraggable',
+            'handleClickNotDraggable',
+            'handlePressDraggable',
+            'handlePressNotDraggable'
         ]);
     }
     handleClickVisible (e) {
@@ -34,6 +38,26 @@ class SpriteInfo extends React.Component {
             this.props.onChangeVisibility(false);
         }
     }
+    handleClickDraggable (e) {
+        e.preventDefault();
+        this.props.onChangeDraggability(true);
+    }
+    handleClickNotDraggable (e) {
+        e.preventDefault();
+        this.props.onChangeDraggability(false);
+    }
+    handlePressDraggable (e) {
+        if (e.key === ' ' || e.key === 'Enter') {
+            e.preventDefault();
+            this.props.onChangeDraggability(true);
+        }
+    }
+    handlePressNotDraggable (e) {
+        if (e.key === ' ' || e.key === 'Enter') {
+            e.preventDefault();
+            this.props.onChangeDraggability(false);
+        }
+    }
     render () {
         return (
             <SpriteInfoComponent
@@ -42,6 +66,10 @@ class SpriteInfo extends React.Component {
                 onClickVisible={this.handleClickVisible}
                 onPressNotVisible={this.handlePressNotVisible}
                 onPressVisible={this.handlePressVisible}
+                onClickNotDraggable={this.handleClickNotDraggable}
+                onClickDraggable={this.handleClickDraggable}
+                onPressNotDraggable={this.handlePressNotDraggable}
+                onPressDraggable={this.handlePressDraggable}
             />
         );
     }
@@ -53,6 +81,7 @@ SpriteInfo.propTypes = {
     onChangeName: PropTypes.func,
     onChangeSize: PropTypes.func,
     onChangeVisibility: PropTypes.func,
+    onChangeDraggability: PropTypes.func,
     onChangeX: PropTypes.func,
     onChangeY: PropTypes.func,
     x: PropTypes.number,
