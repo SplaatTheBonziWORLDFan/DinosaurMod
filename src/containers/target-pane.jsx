@@ -70,6 +70,9 @@ class TargetPane extends React.Component {
     handleChangeSpriteSize (size) {
         this.props.vm.postSpriteInfo({size});
     }
+    handleChangeSpriteLayer (layer) {
+        this.props.vm.postSpriteInfo({layer});
+    }
     handleChangeSpriteVisibility (visible) {
         this.props.vm.postSpriteInfo({visible});
     }
@@ -265,6 +268,7 @@ class TargetPane extends React.Component {
                 onChangeSpriteName={this.handleChangeSpriteName}
                 onChangeSpriteRotationStyle={this.handleChangeSpriteRotationStyle}
                 onChangeSpriteSize={this.handleChangeSpriteSize}
+                onChangeSpriteLayer={this.handleChangeSpriteLayer}
                 onChangeSpriteVisibility={this.handleChangeSpriteVisibility}
                 onChangeSpriteDraggability={this.handleChangeSpriteDraggability}
                 onChangeSpriteX={this.handleChangeSpriteX}

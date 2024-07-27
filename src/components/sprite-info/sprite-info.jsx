@@ -44,6 +44,7 @@ class SpriteInfo extends React.Component {
             // Only update these if rounded value has changed
             Math.round(this.props.direction) !== Math.round(nextProps.direction) ||
             Math.round(this.props.size) !== Math.round(nextProps.size) ||
+            Math.round(this.props.layer) !== Math.round(nextProps.layer) ||
             Math.round(this.props.x) !== Math.round(nextProps.x) ||
             Math.round(this.props.y) !== Math.round(nextProps.y)
         );
@@ -79,6 +80,13 @@ class SpriteInfo extends React.Component {
                 defaultMessage="Draggability"
                 description="Sprite info drag label"
                 id="gui.SpriteInfo.drag"
+            />
+        );
+        const layerLabel = (
+            <FormattedMessage
+                defaultMessage="Layer"
+                description="Sprite info layer label"
+                id="gui.SpriteInfo.layer"
             />
         );
 
@@ -320,6 +328,23 @@ class SpriteInfo extends React.Component {
                             </div>
                         </div>
                     </div>
+                    <div className={classNames(styles.group, styles.largerInput)}>
+                        <Label
+                            secondary
+                            above={labelAbove}
+                            text={layerLabel}
+                        >
+                            <BufferedInput
+                                small
+                                disabled={this.props.disabled}
+                                label={layerLabel}
+                                tabIndex="0"
+                                type="text"
+                                value={this.props.disabled ? '' : Math.round(this.props.layer)}
+                                onSubmit={this.props.onChangeLayer}
+                            />
+                        </Label>
+                    </div>
                 </div>
             </Box>
         );
@@ -338,6 +363,7 @@ SpriteInfo.propTypes = {
     onChangeName: PropTypes.func,
     onChangeRotationStyle: PropTypes.func,
     onChangeSize: PropTypes.func,
+    onChangeLayer: PropTypes.func,
     onChangeX: PropTypes.func,
     onChangeY: PropTypes.func,
     onClickNotVisible: PropTypes.func,
@@ -350,6 +376,10 @@ SpriteInfo.propTypes = {
     onPressDraggable: PropTypes.func,
     rotationStyle: PropTypes.string,
     size: PropTypes.oneOfType([
+        PropTypes.string,
+        PropTypes.number
+    ]),
+    layer: PropTypes.oneOfType([
         PropTypes.string,
         PropTypes.number
     ]),

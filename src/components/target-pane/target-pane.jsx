@@ -26,6 +26,7 @@ const TargetPane = ({
     onChangeSpriteName,
     onChangeSpriteRotationStyle,
     onChangeSpriteSize,
+    onChangeSpriteLayer,
     onChangeSpriteVisibility,
     onChangeSpriteDraggability,
     onChangeSpriteX,
@@ -65,6 +66,7 @@ const TargetPane = ({
             onChangeSpriteName={onChangeSpriteName}
             onChangeSpriteRotationStyle={onChangeSpriteRotationStyle}
             onChangeSpriteSize={onChangeSpriteSize}
+            onChangeSpriteLayer={onChangeSpriteLayer}
             onChangeSpriteVisibility={onChangeSpriteVisibility}
             onChangeSpriteDraggability={onChangeSpriteDraggability}
             onChangeSpriteX={onChangeSpriteX}
@@ -122,6 +124,7 @@ const spriteShape = PropTypes.shape({
     name: PropTypes.string,
     order: PropTypes.number,
     size: PropTypes.number,
+    layer: PropTypes.number,
     visibility: PropTypes.bool,
     draggability: PropTypes.bool,
     x: PropTypes.number,
@@ -141,6 +144,7 @@ TargetPane.propTypes = {
     onChangeSpriteName: PropTypes.func,
     onChangeSpriteRotationStyle: PropTypes.func,
     onChangeSpriteSize: PropTypes.func,
+    onChangeSpriteLayer: PropTypes.func,
     onChangeSpriteVisibility: PropTypes.func,
     onChangeSpriteDraggability: PropTypes.func,
     onChangeSpriteX: PropTypes.func,
