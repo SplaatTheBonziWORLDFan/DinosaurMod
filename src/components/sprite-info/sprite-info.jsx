@@ -76,7 +76,7 @@ class SpriteInfo extends React.Component {
         );
         const dragLabel = (
             <FormattedMessage
-                defaultMessage="Drag"
+                defaultMessage="Draggability"
                 description="Sprite info drag label"
                 id="gui.SpriteInfo.drag"
             />
@@ -168,7 +168,9 @@ class SpriteInfo extends React.Component {
                         {yPosition}
                     </div>
                     <div className={classNames(styles.row, styles.rowTertiary)}>
-
+                        <div className={styles.group}>
+                            
+                        </div>
                     </div>
                 </Box>
             );
