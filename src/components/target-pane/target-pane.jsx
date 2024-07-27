@@ -27,6 +27,7 @@ const TargetPane = ({
     onChangeSpriteRotationStyle,
     onChangeSpriteSize,
     onChangeSpriteVisibility,
+    onChangeSpriteDraggability,
     onChangeSpriteX,
     onChangeSpriteY,
     onDeleteSprite,
@@ -65,6 +66,7 @@ const TargetPane = ({
             onChangeSpriteRotationStyle={onChangeSpriteRotationStyle}
             onChangeSpriteSize={onChangeSpriteSize}
             onChangeSpriteVisibility={onChangeSpriteVisibility}
+            onChangeSpriteDraggability={onChangeSpriteDraggability}
             onChangeSpriteX={onChangeSpriteX}
             onChangeSpriteY={onChangeSpriteY}
             onDeleteSprite={onDeleteSprite}
@@ -121,6 +123,7 @@ const spriteShape = PropTypes.shape({
     order: PropTypes.number,
     size: PropTypes.number,
     visibility: PropTypes.bool,
+    draggability: PropTypes.bool,
     x: PropTypes.number,
     y: PropTypes.number
 });
@@ -139,6 +142,7 @@ TargetPane.propTypes = {
     onChangeSpriteRotationStyle: PropTypes.func,
     onChangeSpriteSize: PropTypes.func,
     onChangeSpriteVisibility: PropTypes.func,
+    onChangeSpriteDraggability: PropTypes.func,
     onChangeSpriteX: PropTypes.func,
     onChangeSpriteY: PropTypes.func,
     onDeleteSprite: PropTypes.func,

@@ -89,6 +89,7 @@ const SpriteSelectorComponent = function (props) {
                 size={selectedSprite.size}
                 stageSize={stageSize}
                 visible={selectedSprite.visible}
+                draggable={selectedSprite.draggable}
                 x={selectedSprite.x}
                 y={selectedSprite.y}
                 onChangeDirection={onChangeSpriteDirection}
@@ -96,6 +97,7 @@ const SpriteSelectorComponent = function (props) {
                 onChangeRotationStyle={onChangeSpriteRotationStyle}
                 onChangeSize={onChangeSpriteSize}
                 onChangeVisibility={onChangeSpriteVisibility}
+                onChangeDraggability={onChangeSpriteDraggability}
                 onChangeX={onChangeSpriteX}
                 onChangeY={onChangeSpriteY}
             />
@@ -158,6 +160,7 @@ SpriteSelectorComponent.propTypes = {
     onChangeSpriteRotationStyle: PropTypes.func,
     onChangeSpriteSize: PropTypes.func,
     onChangeSpriteVisibility: PropTypes.func,
+    onChangeSpriteDraggability: PropTypes.func,
     onChangeSpriteX: PropTypes.func,
     onChangeSpriteY: PropTypes.func,
     onDeleteSprite: PropTypes.func,

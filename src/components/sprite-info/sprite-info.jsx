@@ -346,6 +346,7 @@ SpriteInfo.propTypes = {
     ]),
     stageSize: PropTypes.oneOf(Object.keys(STAGE_DISPLAY_SIZES)).isRequired,
     visible: PropTypes.bool,
+    draggable: PropTypes.bool,
     x: PropTypes.oneOfType([
         PropTypes.string,
         PropTypes.number
