@@ -50,6 +50,7 @@ const SpriteSelectorComponent = function (props) {
         onChangeSpriteRotationStyle,
         onChangeSpriteSize,
         onChangeSpriteVisibility,
+        onChangeSpriteDraggability,
         onChangeSpriteX,
         onChangeSpriteY,
         onDrop,
