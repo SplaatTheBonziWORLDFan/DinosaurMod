@@ -160,6 +160,9 @@ class SpriteInfo extends React.Component {
                         {xPosition}
                         {yPosition}
                     </div>
+                    <div className={classNames(styles.row, styles.rowTertiary)}>
+
+                    </div>
                 </Box>
             );
         }
@@ -229,46 +232,6 @@ class SpriteInfo extends React.Component {
                             </div>
                         </div>
                     </div>
-                    <div className={styles.radioWrapper}>
-                        <div
-                            className={classNames(
-                                styles.radio,
-                                styles.radioFirst,
-                                styles.iconWrapper,
-                                {
-                                    [styles.isActive]: this.props.visible && !this.props.disabled,
-                                    [styles.isDisabled]: this.props.disabled
-                                }
-                            )}
-                            tabIndex="0"
-                            onClick={this.props.onClickVisible}
-                            onKeyPress={this.props.onPressVisible}
-                        >
-                            <img
-                                className={styles.icon}
-                                src={dragOnIcon}
-                            />
-                        </div>
-                        <div
-                            className={classNames(
-                                styles.radio,
-                                styles.radioLast,
-                                styles.iconWrapper,
-                                {
-                                    [styles.isActive]: !this.props.draggable && !this.props.disabled,
-                                    [styles.isDisabled]: this.props.disabled
-                                }
-                            )}
-                            tabIndex="0"
-                            onClick={this.props.onClickNotVisible}
-                            onKeyPress={this.props.onPressNotVisible}
-                        >
-                            <img
-                                className={styles.icon}
-                                src={dragOffIcon}
-                            />
-                        </div>
-                    </div>
                     <div className={classNames(styles.group, styles.largerInput)}>
                         <Label
                             secondary
@@ -297,6 +260,58 @@ class SpriteInfo extends React.Component {
                         />
                     </div>
                 </div>
+                <div className={classNames(styles.row, styles.rowTertiary)}>
+                    <div className={labelAbove ? styles.column : styles.group}>
+                        {
+                            stageSize === STAGE_DISPLAY_SIZES.large ?
+                                <Label
+                                    secondary
+                                    text={showLabel}
+                                /> :
+                                null
+                        }
+                        <div className={styles.radioWrapper}>
+                            <div
+                                className={classNames(
+                                    styles.radio,
+                                    styles.radioFirst,
+                                    styles.iconWrapper,
+                                    {
+                                        [styles.isActive]: this.props.draggable && !this.props.disabled,
+                                        [styles.isDisabled]: this.props.disabled
+                                    }
+                                )}
+                                tabIndex="0"
+                                onClick={this.props.onClickDraggable}
+                                onKeyPress={this.props.onPressDraggable}
+                            >
+                                <img
+                                    className={styles.icon}
+                                    src={dragOnIcon}
+                                />
+                            </div>
+                            <div
+                                className={classNames(
+                                    styles.radio,
+                                    styles.radioLast,
+                                    styles.iconWrapper,
+                                    {
+                                        [styles.isActive]: !this.props.draggable && !this.props.disabled,
+                                        [styles.isDisabled]: this.props.disabled
+                                    }
+                                )}
+                                tabIndex="0"
+                                onClick={this.props.onClickNotDraggable}
+                                onKeyPress={this.props.onPressNotDraggable}
+                            >
+                                <img
+                                    className={styles.icon}
+                                    src={dragOffIcon}
+                                />
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </Box>
         );
     }
@@ -320,6 +335,10 @@ SpriteInfo.propTypes = {
     onClickVisible: PropTypes.func,
     onPressNotVisible: PropTypes.func,
     onPressVisible: PropTypes.func,
+    onClickNotDraggable: PropTypes.func,
+    onClickDraggable: PropTypes.func,
+    onPressNotDraggable: PropTypes.func,
+    onPressDraggable: PropTypes.func,
     rotationStyle: PropTypes.string,
     size: PropTypes.oneOfType([
         PropTypes.string,
