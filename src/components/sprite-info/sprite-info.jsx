@@ -327,7 +327,7 @@ class SpriteInfo extends React.Component {
                                 />
                             </div>
                         </div>
-                    </div>
+                    </div>{/*
                     <div className={classNames(styles.group, styles.largerInput)}>
                         <Label
                             secondary
@@ -344,7 +344,7 @@ class SpriteInfo extends React.Component {
                                 onSubmit={this.props.onChangeVolume}
                             />
                         </Label>
-                    </div>
+                    </div>*/}
                 </div>
             </Box>
         );
