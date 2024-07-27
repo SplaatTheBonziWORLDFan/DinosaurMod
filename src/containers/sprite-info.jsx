@@ -80,7 +80,7 @@ SpriteInfo.propTypes = {
     onChangeDirection: PropTypes.func,
     onChangeName: PropTypes.func,
     onChangeSize: PropTypes.func,
-    onChangeLayer: PropTypes.func,
+    onChangeVolume: PropTypes.func,
     onChangeVisibility: PropTypes.func,
     onChangeDraggability: PropTypes.func,
     onChangeX: PropTypes.func,

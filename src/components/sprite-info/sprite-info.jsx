@@ -44,7 +44,7 @@ class SpriteInfo extends React.Component {
             // Only update these if rounded value has changed
             Math.round(this.props.direction) !== Math.round(nextProps.direction) ||
             Math.round(this.props.size) !== Math.round(nextProps.size) ||
-            Math.round(this.props.layer) !== Math.round(nextProps.layer) ||
+            Math.round(this.props.volume) !== Math.round(nextProps.volume) ||
             Math.round(this.props.x) !== Math.round(nextProps.x) ||
             Math.round(this.props.y) !== Math.round(nextProps.y)
         );
@@ -82,11 +82,11 @@ class SpriteInfo extends React.Component {
                 id="gui.SpriteInfo.drag"
             />
         );
-        const layerLabel = (
+        const volumeLabel = (
             <FormattedMessage
-                defaultMessage="Layer"
-                description="Sprite info layer label"
-                id="gui.SpriteInfo.layer"
+                defaultMessage="Volume"
+                description="Sprite info volume label"
+                id="gui.SpriteInfo.volume"
             />
         );
 
@@ -332,16 +332,16 @@ class SpriteInfo extends React.Component {
                         <Label
                             secondary
                             above={labelAbove}
-                            text={layerLabel}
+                            text={volumeLabel}
                         >
                             <BufferedInput
                                 small
                                 disabled={this.props.disabled}
-                                label={layerLabel}
+                                label={volumeLabel}
                                 tabIndex="0"
                                 type="text"
-                                value={this.props.disabled ? '' : Math.round(this.props.layer)}
-                                onSubmit={this.props.onChangeLayer}
+                                value={this.props.disabled ? '' : Math.round(this.props.volume)}
+                                onSubmit={this.props.onChangeVolume}
                             />
                         </Label>
                     </div>
@@ -363,7 +363,7 @@ SpriteInfo.propTypes = {
     onChangeName: PropTypes.func,
     onChangeRotationStyle: PropTypes.func,
     onChangeSize: PropTypes.func,
-    onChangeLayer: PropTypes.func,
+    onChangeVolume: PropTypes.func,
     onChangeX: PropTypes.func,
     onChangeY: PropTypes.func,
     onClickNotVisible: PropTypes.func,
@@ -379,7 +379,7 @@ SpriteInfo.propTypes = {
         PropTypes.string,
         PropTypes.number
     ]),
-    layer: PropTypes.oneOfType([
+    volume: PropTypes.oneOfType([
         PropTypes.string,
         PropTypes.number
     ]),
