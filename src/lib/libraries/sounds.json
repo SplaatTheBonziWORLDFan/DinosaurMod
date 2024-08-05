@@ -5417,11 +5417,10 @@
             "monster",
             "new"
         ],
-        "dataFormat": "mpeg",
-        "md5ext": "sound.mp3",
+        "assetId": "15eccd22c90176ed0420aaf8c858254b",
+        "dataFormat": "",
         "rate": 44100,
-        "fromDinosaurModLibrary": true,
-        "libraryFilePage2": "sounds/mibup15full.mp3"
+        "md5ext": "15eccd22c90176ed0420aaf8c858254b.mp3"
     },
     {
         "name": "Muted Conga",
