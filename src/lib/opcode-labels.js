@@ -69,7 +69,7 @@ const messages = defineMessages({
         id: 'gui.opcodeLabels.loudness'
     },
     sensing_loud: {
-        defaultMessage: 'loud',
+        defaultMessage: 'loud\?',
         description: 'Label for the loud monitor when shown on the stage',
         id: 'gui.opcodeLabels.loud'
     },
