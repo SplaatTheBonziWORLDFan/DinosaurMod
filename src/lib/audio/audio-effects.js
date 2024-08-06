@@ -167,7 +167,7 @@ class AudioEffects {
                 break;
             case effectTypes.REVERB:
                 ({input, output} = new ReverbEffect(this.audioContext,
-                    this.adjustedTrimStartSeconds, this.adjustedTrimEndSeconds));
+                    this.adjustedTrimStartSeconds, this.adjustedTrimEndSeconds, buffer.duration));
                 break;
             default:
                 const name = this.name;
