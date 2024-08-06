@@ -31,6 +31,7 @@ import reverseIcon from './icon--reverse.svg';
 import fadeOutIcon from './icon--fade-out.svg';
 import fadeInIcon from './icon--fade-in.svg';
 import muteIcon from './icon--mute.svg';
+import reverbIcon from './icon--reverb.svg';
 
 import deleteIcon from './icon--delete.svg';
 import copyIcon from './icon--copy.svg';
@@ -380,7 +381,7 @@ const SoundEditor = props => (
                 />
                 <IconButton
                     className={styles.effectButton}
-                    img={echoIcon}
+                    img={reverbIcon}
                     title={"Reverb"}
                     onClick={props.onReverb}
                 />
