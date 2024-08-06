@@ -18,7 +18,8 @@ const effectTypes = {
     FADEOUT: 'fade out',
     MUTE: 'mute',
     LOWPASS: 'low pass',
-    HIGHPASS: 'high pass'
+    HIGHPASS: 'high pass',
+    /* planned reverb effect here */
 };
 
 const centsToFrequency = (cents) => {
