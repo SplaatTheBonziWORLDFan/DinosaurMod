@@ -1,7 +1,7 @@
 // reverb effect is currently work in progress.
 
 class ReverbEffect {
-    constructor(audioContext, startTime, endTime) {
+    constructor(audioContext, startTime, endTime, soundDuration) {
         this.audioContext = audioContext;
         this.input = this.audioContext.createGain();
         this.output = this.audioContext.createGain();
@@ -39,6 +39,9 @@ class ReverbEffect {
         this.dryMix.gain.value = 1;
         this.wetMix.gain.value = 0.5;
 
+        this.extraDelay = this.audioContext.createDelay();
+        this.setExtraDelay(soundDuration);
+
         this.input.connect(this.gain);
         this.gain.connect(this.dryMix);
         this.gain.connect(this.delay1);
@@ -64,7 +67,14 @@ class ReverbEffect {
 
         this.dryMix.connect(this.mix);
         this.wetMix.connect(this.mix);
-        this.mix.connect(this.output);
+        this.mix.connect(this.extraDelay);
+        this.extraDelay.connect(this.output);
+    }
+
+    setExtraDelay(duration) {
+        // Define a scale factor for the delay based on sound duration
+        const scaleFactor = 0.1; // Adjust this value as needed
+        this.extraDelay.delayTime.value = duration * scaleFactor;
     }
 }
 
