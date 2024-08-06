@@ -374,6 +374,12 @@ const SoundEditor = props => (
                     title={"High Pass"}
                     onClick={props.onHighPass}
                 />
+                <IconButton
+                    className={styles.effectButton}
+                    img={echoIconIcon}
+                    title={"Reverb"}
+                    onClick={props.onReverb}
+                />
             </div>
         </div>
         <div className={styles.infoRow}>
@@ -442,6 +448,7 @@ SoundEditor.propTypes = {
     onHighPass: PropTypes.func.isRequired,
     onFadeIn: PropTypes.func.isRequired,
     onFadeOut: PropTypes.func.isRequired,
+    onReverb: PropTypes.func.isRequired,
     onFaster: PropTypes.func.isRequired,
     onModifySound: PropTypes.func.isRequired,
     onLouder: PropTypes.func.isRequired,

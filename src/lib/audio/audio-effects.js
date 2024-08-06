@@ -5,6 +5,7 @@ import FadeEffect from './effects/fade-effect.js';
 import MuteEffect from './effects/mute-effect.js';
 import LowPassEffect from './effects/lowpass-effect.js';
 import HighPassEffect from './effects/highpass-effect.js';
+import ReverbEffect from './effects/reverb-effect.js';
 
 const effectTypes = {
     ROBOT: 'robot',
@@ -19,7 +20,7 @@ const effectTypes = {
     MUTE: 'mute',
     LOWPASS: 'low pass',
     HIGHPASS: 'high pass',
-    /* planned reverb effect here */
+    REVERB: 'reverb'
 };
 
 const centsToFrequency = (cents) => {
@@ -162,6 +163,10 @@ class AudioEffects {
                 break;
             case effectTypes.MUTE:
                 ({input, output} = new MuteEffect(this.audioContext,
+                    this.adjustedTrimStartSeconds, this.adjustedTrimEndSeconds));
+                break;
+            case effectTypes.REVERB:
+                ({input, output} = new ReverbEffect(this.audioContext,
                     this.adjustedTrimStartSeconds, this.adjustedTrimEndSeconds));
                 break;
             default:
