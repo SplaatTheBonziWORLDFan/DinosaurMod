@@ -378,14 +378,12 @@ const SoundEditor = props => (
                     title={"High Pass"}
                     onClick={props.onHighPass}
                 />
-                {IsLiveTests && (
-                    <IconButton
-                        className={styles.effectButton}
-                        img={echoIcon}
-                        title={"Reverb"}
-                        onClick={props.onReverb}
-                    />
-                )}
+                <IconButton
+                    className={styles.effectButton}
+                    img={echoIcon}
+                    title={"Reverb"}
+                    onClick={props.onReverb}
+                />
             </div>
         </div>
         <div className={styles.infoRow}>
