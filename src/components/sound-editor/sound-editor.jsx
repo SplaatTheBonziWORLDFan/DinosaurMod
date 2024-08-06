@@ -39,6 +39,10 @@ import copyToNewIcon from './icon--copy-to-new.svg';
 
 const BufferedInput = BufferedInputHOC(Input);
 
+const urlParams = new URLSearchParams(location.search);
+
+const IsLiveTests = urlParams.has('livetests')
+
 const messages = defineMessages({
     sound: {
         id: 'gui.soundEditor.sound',
@@ -374,12 +378,14 @@ const SoundEditor = props => (
                     title={"High Pass"}
                     onClick={props.onHighPass}
                 />
-                <IconButton
-                    className={styles.effectButton}
-                    img={echoIcon}
-                    title={"Reverb"}
-                    onClick={props.onReverb}
-                />
+                {IsLiveTests && (
+                    <IconButton
+                        className={styles.effectButton}
+                        img={echoIcon}
+                        title={"Reverb"}
+                        onClick={props.onReverb}
+                    />
+                )}
             </div>
         </div>
         <div className={styles.infoRow}>
