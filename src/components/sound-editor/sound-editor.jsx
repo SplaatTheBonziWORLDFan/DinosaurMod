@@ -376,7 +376,7 @@ const SoundEditor = props => (
                 />
                 <IconButton
                     className={styles.effectButton}
-                    img={echoIconIcon}
+                    img={echoIcon}
                     title={"Reverb"}
                     onClick={props.onReverb}
                 />
