@@ -74,8 +74,8 @@ const projectData = translateFunction => {
                         bitmapResolution: 1,
                         md5ext: '61826d1f7ebade6b17e879198b460b23.svg',
                         dataFormat: 'svg',
-                        rotationCenterX: 59,
-                        rotationCenterY: 72
+                        rotationCenterX: 57,
+                        rotationCenterY: 73
                     },
                     {
                         assetId: 'a2acb3d0f1d4f14132b43c31821f1c5d',
@@ -83,8 +83,8 @@ const projectData = translateFunction => {
                         bitmapResolution: 1,
                         md5ext: 'a2acb3d0f1d4f14132b43c31821f1c5d.svg',
                         dataFormat: 'svg',
-                        rotationCenterX: 59,
-                        rotationCenterY: 72
+                        rotationCenterX: 58,
+                        rotationCenterY: 73
                     },
                     {
                         assetId: '03d8f0b2148d6c6697fa59a9507d4829',
@@ -92,8 +92,8 @@ const projectData = translateFunction => {
                         bitmapResolution: 1,
                         md5ext: '03d8f0b2148d6c6697fa59a9507d4829.svg',
                         dataFormat: 'svg',
-                        rotationCenterX: 59,
-                        rotationCenterY: 72
+                        rotationCenterX: 53,
+                        rotationCenterY: 78
                     }
                 ],
                 sounds: [],
