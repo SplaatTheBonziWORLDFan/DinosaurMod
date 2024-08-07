@@ -714,6 +714,7 @@ const control = function (isInitialSetup, isStage) {
             </value>
         </block>
         <block type="control_exitLoop"/>
+        <block type="control_continueLoop"/>
         <block id="forever" type="control_forever"/>
         ${blockSeparator}
         <block type="control_switch"/>
