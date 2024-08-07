@@ -28,6 +28,21 @@ const defaultProject = translator => {
         assetType: 'ImageVector',
         dataFormat: 'SVG',
         data: encoder.encode(costume1)
+    }, {
+        id: '61826d1f7ebade6b17e879198b460b23',
+        assetType: 'ImageVector',
+        dataFormat: 'SVG',
+        data: encoder.encode(costume2)
+    }, {
+        id: 'a2acb3d0f1d4f14132b43c31821f1c5d',
+        assetType: 'ImageVector',
+        dataFormat: 'SVG',
+        data: encoder.encode(costume3)
+    }, {
+        id: '03d8f0b2148d6c6697fa59a9507d4829',
+        assetType: 'ImageVector',
+        dataFormat: 'SVG',
+        data: encoder.encode(costume4)
     }];
 };
 

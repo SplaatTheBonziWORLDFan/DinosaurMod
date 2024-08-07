@@ -67,6 +67,33 @@ const projectData = translateFunction => {
                         dataFormat: 'svg',
                         rotationCenterX: 59,
                         rotationCenterY: 72
+                    },
+                    {
+                        assetId: '61826d1f7ebade6b17e879198b460b23',
+                        name: translator(messages.costume, { index: 2 }),
+                        bitmapResolution: 1,
+                        md5ext: '61826d1f7ebade6b17e879198b460b23.svg',
+                        dataFormat: 'svg',
+                        rotationCenterX: 59,
+                        rotationCenterY: 72
+                    },
+                    {
+                        assetId: 'a2acb3d0f1d4f14132b43c31821f1c5d',
+                        name: translator(messages.costume, { index: 3 }),
+                        bitmapResolution: 1,
+                        md5ext: 'a2acb3d0f1d4f14132b43c31821f1c5d.svg',
+                        dataFormat: 'svg',
+                        rotationCenterX: 59,
+                        rotationCenterY: 72
+                    },
+                    {
+                        assetId: '03d8f0b2148d6c6697fa59a9507d4829',
+                        name: translator(messages.costume, { index: 4 }),
+                        bitmapResolution: 1,
+                        md5ext: '03d8f0b2148d6c6697fa59a9507d4829.svg',
+                        dataFormat: 'svg',
+                        rotationCenterX: 59,
+                        rotationCenterY: 72
                     }
                 ],
                 sounds: [],
