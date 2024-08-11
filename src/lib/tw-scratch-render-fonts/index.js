@@ -6,9 +6,10 @@ const Handwriting = require('./handlee-regular.ttf');
 const Marker = require('./Knewave.ttf');
 const Curly = require('./Griffy-Regular.ttf');
 const Pixel = require('./Grand9K-Pixel.ttf');
-const Scratch = require('./Scratch.ttf');
+const Scratch = require('./ScratchSavers_b2.woff2'); // made by valadaptive. (the font will be removed if requested)
 
 /* PenguinMod Fonts */
+const Branches = require('./Xtraflexidisc.otf');
 const Technological = require('./MonospaceBold.ttf');
 const Bubbly = require('./QTKooper.otf');
 const Playful = require('./BadComic-Regular.ttf');
@@ -29,7 +30,8 @@ const fontSource = {
     'Marker': Marker,
     'Curly': Curly,
     'Pixel': Pixel,
-    'Scratch': Scratch,
+    'Scratch': Branches,
+    // 'Branches': Branches,
     'Technological': Technological,
     'Bubbly': Bubbly,
     'Bits and Bytes': BitsAndBytes,
