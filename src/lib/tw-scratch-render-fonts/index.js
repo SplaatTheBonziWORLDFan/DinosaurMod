@@ -6,7 +6,7 @@ const Handwriting = require('./handlee-regular.ttf');
 const Marker = require('./Knewave.ttf');
 const Curly = require('./Griffy-Regular.ttf');
 const Pixel = require('./Grand9K-Pixel.ttf');
-const Scratch = require('./Scratch.tff'); // Is this font copyrighted?
+// const Scratch = require('./Scratch.tff');
 
 /* PenguinMod Fonts */
 const Branches = require('./Xtraflexidisc.otf');
