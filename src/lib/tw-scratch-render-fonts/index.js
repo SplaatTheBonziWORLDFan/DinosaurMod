@@ -6,7 +6,7 @@ const Handwriting = require('./handlee-regular.ttf');
 const Marker = require('./Knewave.ttf');
 const Curly = require('./Griffy-Regular.ttf');
 const Pixel = require('./Grand9K-Pixel.ttf');
-const Scratch = require('./ScratchSavers_b2.woff2'); // made by valadaptive. (the font will be removed if requested)
+const Scratch = require('./Scratch.tff'); // Is this font copyrighted?
 
 /* PenguinMod Fonts */
 const Branches = require('./Xtraflexidisc.otf');
