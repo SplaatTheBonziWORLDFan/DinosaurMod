@@ -295,6 +295,27 @@ const EnableDangerousOptimizations = props => (
     />
 );
 
+const OOBRendering = props => (
+    <BooleanSetting
+        {...props}
+        label={
+            <FormattedMessage
+                defaultMessage="Out of Bounds Rendering"
+                description="Enable Out of Bounds Rendering setting"
+                id="pm.settingsModal.oobRendering"
+            />
+        }
+        help={
+            <FormattedMessage
+                defaultMessage="When disabled, everything outside the stage will not be rendered."
+                description="Out of Bounds Rendering setting help"
+                id="pm.settingsModal.oobRendering"
+            />
+        }
+        // slug="out-of-bounds-rendering"
+    />
+);
+
 const WarpTimer = props => (
     <BooleanSetting
         {...props}
