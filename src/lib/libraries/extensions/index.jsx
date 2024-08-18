@@ -1674,7 +1674,7 @@ if (IsLocal || IsLiveTests) {
         {
             name: 'TurboBuilder Extension',
             extensionId: 'https://gabsthecuriouskid.github.io/FirstExtension/legacy-extensions/turbobuilder.js',
-            iconURL: 'https://studio.penguinmod.com/static/assets/93db39f338237e6a51790829ba22a879.png',
+            iconURL: turboBuilderIcon,
             description: 'Not alot of options yet. Create your own amazing extensions!',
             tags: ['dinosaurmod'],
             credits: 'MrIncredibleMaker',
@@ -1797,7 +1797,7 @@ if (IsLocal || IsLiveTests) {
 if (IsSecret && IsLiveTests) {
     const secret = [
         {
-            name: 'MR BEAST UTILTITIES',
+            name: 'MR BEAST UTILITIES',
             extensionId: 'https://turbololder.vercel.app/extensions/mrbeastutil.js',
             iconURL: 'https://turbololder.vercel.app/images/Mr_Beast_Utilitities.svg',
             description: 'the best blockes ever',
