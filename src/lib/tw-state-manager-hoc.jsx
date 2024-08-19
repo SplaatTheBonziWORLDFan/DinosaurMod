@@ -397,6 +397,12 @@ const TWStateManager = function (WrappedComponent) {
                 });
             }
 
+            if (urlParams.has('oob')) {
+                this.props.vm.setRuntimeOptions({
+                    oobRendering: false
+                });
+            }
+            
             for (const extension of urlParams.getAll('extension')) {
                 this.props.vm.extensionManager.loadExtensionURL(extension);
             }
@@ -513,6 +519,12 @@ const TWStateManager = function (WrappedComponent) {
                     searchParams.delete('limitless');
                 } else {
                     searchParams.set('limitless', '');
+                }
+
+                if (runtimeOptions.oobRendering) {
+                    searchParams.delete('oob');
+                } else {
+                    searchParams.set('oob', '');
                 }
 
                 setSearchParams(searchParams);

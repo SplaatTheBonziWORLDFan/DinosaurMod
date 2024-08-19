@@ -295,6 +295,27 @@ const EnableDangerousOptimizations = props => (
     />
 );
 
+const OOBRendering = props => (
+    <BooleanSetting
+        {...props}
+        label={
+            <FormattedMessage
+                defaultMessage="Disable Out of Bounds Rendering"
+                description="Disable Out of Bounds Rendering setting"
+                id="pm.settingsModal.oobRendering"
+            />
+        }
+        help={
+            <FormattedMessage
+                defaultMessage="When disabled, everything outside the stage will not be rendered."
+                description="Out of Bounds Rendering setting help"
+                id="pm.settingsModal.oobRenderingHelp"
+            />
+        }
+        // slug="out-of-bounds-rendering"
+    />
+);
+
 const WarpTimer = props => (
     <BooleanSetting
         {...props}
@@ -518,6 +539,10 @@ const SettingsModalComponent = props => (
                     id="pm.settingsModal.optimizations"
                 />
             </Header>
+            <OOBRendering
+                value={props.oobRendering}
+                onChange={props.onOobRenderingChange}
+            />
             <EnableDangerousOptimizations
                 value={props.dangerousOptimizations}
                 onChange={props.onEnableDangerousOptimizationsChange}
@@ -589,7 +614,9 @@ SettingsModalComponent.propTypes = {
     disableCompiler: PropTypes.bool,
     dangerousOptimizations: PropTypes.bool,
     onDisableCompilerChange: PropTypes.func,
-    onEnableDangerousOptimizationsChange: PropTypes.func
+    onEnableDangerousOptimizationsChange: PropTypes.func,
+    oobRendering: PropTypes.bool,
+    onOobRenderingChange: PropTypes.func
 };
 
 export default injectIntl(SettingsModalComponent);
