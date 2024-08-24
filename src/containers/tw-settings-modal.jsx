@@ -77,7 +77,7 @@ class UsernameModal extends React.Component {
     }
     handleOobRenderingChange (e) {
         this.props.vm.setRuntimeOptions({
-            oobRendering: !e.target.checked
+            oobRendering: e.target.checked
         });
     }
     handleWarpTimerChange (e) {

@@ -399,7 +399,7 @@ const TWStateManager = function (WrappedComponent) {
 
             if (urlParams.has('oob')) {
                 this.props.vm.setRuntimeOptions({
-                    oobRendering: false
+                    oobRendering: true
                 });
             }
             

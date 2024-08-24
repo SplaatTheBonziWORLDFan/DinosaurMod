@@ -307,7 +307,7 @@ const OOBRendering = props => (
         }
         help={
             <FormattedMessage
-                defaultMessage="When disabled, everything outside the stage will not be rendered."
+                defaultMessage="When enabled all sprites that are off screen will not be rendered."
                 description="Out of Bounds Rendering setting help"
                 id="pm.settingsModal.oobRenderingHelp"
             />
