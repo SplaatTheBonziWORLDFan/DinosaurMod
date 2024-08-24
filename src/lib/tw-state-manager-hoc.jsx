@@ -522,9 +522,9 @@ const TWStateManager = function (WrappedComponent) {
                 }
 
                 if (runtimeOptions.oobRendering) {
-                    searchParams.delete('oob');
-                } else {
                     searchParams.set('oob', '');
+                } else {
+                    searchParams.delete('oob');
                 }
 
                 setSearchParams(searchParams);
@@ -609,7 +609,8 @@ const TWStateManager = function (WrappedComponent) {
         runtimeOptions: PropTypes.shape({
             miscLimits: PropTypes.bool,
             fencing: PropTypes.bool,
-            maxClones: PropTypes.number
+            maxClones: PropTypes.number,
+            oobRendering: PropTypes.bool
         }),
         highQualityPen: PropTypes.bool,
         framerate: PropTypes.number,

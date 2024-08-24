@@ -188,6 +188,7 @@ const mapStateToProps = state => ({
     interpolation: state.scratchGui.tw.interpolation,
     infiniteClones: state.scratchGui.tw.runtimeOptions.maxClones === Infinity,
     removeFencing: !state.scratchGui.tw.runtimeOptions.fencing,
+    oobRendering: state.scratchGui.tw.runtimeOptions.oobRendering,
     removeLimits: !state.scratchGui.tw.runtimeOptions.miscLimits,
     dangerousOptimizations: state.scratchGui.tw.runtimeOptions.dangerousOptimizations,
     warpTimer: state.scratchGui.tw.compilerOptions.warpTimer,
