@@ -244,13 +244,13 @@ class SoundTab extends React.Component {
         return (
             <AssetPanel
                 buttons={isSupported ? [{
-                    title: intl.formatMessage(messages.createSound),
-                    img: searchIcon,
-                    onClick: this.handleCreateSound
-                }, {
                     title: intl.formatMessage(messages.addSound),
                     img: addSoundFromLibraryIcon,
                     onClick: onNewSoundFromLibraryClick
+                }, {
+                    title: intl.formatMessage(messages.createSound),
+                    img: searchIcon,
+                    onClick: this.handleCreateSound
                 }, {
                     title: intl.formatMessage(messages.fileUploadSound),
                     img: fileUploadIcon,
