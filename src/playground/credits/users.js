@@ -135,6 +135,156 @@ const logoArtists = Promise.all([
     '593554048188416001'
 ].map(fromHardcodedDiscord));
 
+const pmCostumeSubmittors = [
+    // accounts
+    {
+        text: 'budc123',
+        image: `https://github.com/budc123.png`,
+        href: `https://github.com/budc123/`,
+    },
+    {
+        text: 'concertalyis',
+        image: `https://github.com/concertalyis.png`,
+        href: `https://github.com/concertalyis/`,
+    },
+    {
+        text: 'WojtekCodesToday',
+        image: `https://github.com/WojtekCodesToday.png`,
+        href: `https://github.com/WojtekCodesToday/`,
+    },
+    {
+        text: 'ddededodediamante',
+        image: `https://github.com/ddededodediamante.png`,
+        href: `https://github.com/ddededodediamante/`,
+    },
+    {
+        text: 'G1nX',
+        image: `https://trampoline.turbowarp.org/avatars/by-username/G1nX`,
+        href: "https://penguinmod.com/profile?user=G1nX",
+    },
+    // unknown
+    {
+        text: 'maroonmball',
+        image: `https://penguinmod.com/unknown_user.png`,
+        href: "https://studio.penguinmod.com/credits.html#",
+    },
+    {
+        text: 'eviepepsi',
+        image: `https://penguinmod.com/unknown_user.png`,
+        href: "https://studio.penguinmod.com/credits.html#",
+    },
+    {
+        text: '1340073',
+        image: `https://penguinmod.com/unknown_user.png`,
+        href: "https://studio.penguinmod.com/credits.html#",
+    },
+    {
+        text: 'cubeycreator',
+        image: `https://penguinmod.com/unknown_user.png`,
+        href: "https://studio.penguinmod.com/credits.html#",
+    },
+    {
+        text: 'novaspiderultra',
+        image: `https://penguinmod.com/unknown_user.png`,
+        href: "https://studio.penguinmod.com/credits.html#",
+    },
+    {
+        text: 'poundpound0209',
+        image: `https://penguinmod.com/unknown_user.png`,
+        href: "https://studio.penguinmod.com/credits.html#",
+    },
+    {
+        text: 'gdplayer1035',
+        image: `https://penguinmod.com/unknown_user.png`,
+        href: "https://studio.penguinmod.com/credits.html#",
+    },
+    {
+        text: 'cognitixsammy',
+        image: `https://penguinmod.com/unknown_user.png`,
+        href: "https://studio.penguinmod.com/credits.html#",
+    },
+    {
+        text: 'thebusyman',
+        image: `https://penguinmod.com/unknown_user.png`,
+        href: "https://studio.penguinmod.com/credits.html#",
+    },
+    {
+        text: 'skyglide5',
+        image: `https://penguinmod.com/unknown_user.png`,
+        href: "https://studio.penguinmod.com/credits.html#",
+    },
+    {
+        text: 'cxnnie09',
+        image: `https://penguinmod.com/unknown_user.png`,
+        href: "https://studio.penguinmod.com/credits.html#",
+    },
+    {
+        text: 'hoveras',
+        image: `https://penguinmod.com/unknown_user.png`,
+        href: "https://studio.penguinmod.com/credits.html#",
+    },
+    {
+        text: 'blockgamer904',
+        image: `https://penguinmod.com/unknown_user.png`,
+        href: "https://studio.penguinmod.com/credits.html#",
+    },
+];
+const pmSoundSubmittors = [
+    // accounts
+    {
+        text: 'ddededodediamante',
+        image: `https://github.com/ddededodediamante.png`,
+        href: `https://github.com/ddededodediamante/`,
+    },
+    {
+        text: 'concertalyis',
+        image: `https://github.com/concertalyis.png`,
+        href: `https://github.com/concertalyis/`,
+    },
+    {
+        text: 'G1nX',
+        image: `https://trampoline.turbowarp.org/avatars/by-username/G1nX`,
+        href: "https://penguinmod.com/profile?user=G1nX",
+    },
+    // unknown
+    {
+        text: 'maroonmball',
+        image: `https://penguinmod.com/unknown_user.png`,
+        href: "https://studio.penguinmod.com/credits.html#",
+    },
+    {
+        text: 'jn567',
+        image: `https://penguinmod.com/unknown_user.png`,
+        href: "https://studio.penguinmod.com/credits.html#",
+    },
+    {
+        text: 'lukepuke311',
+        image: `https://penguinmod.com/unknown_user.png`,
+        href: "https://studio.penguinmod.com/credits.html#",
+    },
+    {
+        text: 'ma_01',
+        image: `https://penguinmod.com/unknown_user.png`,
+        href: "https://studio.penguinmod.com/credits.html#",
+    },
+    {
+        text: 'poundpound0209',
+        image: `https://penguinmod.com/unknown_user.png`,
+        href: "https://studio.penguinmod.com/credits.html#",
+    },
+    {
+        text: 'cognitixsammy',
+        image: `https://penguinmod.com/unknown_user.png`,
+        href: "https://studio.penguinmod.com/credits.html#",
+    },
+    {
+        text: 'mememaster9000',
+        image: `https://penguinmod.com/unknown_user.png`,
+        href: "https://studio.penguinmod.com/credits.html#",
+    },
+];
+
+
 const extensionDevelopers = [
     'GarboMuffin',
     'griffpatch',
@@ -158,5 +308,7 @@ export default {
     logoArtists: shuffle(logoArtists),
     extensionDevelopers: shuffle(extensionDevelopers),
     pmExtensionDevelopers: shuffle(pmExtensionDevelopers),
+    pmSoundSubmittors: shuffle(pmSoundSubmittors),
+    pmCostumeSubmittors: shuffle(pmCostumeSubmittors),
     pmTranslators: [].concat(shuffle(pmTranslators), shuffle(pmTranslatorsNamed)),
 };

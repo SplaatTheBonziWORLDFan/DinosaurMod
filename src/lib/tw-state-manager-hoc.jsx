@@ -397,9 +397,9 @@ const TWStateManager = function (WrappedComponent) {
                 });
             }
 
-            if (urlParams.has('oob')) {
+            if (urlParams.has('nooffscreen')) {
                 this.props.vm.setRuntimeOptions({
-                    oobRendering: true
+                    disableOffscreenRendering: true
                 });
             }
             
@@ -521,10 +521,10 @@ const TWStateManager = function (WrappedComponent) {
                     searchParams.set('limitless', '');
                 }
 
-                if (runtimeOptions.oobRendering) {
-                    searchParams.set('oob', '');
+                if (runtimeOptions.disableOffscreenRendering) {
+                    searchParams.set('nooffscreen', '');
                 } else {
-                    searchParams.delete('oob');
+                    searchParams.delete('nooffscreen');
                 }
 
                 setSearchParams(searchParams);
@@ -610,7 +610,7 @@ const TWStateManager = function (WrappedComponent) {
             miscLimits: PropTypes.bool,
             fencing: PropTypes.bool,
             maxClones: PropTypes.number,
-            oobRendering: PropTypes.bool
+            disableOffscreenRendering: PropTypes.bool
         }),
         highQualityPen: PropTypes.bool,
         framerate: PropTypes.number,

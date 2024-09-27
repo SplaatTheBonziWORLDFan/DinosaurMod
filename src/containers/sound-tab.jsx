@@ -136,7 +136,22 @@ class SoundTab extends React.Component {
     }
 
     async handleCreateSound() {
-        window.open("https://dinobox.vercel.app", "_blank")
+        const defaultEditor = String(localStorage.getItem("dinosaurmod_musicEditor_data")).toLowerCase()
+        switch (defaultEditor) {
+            case 'dinobox':
+                window.open("https://dinobox.vercel.app/?dinosaurmod&", "_blank")
+                break;
+            case 'beepbox':
+                window.open("https://beepbox.co/", "_blank")
+                break;
+            case 'jummbox':
+                window.open("https://jummb.us/", "_blank")
+                break;
+            default:
+                localStorage.getItem("dinosaurmod_musicEditor_data", "dinobox")
+                window.open("https://dinobox.vercel.app/?dinosaurmod&", "_blank")
+                break;
+        }
     }
 
     handleFileUploadClick() {

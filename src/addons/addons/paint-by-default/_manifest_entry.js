@@ -111,6 +111,10 @@ const manifest = {
         {
           "id": "upload",
           "name": "Upload"
+        },
+        {
+          "id": "create",
+          "name": "Create"
         }
       ],
       "default": "library"

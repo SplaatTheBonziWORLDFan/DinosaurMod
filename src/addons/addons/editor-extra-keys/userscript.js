@@ -78,9 +78,6 @@ export default async function ({ addon, msg }) {
         keys.push(
           ...[
             ["windows", "windows"],
-            ["ä", "ä"],
-            ["ö", "ö"],
-            ["ü", "ü"],
             ["bombastic side eye", "bombastic side eye"],
             ["trolololo", "trolololo"],
             ["intact", "intact"],
@@ -89,6 +86,16 @@ export default async function ({ addon, msg }) {
             ["hmmm", "hmmm"],
             ["joke", "joke"],
             ["backyardigans", "backyardigans"],
+          ]
+        );
+      }
+      if (addon.settings.get("languageKeys")) {
+        keys.push(
+          ...[
+            ["ä", "ä"],
+            ["ö", "ö"],
+            ["ü", "ü"],
+            ["ß", "ß"],
           ]
         );
       }

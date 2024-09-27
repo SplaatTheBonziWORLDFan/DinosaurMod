@@ -962,8 +962,8 @@ const menuItems = [
         featured: true,
     },
     */
-    {
-        name: 'PenguinAI',
+    /*{
+        name: 'PenguinAI⚠',
         extensionId: 'https://extensions.penguinmod.com/extensions/MubiLop/penguingpt.js',
         iconURL: 'https://extensions.penguinmod.com/images/MubiLop/penguingpt.png',
         tags: ['penguinmod'],
@@ -971,7 +971,7 @@ const menuItems = [
         extDeveloper: 'MubiLop',
         internetConnectionRequired: true,
         featured: true
-    },
+    },*/
     {
         name: 'LZ Compress',
         extensionId: 'shovellzcompresss',
@@ -1502,8 +1502,7 @@ const menuItems = [
     },
     {
         name: 'TurboBuilder',
-        href: 'https://legacy-turbobuilder.vercel.app',
-        extensionId: 'special_turboBuilder',
+        href: 'https://legacy-pecial_turboBuilder',
         iconURL: turboBuilderIcon,
         description: 'Create your own amazing extensions using a scratch-based UI!',
         credits: 'Started by JeremyGamer13, continued by jwklong',

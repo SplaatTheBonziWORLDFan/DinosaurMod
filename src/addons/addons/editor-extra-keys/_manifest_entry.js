@@ -32,7 +32,12 @@ const manifest = {
       "type": "warning",
       "text": "The \"Joke keys\" don't work at all, it's just joke keys.",
       "id": "jokeKeysWarn"
-    }
+    },
+    {
+      "type": "notice",
+      "text": "The \"Other language keys\" have keys from different language keyboards.",
+      "id": "languageKeysWarn"
+    },
   ],
   "settings": [
     {
@@ -60,6 +65,13 @@ const manifest = {
       "dynamic": true,
       "name": "Show Joke keys",
       "id": "jokeKeys",
+      "type": "boolean",
+      "default": false
+    },
+    {
+      "dynamic": true,
+      "name": "Show Other Language keys",
+      "id": "languageKeys",
       "type": "boolean",
       "default": false
     }
