@@ -49,7 +49,7 @@ export default {
   "paint-by-default": () => import(/* webpackChunkName: "addon-entry-paint-by-default" */ "../addons/paint-by-default/_runtime_entry.js"),
   "block-cherry-picking": () => import(/* webpackChunkName: "addon-default-entry" */ "../addons/block-cherry-picking/_runtime_entry.js"),
   "hide-new-variables": () => import(/* webpackChunkName: "addon-entry-hide-new-variables" */ "../addons/hide-new-variables/_runtime_entry.js"),
-  "editor-create-music": () => import(/* webpackChunkName: "addon-entry-editor-create-music" */ "../addons/editor-create-music/_runtime_entry.js"),
+  "editor-create-music": () => import(/* webpackChunkName: "addon-default-entry" */ "../addons/editor-create-music/_runtime_entry.js"),
   "editor-extra-keys": () => import(/* webpackChunkName: "addon-entry-editor-extra-keys" */ "../addons/editor-extra-keys/_runtime_entry.js"),
   "hide-delete-button": () => import(/* webpackChunkName: "addon-entry-hide-delete-button" */ "../addons/hide-delete-button/_runtime_entry.js"),
   "no-script-bumping": () => import(/* webpackChunkName: "addon-entry-no-script-bumping" */ "../addons/no-script-bumping/_runtime_entry.js"),
