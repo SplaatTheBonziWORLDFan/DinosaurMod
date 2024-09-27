@@ -72,6 +72,7 @@ const addons = [
 ];
 
 const newAddons = [
+    'editor-create-music',
     'vol-slider',
     'number-pad',
     'rename-broadcasts',

@@ -96,13 +96,33 @@ const Credits = () => (
                     height="160"
                 />
             </a>
+            <h2>Costumes</h2>
+            <p>
+                All PenguinMod costumes are downloaded or created from:
+                <ul>
+                    <li><a href="https://publicdomainvectors.org/">https://publicdomainvectors.org/</a></li>
+                    <li><a href="https://discord.gg/NZ9MBMYTZh">User-submissions from the PenguinMod Discord Server</a></li>
+                    <li>The PenguinMod Developers</li>
+                </ul>
+                All costumes exclusive to PenguinMod are included under Public Domain licenses or licenses such as MIT and CC0.
+            </p>
+            <p>This is the current list of user-submitted costume creators:</p>
+            <UserList users={UserData.pmCostumeSubmittors} />
+            <p><i>The list order is randomized on each refresh.</i></p>
             <h2>Sound Effects</h2>
             <p>
-                PenguinMod has added some more sounds to the Sound Library.
-                All PenguinMod sounds are
-                from <a href="https://freesound.org/">https://freesound.org/</a> and <a href="https://archive.org/">https://archive.org/</a> under
-                the Public Domain license.
+                All PenguinMod sounds are downloaded or created from:
+                <ul>
+                    <li><a href="https://freesound.org/">https://freesound.org/</a></li>
+                    <li><a href="https://archive.org/">https://archive.org/</a></li>
+                    <li><a href="https://discord.gg/NZ9MBMYTZh">User-submissions from the PenguinMod Discord Server</a></li>
+                    <li>The PenguinMod Developers</li>
+                </ul>
+                All sounds exclusive to PenguinMod are included under Public Domain licenses or licenses such as MIT and CC0.
             </p>
+            <p>This is the current list of user-submitted sound creators:</p>
+            <UserList users={UserData.pmSoundSubmittors} />
+            <p><i>The list order is randomized on each refresh.</i></p>
         </section>
         <section>
             <h1>Dinosaurmod, PenguinMod & TurboWarp</h1>
