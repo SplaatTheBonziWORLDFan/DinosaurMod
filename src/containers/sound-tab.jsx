@@ -51,6 +51,7 @@ class SoundTab extends React.Component {
             'handleExportSound',
             'handleNewSound',
             'handleSurpriseSound',
+            'handleCreateSound',
             'handleFileUploadClick',
             'handleSoundUpload',
             'handleDrop',
@@ -134,6 +135,10 @@ class SoundTab extends React.Component {
         });
     }
 
+    async handleCreateSound() {
+        window.open("https://dinobox.vercel.app", "_blank")
+    }
+
     handleFileUploadClick() {
         this.fileInput.click();
     }
@@ -209,6 +214,11 @@ class SoundTab extends React.Component {
         )) : [];
 
         const messages = defineMessages({
+            createSound: {
+                defaultMessage: 'Create Music',
+                description: 'Button to create music from DinoBox in the editor tab',
+                id: 'gui.soundTab.createSound'
+            },
             fileUploadSound: {
                 defaultMessage: 'Upload Sound',
                 description: 'Button to upload sound from file in the editor tab',
@@ -234,6 +244,10 @@ class SoundTab extends React.Component {
         return (
             <AssetPanel
                 buttons={isSupported ? [{
+                    title: intl.formatMessage(messages.createSound),
+                    img: searchIcon,
+                    onClick: this.handleCreateSound
+                }, {
                     title: intl.formatMessage(messages.addSound),
                     img: addSoundFromLibraryIcon,
                     onClick: onNewSoundFromLibraryClick

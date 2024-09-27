@@ -54,20 +54,24 @@ export default async function ({ addon, console }) {
     },
   });
   const soundMeta = Object.assign(Object.create(null), {
-    upload: {
+    create: {
       index: 0,
+      tooltip: "gui.soundTab.createSound",
+    },
+    upload: {
+      index: 1,
       tooltip: "gui.soundTab.fileUploadSound",
     },
     surprise: {
-      index: 1,
+      index: 2,
       tooltip: "gui.soundTab.surpriseSound",
     },
     record: {
-      index: 2,
+      index: 3,
       tooltip: "gui.soundTab.recordSound",
     },
     library: {
-      index: 3,
+      index: 4,
       tooltip: "gui.soundTab.addSoundFromLibrary",
     },
   });
