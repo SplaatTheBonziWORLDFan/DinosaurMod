@@ -3,7 +3,7 @@ const manifest = {
     "editorOnly": true,
     "noTranslations": true,
     "name": "Choose Default Music Editor",
-    "description": "A Addon to choose which Music Editor you would choose as default.",
+    "description": "An Addon to choose which Music Editor you would choose as default in the \"Create Music\" Option in the Sound Tab.",
     "credits": [
       {
         "name": "MrIncredibleMakerZe",
@@ -18,7 +18,7 @@ const manifest = {
     "info": [
       {
         "type": "notice",
-        "text": "This Addon is in beta.",
+        "text": "This Addon is in beta. You have to refresh the page for this addon to work.",
         "id": "betaNotice"
       }
     ],
