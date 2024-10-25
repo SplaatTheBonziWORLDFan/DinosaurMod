@@ -1503,7 +1503,7 @@ const menuItems = [
     {
         name: 'TurboBuilder',
         href: 'https://turbobuilder.vercel.app',
-        extensionId: 'special_turboBuilderDev',
+        extensionId: 'special_turboBuilder',
         iconURL: turboBuilderIcon,
         description: 'Create your own amazing extensions using a scratch-based UI!',
         credits: 'Started by JeremyGamer13, continued by jwklong',
