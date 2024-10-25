@@ -242,6 +242,11 @@ module.exports = [
             new TWGenerateServiceWorkerPlugin()
         ])
     })
+    resolve: {
+        alias: {
+          '@src': path.resolve(__dirname, 'src')
+        }
+    }
 ].concat(
     process.env.NODE_ENV === 'production' || process.env.BUILD_MODE === 'dist' ? (
         // export as library
