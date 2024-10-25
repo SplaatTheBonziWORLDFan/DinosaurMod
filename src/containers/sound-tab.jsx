@@ -148,7 +148,7 @@ class SoundTab extends React.Component {
                 window.open("https://jummb.us/", "_blank")
                 break;
             default:
-                localStorage.getItem("dinosaurmod_musicEditor_data", "dinobox")
+                localStorage.setItem("dinosaurmod_musicEditor_data", "dinobox")
                 window.open("https://dinobox.vercel.app/?dinosaurmod&", "_blank")
                 break;
         }
