@@ -40,6 +40,10 @@ const manifest = {
           {
             "id": "jummbox",
             "name": "JummBox"
+          },
+          {
+            "id": "ultrabox",
+            "name": "UltraBox"
           }
         ],
         "default": "dinobox"

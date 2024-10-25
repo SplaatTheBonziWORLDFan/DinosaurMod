@@ -147,6 +147,9 @@ class SoundTab extends React.Component {
             case 'jummbox':
                 window.open("https://jummb.us/", "_blank")
                 break;
+            case 'ultrabox':
+                window.open("https://ultraabox.github.io/", "_blank")
+                break;
             default:
                 localStorage.setItem("dinosaurmod_musicEditor_data", "dinobox")
                 window.open("https://dinobox.vercel.app/?dinosaurmod&", "_blank")
