@@ -25,6 +25,8 @@ import DragConstants from '../lib/drag-constants';
 import downloadBlob from '../lib/download-blob';
 import SharedAudioContext from '../lib/audio/shared-audio-context.js';
 
+import { variables } from "../variables.js"
+
 import { connect } from 'react-redux';
 
 import {
@@ -136,7 +138,7 @@ class SoundTab extends React.Component {
     }
 
     async handleCreateSound() {
-        const defaultEditor = String(localStorage.getItem("dinosaurmod_musicEditor_data")).toLowerCase()
+        const defaultEditor = String(variables["dinosaurmod_musicEditor_data"]).toLowerCase()
         switch (defaultEditor) {
             case 'dinobox':
                 window.open("https://dinobox.vercel.app/?dinosaurmod&", "_blank")
@@ -148,7 +150,7 @@ class SoundTab extends React.Component {
                 window.open("https://jummb.us/", "_blank")
                 break;
             default:
-                localStorage.getItem("dinosaurmod_musicEditor_data", "dinobox")
+                variables["dinosaurmod_musicEditor_data"] = "dinobox"
                 window.open("https://dinobox.vercel.app/?dinosaurmod&", "_blank")
                 break;
         }
