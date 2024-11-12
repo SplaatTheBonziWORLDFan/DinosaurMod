@@ -211,7 +211,7 @@ const CustomProcedures = props => (
                     />
                     <div className={styles.optionTitle}>
                         <FormattedMessage
-                            defaultMessage="Add a number input"
+                            defaultMessage="Add an input"
                             description="Label for button to add a number input"
                             id="gui.customProcedures.addAnInputNumber"
                         />
